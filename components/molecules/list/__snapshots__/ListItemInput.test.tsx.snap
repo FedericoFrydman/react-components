@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItemInput Component should render the component 1`] = `
+<Modal
+  classNames={
+    Array [
+      "lsux-list-item-input__control",
+    ]
+  }
+  primary="$10.00/mo"
+  secondary="Lorem ipsum dolor sit amet"
+>
+  <ForwardRef(CheckboxComponent)
+    name="test list item"
+    onChange={[Function]}
+  />
+</Modal>
+`;

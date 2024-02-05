@@ -1,0 +1,21 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
+.lsux-email-section-title {
+  background-color: $N00;
+  height: 168px;
+  text-align: center;
+  width: 600px;
+
+  .lsux-heading {
+    margin: 0 auto 16px;
+    max-width: 488px;
+  }
+
+  &.lsux-email-section-title--with-subheading {
+    .lsux-text {
+      margin: 0 auto;
+      max-width: 488px;
+    }
+  }
+}

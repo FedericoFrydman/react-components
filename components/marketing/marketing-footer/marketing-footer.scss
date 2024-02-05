@@ -1,0 +1,10 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-marketing-footer {
+  &--dark {
+    background-color: $N1000;
+  }
+  &--light {
+    background-color: $N00;
+  }
+}

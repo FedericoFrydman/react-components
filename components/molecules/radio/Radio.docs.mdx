@@ -1,0 +1,72 @@
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Radio } from './Radio';
+import { FormField } from '../../organisms/form-field/FormField';
+import { Alert } from '../alert/Alert';
+
+# Radio Props
+
+<Description />
+
+**This documentantion is just to display the radio props where you can interact with them and see how it behaves. For implementation please use [FormField](/?path=/docs/forms-form-fields--radio-field) docs to gide.**
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  The Radio component must be used as a child of a FormField component.
+</Alert>
+
+<Canvas>
+  <Story id="controls-form-fields-radio-props--default" />
+</Canvas>
+
+<Meta />
+
+## Example Code
+
+```tsx
+<h3>Group 1</h3>
+<FormField id="first-group">
+  <Radio rightLabel="One" name="foo" />
+  <Radio rightLabel="Two" name="foo" />
+</FormField>
+
+<h3>Group 2</h3>
+<FormField id="first-group">
+  <Radio rightLabel="One" name="foo2" />
+  <Radio rightLabel="Two" name="foo2" />
+</FormField>
+```
+
+### Result
+
+<h3>Group 1</h3>
+<FormField id="first-group">
+  <Radio rightLabel="One" name="foo" />
+  <Radio rightLabel="Two" name="foo" />
+</FormField>
+<h3>Group 2</h3>
+<FormField id="first-group">
+  <Radio rightLabel="One" name="foo2" />
+  <Radio rightLabel="Two" name="foo2" />
+</FormField>
+
+## When to use it
+
+Use a radio button when the user has to choose only one option based on a pre-defined list of mutually exclusive options.
+
+## Usage guidelines
+
+- **Do** always associate the radio button with a label that clearly gives context for the user to make a decision
+- **Do** capitalize each item of the list
+- **Do** list the items in a rational order
+- **Do** not use more than 4 options on a list of radio buttons. If it exceeds that, use a selector.
+- **Do** not punctuate the end of every list item
+- **Do** not mark required fields with asterisks
+
+## States
+
+<Canvas>
+  <Story id="controls-form-fields-radio-props--selected" />
+</Canvas>
+
+<Canvas>
+  <Story id="controls-form-fields-radio-props--disabled" />
+</Canvas>

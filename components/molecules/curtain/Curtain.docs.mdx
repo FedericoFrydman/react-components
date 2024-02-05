@@ -1,0 +1,53 @@
+import { FC } from 'react';
+import { Title, Description, ArgsTable, Props, Story, Canvas } from '@storybook/addon-docs';
+import { CurtainTest } from './CurtainTest';
+import { Curtain } from './Curtain';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="components-curtain--default" />
+</Canvas>
+
+<ArgsTable of={Curtain} />
+
+## Example code
+
+```tsx
+export const CurtainTest: FC = () => {
+  const [alertActive, setAlertActive] = useState(false);
+  const [alertOpen, setAlertOpen] = useState(false);
+
+  const handleCreate = useCallback(() => {
+    setAlertActive(true);
+    setAlertOpen(true);
+  }, []);
+
+  const handleAlertDismiss = useCallback(() => {
+    setAlertOpen(false);
+  }, []);
+
+  const onCloseComplete = useCallback(() => {
+    setAlertActive(false);
+  }, []);
+
+  return (
+    <div>
+      {alertActive && (
+        <Curtain onClose={onCloseComplete} isOpen={alertOpen} initialAnimate={true} fixed={true}>
+          <Alert severity="default" classNames={[]} icon="alert_information" onDismiss={handleAlertDismiss}>
+            Here is an alert
+          </Alert>
+        </Curtain>
+      )}
+      <Button label="Alert" onClick={handleCreate} />
+    </div>
+  );
+};
+```
+
+### Result
+
+<CurtainTest />

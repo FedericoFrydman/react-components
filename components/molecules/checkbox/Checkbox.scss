@@ -1,0 +1,119 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-cb-container {
+  align-items: center;
+  display: flex;
+  margin: 2px;
+
+  & input {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    width: 0;
+  }
+
+  body.using-key input:focus ~ &__cb {
+    outline: 2px solid var(--checkbox-cb-enabled-focus-halo);
+  }
+
+  &__cb {
+    align-items: center;
+    border: 2px solid var(--checkbox-cb-enabled-unchecked-border);
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    height: 22px;
+    justify-content: center;
+    min-width: 22px;
+    transition: all 0.1s ease-in-out;
+
+    img {
+      display: none;
+      height: 18px;
+      user-select: none;
+      width: 18px;
+    }
+
+    &--filled--error,
+    &--outlined--error {
+      border: 2px solid $R200;
+    }
+  }
+
+  input:checked ~ &__cb {
+    background-color: var(--checkbox-cb-enabled-checked-filled-background);
+    border: 2px solid var(--brand-color-prim200);
+
+    &--filled {
+      background-color: var(--checkbox-cb-enabled-checked-filled-background);
+      border-color: var(--checkbox-cb-enabled-checked-filled-border);
+      img {
+        display: block;
+        filter: $filter-white;
+      }
+      &--error {
+        background-color: $R200;
+        border: 2px solid $R200;
+
+        img {
+          display: block;
+          filter: $filter-white;
+        }
+      }
+    }
+
+    &--outlined {
+      background-color: var(--checkbox-cb-enabled-checked-outlined-background);
+      img {
+        display: block;
+        filter: var(--brand-color-prim200-filter);
+      }
+      &--error {
+        background-color: $N00;
+        border: 2px solid $R200;
+        img {
+          display: block;
+          filter: $filter-red-200;
+        }
+      }
+    }
+  }
+
+  input:disabled ~ &__cb {
+    border: 2px solid $N500;
+    cursor: not-allowed;
+  }
+  input:disabled:checked ~ &__cb {
+    cursor: not-allowed;
+
+    &--filled,
+    &--filled--error {
+      background-color: var(--checkbox-cb-disabled-checked-filled-background);
+      border-color: var(--checkbox-cb-disabled-checked-filled-border);
+      img {
+        display: block;
+        filter: $filter-white;
+      }
+    }
+
+    &--outlined,
+    &--outlined--error {
+      background-color: var(--checkbox-cb-disabled-checked-outlined-background);
+      border-color: var(--checkbox-cb-disabled-checked-outlined-border);
+      img {
+        display: block;
+        filter: $filter-gray;
+      }
+    }
+
+    img {
+      display: block;
+      filter: $filter-gray;
+    }
+  }
+
+  input:disabled ~ .lsux-text {
+    color: $N500;
+    cursor: not-allowed;
+  }
+}

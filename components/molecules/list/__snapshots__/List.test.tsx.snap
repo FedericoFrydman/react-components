@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Component should render the component 1`] = `
+<ForwardRef(ContainerComponent)
+  classNames={
+    Array [
+      "m-5",
+    ]
+  }
+  style={
+    Object {
+      "maxWidth": 340,
+    }
+  }
+>
+  <Card
+    background="white"
+  >
+    <CardContent
+      background="white"
+    >
+      <CardTitle>
+        Plan Name
+      </CardTitle>
+      <ForwardRef(TextComponent)
+        text="Example plan description text"
+      />
+    </CardContent>
+    <CardContent
+      background="light-gray"
+    >
+      <CardTitle
+        classNames={
+          Array [
+            "mb-3",
+          ]
+        }
+      >
+        Coverage Add-ons
+      </CardTitle>
+      <ForwardRef(ListComponent)
+        background="white"
+      >
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="0"
+          inputProps={
+            Object {
+              "name": "0",
+            }
+          }
+          isSelected={false}
+          key="0"
+          primary="$10.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="1"
+          inputProps={
+            Object {
+              "name": "1",
+            }
+          }
+          isSelected={true}
+          key="1"
+          primary="$20.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="2"
+          inputProps={
+            Object {
+              "name": "2",
+            }
+          }
+          isSelected={false}
+          key="2"
+          primary="$30.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="3"
+          inputProps={
+            Object {
+              "name": "3",
+            }
+          }
+          isSelected={false}
+          key="3"
+          primary="$40.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="4"
+          inputProps={
+            Object {
+              "name": "4",
+            }
+          }
+          isSelected={false}
+          key="4"
+          primary="$50.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="5"
+          inputProps={
+            Object {
+              "name": "5",
+            }
+          }
+          isSelected={false}
+          key="5"
+          primary="$60.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="6"
+          inputProps={
+            Object {
+              "name": "6",
+            }
+          }
+          isSelected={false}
+          key="6"
+          primary="$70.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="7"
+          inputProps={
+            Object {
+              "name": "7",
+            }
+          }
+          isSelected={false}
+          key="7"
+          primary="$80.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="8"
+          inputProps={
+            Object {
+              "name": "8",
+            }
+          }
+          isSelected={false}
+          key="8"
+          primary="$90.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+        <ListItemInputSwitchComponent
+          handleClick={[Function]}
+          id="9"
+          inputProps={
+            Object {
+              "name": "9",
+            }
+          }
+          isSelected={false}
+          key="9"
+          primary="$100.00/mo"
+          secondary="Lorem ipsum dolor sit amet"
+        />
+      </ForwardRef(ListComponent)>
+    </CardContent>
+  </Card>
+</ForwardRef(ContainerComponent)>
+`;

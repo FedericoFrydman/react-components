@@ -1,0 +1,48 @@
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { NavigationTest } from './NavigationTest';
+import { Container } from '../../atoms/container/Container';
+import { Alert } from '../../molecules/alert/Alert';
+
+# Navigation
+
+A navigation pane/slider
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  Please have in mind you need to wrap your application components inside a Container* component with Flexbox in order
+  have all components side by side.
+</Alert>
+
+\*_Here you can see how to use the [Container component](/?path=/docs/layout-container--background-color)._
+
+If you have to add padding of margin to the navigation component you need to use the [spacing classes](/?path=/story/foundation-spacing--page).
+
+If you have to add padding of margin to the navigation component you need to use the [spacing classes](/?path=/story/foundation-spacing--page).
+
+If you have to add padding of margin to the navigation component you need to use the [spacing classes](/?path=/story/foundation-spacing--page).
+
+```tsx
+<Container flexbox>
+  {isSmall && <Button label="Open Slideout" onClick={openClicked} />}
+  <Navigation
+    items={[
+      { data: 'zero', iconName: 'action_attach', name: 'one' },
+      { data: 'child1', hidden: activeIndex > 2, name: 'child a' },
+      { data: 'child2', hidden: activeIndex > 2, name: 'child b' },
+      { data: 'one', iconName: 'action_add', name: 'two', useBadge: true},
+      { data: 'child3', hidden: activeIndex < 3, name: 'child c' },
+      { data: 'child4', hidden: activeIndex < 3, name: 'child d' },
+    ]}
+    activeIndex={activeIndex}
+    onClick={navigationClicked}
+    navigationType={!isSmall ? 'pane' : 'slideout'}
+    isOpen={isOpen}
+    onClose={closeClicked}
+    disabledItems={[4]}
+    classNames={['pt-7']}
+  />
+</Container>
+```
+
+### Result
+
+<NavigationTest></NavigationTest>

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Component should render the component 1`] = `
+<div
+  className="lsux-badge lsux-badge--default--subtle lsux-badge--square"
+>
+  <ForwardRef(TextComponent)
+    as="span"
+    text="something"
+    textSize="medium"
+  />
+</div>
+`;

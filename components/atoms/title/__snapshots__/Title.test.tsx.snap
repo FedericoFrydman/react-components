@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title Component should render the component 1`] = `
+<ForwardRef(TextComponent)
+  classNames={Array []}
+  text="some text"
+  textSize="medium"
+/>
+`;

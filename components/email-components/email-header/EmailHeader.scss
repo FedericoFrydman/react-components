@@ -1,0 +1,22 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-email-header {
+  background-color: $N00;
+  height: 69px;
+  overflow-wrap: break-word;
+  table-layout: fixed;  
+  width:100%;
+
+  .lsux-email-header--logo {
+    padding-left: 24px;
+  }
+
+  .lsux-email-header--date {
+    color: $N1000;
+    padding-right: 24px;
+    text-align: right;
+  }
+  .lsux-email-header--center {
+    text-align: center;
+  }
+}

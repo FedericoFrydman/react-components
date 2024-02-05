@@ -1,0 +1,49 @@
+import { FC } from 'react';
+import { ArgsTable, Props, Story, Canvas } from '@storybook/addon-docs';
+import { SwitchTest } from './SwitchTest';
+import { Switch } from './Switch';
+
+# Switch
+
+<Canvas>
+  <Story id="controls-switch--small" />
+</Canvas>
+
+<ArgsTable of={Switch}/>
+
+## Usage guideline
+
+- **Do** limit amount of Switches on the screen
+- **Do** use Switch for On/Off interaction
+- **Do** use to offer instant feedback, no button needed to review and submit
+- **Do not** use more than two Switches for similar or related options, use _Checkbox_ instead.
+
+## Switch vs Checkbox
+
+Switch and Checkbox are similar in a way that both allow users to turn on or off something. However, Checkbox has an undetermined or "unchecked" state while Switch mimics light switches in physical world it can only be on or off, there is no unchecked.
+
+In addition, Switch gives instant feedback/update while Checkbox generally requires a button to confirm update.
+
+## Example code
+
+```tsx
+export const SwitchTest: FC = ({}) => {
+  const [selected, setSelected] = useState(false);
+
+  const setSelectedSwitch = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setSelected(!selected);
+  };
+
+  return (
+    <>
+      <div>Value is {selected ? 'On' : 'Off'}</div>
+      <Switch onClick={setSelectedSwitch} isChecked={selected} imageOn={'alert_check'} />
+    </>
+  );
+};
+```
+
+### Result
+
+<SwitchTest />

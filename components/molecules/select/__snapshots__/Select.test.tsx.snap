@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Component should render the component 1`] = `
+<Select>
+  <SelectTrigger
+    className="lsux-select__trigger"
+    placeholder="Select a country"
+  >
+    <div
+      className="lsux-select__trigger__row"
+    >
+      <SelectValue
+        className="lsux-select__trigger__value"
+        placeholder="Select a country"
+      />
+      <SelectIcon
+        className="lsux-select__trigger__icon"
+      >
+        <ForwardRef(IconComponent)
+          name="arrow_caret_down_md"
+        />
+      </SelectIcon>
+    </div>
+  </SelectTrigger>
+  <SelectPortal>
+    <SelectContent
+      className="lsux-select__content"
+    >
+      <SelectScrollUpButton
+        className="lsux-select__content__button"
+      >
+        <ForwardRef(IconComponent)
+          name="arrow_caret_up_md"
+        />
+      </SelectScrollUpButton>
+      <SelectViewport
+        className="lsux-select__viewport"
+      >
+        <SelectItem
+          key="US"
+          textValue="United States"
+          value="US"
+        />
+        <SelectItem
+          key="DE"
+          textValue="Germany"
+          value="DE"
+        />
+        <SelectItem
+          key="FR"
+          textValue="France"
+          value="FR"
+        />
+      </SelectViewport>
+      <SelectScrollDownButton
+        className="lsux-select__content__button"
+      >
+        <ForwardRef(IconComponent)
+          name="arrow_caret_down_md"
+        />
+      </SelectScrollDownButton>
+      <SelectArrow />
+    </SelectContent>
+  </SelectPortal>
+</Select>
+`;

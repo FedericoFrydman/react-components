@@ -1,0 +1,38 @@
+import { ArgsTable, Story, Canvas, Stories } from '@storybook/addon-docs';
+import { Alert } from '../alert/Alert';
+import { Input } from './Input';
+
+# Input Props
+
+**This documentantion is just to display the input props where you can interact with them and see how it behaves. For implementation please use [FormField](/?path=/docs/forms-form-fields--input-field) docs to gide.**
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  The Input component must be used as a child of a FormField component.
+</Alert>
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+<ArgsTable of={Input} />
+
+**About the input:**
+
+- Input allows people to enter data for further use in your product, or to configure options. Inputs and forms are used to get information and guide people with minimal fuss.
+- Input should always be accompanied by a label for accessibility purposes with the exception of Search (for this reason, the default text color for Search is N1000 for color contrast.
+- Input has a HTML property call autoComplete it should be equal to "off" in order to not be auto completed.
+
+## Example Code
+
+```tsx
+<FormField id="name-input" status={name.status} validationHint={name.hint} label="First Name" type="input" required>
+  <Input
+    name="name-input"
+    onChange={handleInputChange}
+    placeholder="First Name"
+    value={name.value}
+    type="text"
+    required
+  />
+</FormField>
+```
+
+<Stories />

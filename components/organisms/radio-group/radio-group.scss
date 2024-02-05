@@ -1,0 +1,55 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-rbg-container {
+  margin: 24px;
+
+  .lsux-checkbox-title {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .lsux-checkbox-options-section {
+    background: white;
+    border-color: $N400;
+    border-radius: 6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .lsux-checkbox-option-div {
+    font-size: 14px;
+    list-style: none;
+    padding: 12px;
+  }
+  .lsux-option-li {
+    border-bottom: 1px solid $N350;
+    padding: 4px;
+  }
+  .lsux-option-li:last-child {
+    border-bottom: none;
+  }
+  .lsux-option-div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+  .lsux-option-subdiv {
+    font-size: 14px;
+    text-align: left;
+  }
+  .lsux-option-title {
+    color: $N800;
+    font-weight: 700;
+    margin: 1px;
+  }
+  .lsux-option-value {
+    color: $N800;
+    font-weight: 800;
+    margin: 1px;
+    padding: 0px;
+  }
+  .lsux-checked-icon {
+    height: 20px;
+  }
+}

@@ -1,0 +1,92 @@
+import { FC } from 'react';
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { BreadcrumbsTest } from './BreadcrumbsTest';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="navigation-breadcrumbs--default" />
+</Canvas>
+
+<Meta />
+
+
+## Usage guideline
+
+- **Do** use only when the navigation has more than two layers
+- **Do** place breadcrumbs in the top left corner typically above the page title
+- **Do** use the exact section names. For example, don't shorten My Applications to Applications.
+- **Do not** show more than 5 links. Try to truncate some links with ellipsis to prevent it becoming too long
+- Show progress from the highest navigation level to the lowest, without skipping a step.
+
+## Example Code
+
+This example is a snapshot of the Workday Org Chart in Engineering in December of 2020.
+
+```tsx
+
+const db = [...];
+
+function get_descendants(employee: string): string[] {
+  const descendants = [];
+
+  for (const [key, value] of Object.entries(db)) {
+    if (value === employee && key != value) {
+      descendants.push(key);
+    }
+  }
+
+  return descendants;
+}
+
+function get_ancestors(employee: string): Crumb[] {
+  const ancestors: Crumb[] = [];
+
+  ancestors.unshift({ label: employee, link: employee });
+
+  let current = employee;
+
+  let manager: string = db[current];
+
+  while (manager != current) {
+    ancestors.unshift({ label: manager, link: manager });
+    current = manager;
+    manager = db[manager];
+  }
+
+  return ancestors;
+}
+
+export const BreadcrumbsTest: FC = ({}) => {
+  const [activeNode, setActiveNode] = useState('Arnold Blinn');
+
+  const ancestors = get_ancestors(activeNode);
+  const descendants = get_descendants(activeNode);
+  return (
+    <div>
+      <Breadcrumbs crumbs={ancestors} maxTail={3} onClick={setActiveNode} />
+      {descendants.map(function (name, index) {
+        const nodeClicked = (e: React.MouseEvent<HTMLAnchorElement>): void => {
+          e.preventDefault();
+          setActiveNode(name);
+        };
+        return (
+          <div key={index}>
+            <a href="#" onClick={nodeClicked}>
+              {name}
+            </a>
+            <br />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+```
+
+### Result
+
+<BreadcrumbsTest />

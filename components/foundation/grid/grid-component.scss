@@ -1,0 +1,8 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-grid.show .lsux-row .lsux-col .content {
+  background-color: $N300;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}

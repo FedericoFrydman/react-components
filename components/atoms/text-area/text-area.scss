@@ -1,0 +1,118 @@
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/colors.scss';
+
+@mixin createBorder($color) {
+  border: 1px solid $color;
+  -webkit-border-color: none;
+  border-radius: var(--brand-border-radius);
+  -moz-box-sizing: border-box; /* Firefox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome */
+  box-sizing: border-box;
+}
+
+@mixin focusState($color) {
+  border-color: $color;
+}
+
+.lsux-text-area {
+  @include createBorder($N350);
+  border-radius: var(--brand-border-radius);
+  box-sizing: border-box;
+  letter-spacing: -0.011em;
+  line-height: 22px;
+  outline: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  -moz-transition: border-color ease-in-out 0.15s; /* Firefox */
+  -webkit-transition: border-color ease-in-out 0.15s; /* Safari/Chrome */
+  transition: border-color ease-in-out 0.15s;
+  width: 100%;
+
+  &--warning {
+    background: $Y10;
+    @include createBorder($Y200);
+    color: $Y200;
+    outline: none;
+
+    &:focus {
+      background-color: unset;
+      @include focusState($Y200);
+      color: unset;
+    }
+  }
+
+  &--valid {
+    @include createBorder($G200);
+    color: $G200;
+    outline: none;
+
+    &:focus {
+      @include focusState($G200);
+      color: unset;
+    }
+  }
+
+  &--invalid {
+    background: $R10;
+    color: $R200;
+    outline: none;
+    @include createBorder($R200);
+
+    & + .text {
+      color: $R200;
+    }
+
+    &:focus {
+      background-color: unset;
+      @include focusState($R200);
+      color: unset;
+    }
+  }
+
+  &--resize-none {
+    resize: none;
+  }
+  &--resize-both {
+    resize: both;
+  }
+  &--resize-horizontal {
+    resize: horizontal;
+  }
+  &--resize-vertical {
+    resize: vertical;
+  }
+  &--resize-initial {
+    resize: initial;
+  }
+  &--resize-inherit {
+    resize: inherit;
+  }
+
+  &:focus:not(:read-only) {
+    @include focusState(var(--brand-color-prim200));
+    outline: none;
+  }
+
+  &:disabled {
+    color: $N350;
+    cursor: not-allowed;
+  }
+
+  &:-moz-read-only {
+    border: none;
+    color: $N700;
+  }
+
+  &:read-only {
+    border: none;
+    color: $N700;
+  }
+
+  &::placeholder {
+    align-items: center;
+    color: $N500;
+    display: flex;
+    right: 8px;
+    top: 8px;
+  }
+}

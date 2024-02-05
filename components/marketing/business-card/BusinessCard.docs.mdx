@@ -1,0 +1,46 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { BusinessCard } from './BusinessCard';
+import { Grid } from '../../foundation/grid/Grid';
+import { GridRow } from '../../foundation/grid/GridRow';
+import { GridCol } from '../../foundation/grid/GridCol';
+import { Text } from '../../atoms/text/Text';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="marketing-businesscard--default" />
+</Canvas>
+
+<ArgsTable of={BusinessCard} />
+
+This is an example of how to implement the `BusinessCard` component.
+
+### Example Code
+
+```tsx
+<BusinessCard
+  id="card-id"
+  title="Card Title"
+  displayName="John Doe"
+  email="john.doe@pplsi.com"
+  market="en-us"
+  phone="1234567890"
+  profileImage="https://api.legalshield.com/v2/public/associates/avatar/127525095-1596790237.195000.jpg"
+  sitename="https://www.pplsi.com"
+/>
+```
+
+### Result
+
+<BusinessCard
+  id="card-id"
+  title="Card Title"
+  displayName="John Doe"
+  email="john.doe@pplsi.com"
+  market="en-us"
+  phone="1234567890"
+  profileImage="https://api.legalshield.com/v2/public/associates/avatar/127525095-1596790237.195000.jpg"
+  sitename="https://www.pplsi.com"
+/>

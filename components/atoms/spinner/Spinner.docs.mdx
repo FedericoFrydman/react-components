@@ -1,0 +1,31 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Heading } from '../heading/Heading';
+import { Spinner } from './Spinner';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="components-spinner--default" />
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={Spinner}/>
+
+## Usage guideline
+
+- **Do** include proper ARIA tags to ensure Spinner is fully accessible for all users, including screen readers.
+- Our circular spinner can be located anywhere but should be vertically and horizontally centered into space.
+- If a spinner is triggered by a button, place the spinner in the button, and disable the button while the spinner is visible.
+- If only a portion of a page is displaying new content or being updated, place the spinner in that part of the page.
+- If you are unsure where to place the spinner, place it where you want the user's attention to be when loading is finished.
+- Only show a spinner if the expected wait time is more than a second.
+
+## Sizes
+
+| <Heading as="T16" text="Small" />    | <Heading as="T16" text="Medium" />   | <Heading as="T16" text="Large" />    | <Heading as="T16" text="XLarge" />   |
+| ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
+| <Heading as="T16" text="16x16 px" /> | <Heading as="T16" text="24x24 px" /> | <Heading as="T16" text="48x48 px" /> | <Heading as="T16" text="96x96 px" /> |
+| <Spinner spinnerSize="small" />      | <Spinner spinnerSize="medium" />     | <Spinner spinnerSize="large" />      | <Spinner spinnerSize="xlarge" />     |

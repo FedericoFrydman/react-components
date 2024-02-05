@@ -1,0 +1,59 @@
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Badge } from './Badge';
+
+# Badge
+
+A badge is a visual element to quickly indicate the status, state, or category of a piece of information. Users cannot interact with badges. If the interaction is desired, use a Tag.
+
+<ArgsTable of={Badge} />
+
+## Badge types
+
+| DEFAULT                                           | SUCCESS                                           | ATTENTION                                           | IMPORTANT                                           | NEW                                           | PRIMARY                                           |
+| ------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------- | ------------------------------------------------- |
+| <Badge text="default" bold variant="default" />   | <Badge text="success" bold variant="success" />   | <Badge text="attention" bold variant="attention" /> | <Badge text="important" bold variant="important" /> | <Badge text="new" bold variant="new" />       | <Badge text="primary" bold variant="primary" />   |
+| <Badge text="default" variant="default" />        | <Badge text="success" variant="success" />        | <Badge text="attention" variant="attention" />      | <Badge text="important" variant="important" />      | <Badge text="new" variant="new" />            | <Badge text="primary" variant="primary" />        |
+| <Badge text="10" circle bold variant="default" /> | <Badge text="10" circle bold variant="success" /> | <Badge text="10" circle bold variant="attention" /> | <Badge text="10" circle bold variant="important" /> | <Badge text="10" circle bold variant="new" /> | <Badge text="10" circle bold variant="primary" /> |
+| <Badge text="10" circle variant="default" />      | <Badge text="10" circle variant="success" />      | <Badge text="10" circle variant="attention" />      | <Badge text="10" circle variant="important" />      | <Badge text="10" circle variant="new" />      | <Badge text="10" circle variant="primary" />      |
+
+### Default Badge
+
+---
+
+A default badge can be styled as Bold or Subtle.
+
+<Canvas>
+  <Story id="components-badge--default" />
+</Canvas>
+
+<Canvas>
+  <Story id="components-badge--subtle" />
+</Canvas>
+
+Choose either Bold or Subtle style to work best for your design or screens.
+
+### Counter
+
+Use circle type to show the status of a value.
+
+<Canvas>
+  <Story id="components-badge--counter" />
+</Canvas>
+
+---
+
+## Usage guideline
+
+- **Do** write label as a single keyword, short and precise. Use two words only if necessary.
+- **Do not** include an icon inside a badge. The badge is a text label only.
+- Labels should remain case sensitive.
+- Keep label text precise.
+
+| **Variant**                                         | **When to use**                                                                 | **Example**                                   |
+| --------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------- |
+| <Badge text="Default" bold />                       | <ul><li>Category name</li><li>Item that shows no status change/action</li></ul> | “Traffic” to categorize traffic intake        |
+| <Badge text="Success" variant="success" bold />     | <ul><li>Approve</li><li>Success</li><li>Positive action</li></ul>               | “Active” in membership                        |
+| <Badge text="Attention" variant="attention" bold /> | <ul><li>Warning</li><li>Requires attention</li></ul>                            | “Confidential"                                |
+| <Badge text="Important" variant="important" bold /> | <ul><li>Error</li><li>Can cause error</li><li>Deletion</li></ul>                |                                               |
+| <Badge text="New" variant="new" bold />             | <ul><li>Status change</li><li>New feature</li></ul>                             | "New Plan"<br/> "Just Joined"<br/> "1" New notification 
+| <Badge text="Primary" variant="primary" bold />     | <ul><li>VIP</li><li>Highlight an item among other categories or items</li></ul> | "VP"<br/> "Best Value"                             |

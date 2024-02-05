@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppTitle Component should render the component 1`] = `
+<ForwardRef(TextComponent)
+  classNames={
+    Array [
+      "lsux-app-title",
+      "custom--class",
+    ]
+  }
+  text="some text"
+/>
+`;

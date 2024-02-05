@@ -1,0 +1,50 @@
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { RadioGroup } from './RadioGroup';
+
+# Radio Group Props
+
+**To display the radio props where you can interact with them and see how it behaves.**
+
+<Canvas>
+  <Story id="layout-radiogroup--default" />
+</Canvas>
+
+<ArgsTable of={RadioGroup}/>
+
+## Example Code
+
+```tsx
+<RadioGroup
+  title="Plan add-ons"
+  value="Home Business"
+  onChange={() => alert('Radio button was pressed')}
+  options={[
+    {
+      name: 'Trial Defense',
+      price: 14.95,
+      value: 'Trial Defense',
+    },
+
+    { name: 'Gun Owner', price: 14.95, value: 'Gun Owner' },
+    { name: 'Ride Share', price: 14.95, value: 'Ride Share' },
+    {
+      name: 'Home Business',
+      price: 14.95,
+      value: 'Home Business',
+    },
+    {
+      name: 'Business Builder',
+      price: 14.95,
+      value: 'Business Builder',
+    },
+  ]}
+/>
+```
+
+## When to use it
+
+Use a radio button when the user has to choose only one option based on a pre-defined list of mutually exclusive options.
+
+- Do use title props to show label for the radio-group
+- Do use value and onChange props to handle option selection
+- Do use options props object contaning { price, name, value } in order to render options for the radio-group

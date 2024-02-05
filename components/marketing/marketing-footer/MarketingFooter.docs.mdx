@@ -1,0 +1,46 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { MarketingFooter } from './MarketingFooter';
+import { Grid } from '../../foundation/grid/Grid';
+import { GridRow } from '../../foundation/grid/GridRow';
+import { GridCol } from '../../foundation/grid/GridCol';
+import { Text } from '../../atoms/text/Text';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="marketing-marketingfooter--default" />
+</Canvas>
+
+<ArgsTable of={MarketingFooter} />
+
+This is an example of how to implement the `MarketingFooter` component.
+
+### Example Code
+
+```tsx
+<MarketingFooter
+  availableMarkets={['en-us', 'es-us', 'en-ca', 'fr-ca']}
+  dark={false}
+  disclaimerContent="Disclaimer content"
+  download={true}
+  footerContent="Footer content"
+  onMarketClicked={handleMarketClick}
+  social={true}
+/>
+```
+
+### Result
+
+<MarketingFooter
+  availableMarkets={['en-us', 'es-us', 'en-ca', 'fr-ca']}
+  dark={false}
+  disclaimerContent="Disclaimer content"
+  download={true}
+  footerContent="Footer content"
+  onMarketClicked={() => {
+    return null;
+  }}
+  social={true}
+/>

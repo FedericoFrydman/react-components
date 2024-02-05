@@ -1,0 +1,45 @@
+@import '../../assets/styles/colors.scss';
+
+$list-item-input-control-padding: 12px;
+
+.lsux-list-item-input {
+  &__text {
+    display: flex;
+    flex: 1;
+  }
+  &__control {
+    display: flex;
+  }
+  &__button {
+    background-color: transparent;
+    border: none;
+    border-radius: var(--brand-border-radius);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3.5px;
+    padding: $list-item-input-control-padding;
+    transition: all ease-in 0.1s;
+    width: 100%;
+
+    &__children {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &--left {
+        margin-left: 0;
+        margin-right: $list-item-input-control-padding;
+      }
+      &--right {
+        margin-left: $list-item-input-control-padding;
+        margin-right: 0;
+      }
+    }
+
+    &--selected.show-halo {
+      box-shadow: 0 0 0 1.5px var(--brand-color-prim200);
+    }
+  }
+}

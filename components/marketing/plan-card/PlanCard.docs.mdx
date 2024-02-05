@@ -1,0 +1,40 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Grid } from '../../foundation/grid/Grid';
+import { GridRow } from '../../foundation/grid/GridRow';
+import { GridCol } from '../../foundation/grid/GridCol';
+import { Text } from '../../atoms/text/Text';
+import { PlanCard } from './PlanCard';
+
+<Title />
+
+<Description />
+
+<ArgsTable of={PlanCard} />
+
+## Usage Guidelines
+
+- Use this component to display a plan card with a title, subtext, and a description.
+- Use the `selected` prop to select the PlanCard.
+- Use the sub-components to add more content to the PlanCard.
+
+### Example Code
+
+```tsx
+<PlanCard id="ls-card" isSelected={true} selectable>
+  <PlanCardInfo
+    appName="LegalShield"
+    planDescription={'Legal protection for you and your family'}
+    planFees={'+ processing fees'}
+    planName={'Individual & Family Legal'}
+    planPrice={'$29.95'}
+    planRecurrence={'/mo'}
+    planType={'Legal Plan'}
+    showFees={true}
+    onClick={null}
+    onSeeMoreClick={() => alert('See more!')}
+  >
+    <PlanCardRegionPicker availableRegions={planCardAvailableRegions} selectedRegion={'CA'} onRegionSelect={null} />
+  </PlanCardInfo>
+  <PlanCardAddOns />
+</PlanCard>
+```

@@ -1,0 +1,28 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-email-numbered-steps {
+  margin: 0 auto;
+  width: 552px;
+
+  &--number {
+    padding-right: 16px;
+    vertical-align: top;
+
+    .lsux-heading {
+      background-color: $N300;
+      border-radius: 50%;
+      height: 50px;
+      padding: 10px;
+      text-align: center;
+      width: 50px;
+    }
+  }
+  &--content {
+    .lsux-heading {
+      margin-top: 0;
+    }
+    .lsux-text {
+      margin-bottom: 32px;
+    }
+  }
+}

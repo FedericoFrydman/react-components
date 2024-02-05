@@ -1,0 +1,19 @@
+.SearchForm {
+  align-items: center;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+  &--title,
+  &--search-field,
+  &--search-button {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  &--search-button {
+    width: unset;
+  }
+}

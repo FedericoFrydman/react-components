@@ -1,0 +1,192 @@
+@import '../../assets/styles/brand.scss';
+@import '../../assets/styles/colors.scss';
+
+.lsux-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lsux-icon {
+  filter: $filter-default;
+  transition: all 0.15s ease-in-out;
+
+  &--no-transition {
+    transition: none;
+  }
+
+  &.lsux-icon--mono {
+    filter: none;
+  }
+
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &--xsmall {
+    height: 12px;
+    width: 12px;
+  }
+
+  &--small {
+    height: 16px;
+    width: 16px;
+  }
+
+  &--medium-small {
+    height: 18px;
+    width: 18px;
+  }
+
+  &--medium {
+    height: 24px;
+    width: 24px;
+  }
+
+  &--large {
+    height: 32px;
+    width: 32px;
+  }
+
+  &--xlarge {
+    height: 48px;
+    width: 48px;
+  }
+
+  &--N00 {
+    filter: $filter-white;
+  }
+  &--N100 {
+    filter: $filter-neutral-100;
+  }
+  &--N300 {
+    filter: $filter-neutral-300;
+  }
+  &--N500 {
+    filter: $filter-light-gray;
+  }
+  &--N700 {
+    filter: $filter-gray;
+  }
+  &--N800 {
+    filter: $filter-black;
+  }
+  &--N1000 {
+    filter: $filter-deep-black;
+  }
+
+  &--G10 {
+    filter: $filter-green-10;
+  }
+  &--G100 {
+    filter: $filter-green-100;
+  }
+  &--G200 {
+    filter: $filter-green;
+  }
+  &--G300 {
+    filter: $filter-green-300;
+  }
+
+  &--P10 {
+    filter: $filter-purple-10;
+  }
+  &--P100 {
+    filter: $filter-purple-100;
+  }
+  &--P200 {
+    filter: $filter-purple-200;
+  }
+  &--P300 {
+    filter: $filter-purple-300;
+  }
+
+  &--R10 {
+    filter: $filter-red-10;
+  }
+  &--R100 {
+    filter: $filter-red-100;
+  }
+  &--R200 {
+    filter: $filter-red-200;
+  }
+  &--R300 {
+    filter: $filter-red;
+  }
+
+  &--B10 {
+    filter: $filter-blue-10;
+  }
+  &--B100 {
+    filter: $filter-blue-100;
+  }
+  &--B200 {
+    filter: $filter-blue;
+  }
+  &--B300 {
+    filter: $filter-blue-300;
+  }
+
+  &--Y10 {
+    filter: $filter-yellow-10;
+  }
+  &--Y100 {
+    filter: $filter-yellow-100;
+  }
+  &--Y200 {
+    filter: $filter-yellow-200;
+  }
+  &--Y300 {
+    filter: $filter-yellow;
+  }
+
+  &--BRAND50 {
+    filter: var(--brand-color-prim50-filter);
+  }
+
+  &--BRAND100 {
+    filter: var(--brand-color-prim100-filter);
+  }
+
+  &--BRAND200 {
+    filter: var(--brand-color-prim200-filter);
+  }
+
+  &--BRAND300 {
+    filter: var(--brand-color-prim300-filter);
+  }
+}
+
+.circle {
+  background: $R200;
+  border-radius: 50%;
+
+  &--xsmall {
+    height: 4px;
+    width: 4px;
+  }
+
+  &--small {
+    height: 5px;
+    width: 5px;
+  }
+
+  &--medium-small {
+    height: 6px;
+    width: 6px;
+  }
+
+  &--medium {
+    height: 7px;
+    width: 7px;
+  }
+
+  &--large {
+    height: 9px;
+    width: 9px;
+  }
+
+  &--xlarge {
+    height: 11px;
+    width: 11px;
+  }
+}

@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component should render the component 1`] = `
+<div
+  className="lsux-modal-blocker shadow100-bottom"
+  id="modal"
+>
+  <div
+    className="lsux-modal lsux-modal-position-center elevation-4"
+    onScroll={[Function]}
+  >
+    <ForwardRef(ContainerComponent)
+      classNames={
+        Object {
+          "lsux-modal__header": true,
+          "pb-2": true,
+          "pr-4": true,
+          "pt-4": true,
+        }
+      }
+    >
+      <ForwardRef(ButtonComponent)
+        alt="Close"
+        iconLeft="edit_close_circle_filled"
+        iconSize="medium"
+        onClick={[Function]}
+        shape="rectangular"
+        variant="tertiary"
+      />
+    </ForwardRef(ContainerComponent)>
+    <ForwardRef(ContainerComponent)
+      classNames={
+        Object {
+          "lsux-modal__content": true,
+          "pb-5": true,
+          "pt-4": [Function],
+          "pt-5": false,
+          "px-5": true,
+        }
+      }
+      flexDirection="column"
+      flexbox={true}
+    >
+      <ForwardRef(ContainerComponent)
+        flexDirection="column"
+        flexbox={true}
+        justifyContent="flex-start"
+      >
+        <ForwardRef(ContainerComponent)
+          classNames={
+            Array [
+              "lsux-modal--children",
+            ]
+          }
+        >
+          <ModalTitle
+            text="My Title"
+          />
+          <ForwardRef(TextComponent)>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ForwardRef(TextComponent)>
+        </ForwardRef(ContainerComponent)>
+      </ForwardRef(ContainerComponent)>
+      <ModalActions
+        classNames={
+          Array [
+            "lsux-modal__button-bar",
+          ]
+        }
+      >
+        <ForwardRef(ButtonComponent)
+          classNames={
+            Array [
+              "lsux-modal-button-pad",
+            ]
+          }
+          disabled={false}
+          label="Label"
+          onClick={[Function]}
+          shape="rectangular"
+          variant="primary"
+        />
+        <ForwardRef(ButtonComponent)
+          disabled={false}
+          label="Cancel"
+          onClick={[Function]}
+          shape="rectangular"
+          variant="secondary"
+        />
+      </ModalActions>
+    </ForwardRef(ContainerComponent)>
+  </div>
+</div>
+`;

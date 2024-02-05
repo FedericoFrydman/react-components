@@ -1,0 +1,77 @@
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Alert } from './Alert';
+
+# Alert
+
+Alert displays high priority message related to a task, system feedback or global non-task notifications. It is persistent until user dismisses and can include action link related to the message. A screen can have multiple Alerts with most important Alert stacking at the top.
+
+<Canvas>
+  <Story id="components-alert--default" />
+</Canvas>
+
+<Meta component={Alert} title="Alert" />
+
+### Usage Guidelines
+
+1. Avoid modifying the appearance of preset styles and icons.
+2. Do not excessively stack standalone alerts. Limit to max 3 banners.
+3. Consider combine Alerts if they are the same type or consider a dedicated interface as a possibly better approach.
+4. Use sentence case capitalization
+5. For notification that is short and specific task related or temporary, use
+   [Snackbar](https://ux-framework-svc-sandbox-us.app.pplsicorp.com/?path=/docs/components-toast--information-toast) instead.
+
+---
+
+### Styles and priority
+
+| Severity      | Use                                                                            | Example                                                             | Importance          |
+| ------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------- | ------------------- |
+| Default       | Strictly information only                                                      | We have pre-filled your account information.                        | 5 (least important) |
+| Informational | Information related to a task or result of an action                           | To continue accessing your account, you must create a new password. | 4                   |
+| Success       | Task completed or success                                                      | Payment has been updated.                                           | 3                   |
+| Warning       | Actions that are not desirable or might have unexpected results                | You are viewing confidential information.                           | 2                   |
+| Error         | Critical failure or error and action/screen is blocked until error is resolved | Account cannot be created. Please try again later.                  | 1 (most important)  |
+
+### Examples
+
+---
+
+#### Default
+
+<Canvas>
+  <Story id="components-alert--default" />
+</Canvas>
+
+#### Default (Dismissible)
+
+<Canvas>
+  <Story id="components-alert--default-dismissible" />
+</Canvas>
+
+#### Informational
+
+<Canvas>
+  <Story id="components-alert--information" />
+</Canvas>
+
+#### Success
+
+<Canvas>
+  <Story id="components-alert--success" />
+</Canvas>
+
+#### Warning
+
+<Canvas>
+  <Story id="components-alert--warning" />
+</Canvas>
+
+#### Error
+
+<Canvas>
+  <Story id="components-alert--error" />
+</Canvas>
+
+## ArgsTable
+
+<ArgsTable of={Alert} />

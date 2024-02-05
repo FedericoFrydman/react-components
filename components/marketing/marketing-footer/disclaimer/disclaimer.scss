@@ -1,0 +1,26 @@
+@import '../../../assets/styles/colors.scss';
+
+.lsux-disclaimer {
+  &--dark {
+    color: $N600;
+    font-size: xx-small;
+    line-height: 1.4;
+  }
+  &--light {
+    color: $N1000;
+    font-size: xx-small;
+    line-height: 1.4;
+  }
+
+  &--dark a,
+  &--dark a:link,
+  &--dark a:visited {
+    color: $N600;
+  }
+
+  &--light a,
+  &--light a:link,
+  &--light a:visited {
+    color: $N1000;
+  }
+}

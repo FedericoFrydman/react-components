@@ -1,0 +1,45 @@
+import { FC } from 'react';
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { DataTable } from './DataTable';
+import { Alert } from '../../molecules/alert/Alert';
+
+<Title />
+
+<Alert heading="Experimental component" dismissible={false} severity="warning">This is a 'work in progress' component that uses React Table V8</Alert>
+
+<Description />
+
+DataTable used TanStack Table framework and written in TypeScript, TanStack Table is headless. This means that it doesn't render any DOM elements, and instead relies on you, the UI/UX developer to provide the table's markup and styles.
+More info in [docs](https://tanstack.com/table/v8/docs/guide/overview)
+\*\*
+
+## Core Objects and Types
+
+- Column Defs
+  - Objects used to configure a column and its data model, display templates, and more
+- Table
+  - The core table object containing both state and API
+- Table Data
+  - The core data array you provide the table
+- Columns
+  - Each column mirrors its respective column def and also provide column-specific APIs
+- Rows
+  - Each row mirrors its respective row data and provides row-specific APIs
+- Header Groups
+  - Header groups are computed slices of nested header levels, each containing a group of headers
+- Headers
+  - Each header is either directly associated with or derived from its column def and provides header-specific APIs
+- Cells
+  - Each cell mirrors its respective row-column intersection and provides cell-specific APIs
+
+There are even more structures that pertain to specific features like filtering, sorting, grouping, etc, which you can find in the [features](https://tanstack.com/table/v8/docs/guide/features) section.
+
+<ArgsTable of={DataTable}/>
+
+<Canvas>
+  <Story id="layout-datatable--default" />
+</Canvas>
+
+<Canvas>
+  <Story id="layout-datatable--expanded" />
+</Canvas>

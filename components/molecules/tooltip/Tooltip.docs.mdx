@@ -1,0 +1,42 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Tooltip } from './Tooltip';
+import { Badge } from '../badge/Badge';
+
+<Title />
+
+Tooltip is a highly customizable component used mainly on less-intuitive elements when additional information is needed.
+
+This component uses library Tippy.js from https://atomiks.github.io/tippyjs/.
+
+<Description />
+
+<Canvas>
+  <Story id="components-tooltip--default" />
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={Tooltip}/>
+
+<Stories />
+
+## Example Code
+
+```tsx
+<Tooltip animation="scale" arrow placement="bottom" text="Some text">
+  <Badge text="Hover" />
+</Tooltip>
+```
+
+### Result
+
+<Tooltip animation="scale" arrow placement="bottom" text="Some text">
+  <Badge text="Hover" />
+</Tooltip>
+
+## Usage guidelines
+
+- **Do** use Tooltip to give additional information to improve user’s confidence
+- **Do not** use Tooltip to show critical information
+- Do not repeat trigger link title in the Tooltip
+- Tooltip support pure text content only so should not contain any form elements, use Popover instead.

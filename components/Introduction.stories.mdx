@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/addon-docs';
+import { version } from '../../package.json';
+import { Heading } from '../index.ts';
+
+<Meta title="Introduction/Getting Started" />
+
+# Adonis UX Framework
+
+<Heading as="T26" text={`v${version}`} />
+
+This is a shared web components library to be used across LegalShield React apps.
+
+## Usage
+
+### Install the library
+
+Create a new file `.npmrc` in the same folder where you have `package.json`. And add this line on it:
+
+```
+@legalshield:registry=https://npm.pkg.github.com/legalshield
+```
+
+You will also need to create your [GIT_PERSONAL_ACCESS_TOKEN](https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token) with at least `read:packages` access. And add it to your env.
+
+Then run:
+
+```
+npm config set '//npm.pkg.github.com/:_authToken' "${GIT_PERSONAL_ACCESS_TOKEN}"
+```
+
+**NOTE:** If you are using docker in your project make sure to run these steps in your dockerfile
+
+```docker
+ARG GIT_PERSONAL_ACCESS_TOKEN
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm config set '//npm.pkg.github.com/:_authToken' "${GIT_PERSONAL_ACCESS_TOKEN}"
+COPY .npmrc ./
+RUN npm install
+COPY . .
+```
+
+Now you will be able to install the library.
+
+```
+npm install @legalshield/adonis-ux-framework;
+```
+
+### Import the components in your React App.
+
+```jsx
+import { SomeComponent } from '@legalshield/adonis-ux-framework';
+
+...
+
+<SomeComponent />
+...
+```
+
+## Development Instructions
+
+1. Create new components inside `src/components`.
+
+2. Export the component in the `src/components/index.ts` file to make it accesible as an npm package.
+
+## Submitting a PR
+
+### Creating your branch
+
+`your-GH-user--jiraboard-jiranumber-description` like `someuser--FEP-84`
+
+This will allow use to track the project and contributor.

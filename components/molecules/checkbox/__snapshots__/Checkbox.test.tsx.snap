@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Component should render the component 1`] = `
+<label
+  className="lsux-cb-container"
+  data-testid="lsux-cb-container"
+>
+  <input
+    checked={false}
+    className="lsux-cb-container__input"
+    disabled={false}
+    name="checkbox-test"
+    onClick={[Function]}
+    type="checkbox"
+  />
+  <div
+    className="lsux-cb-container__cb lsux-cb-container__cb--filled"
+    data-testid="lsux-cb-container__icon"
+  />
+</label>
+`;

@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs';
+import { RuntimeCSSTest } from './RuntimeCSSTest';
+
+<Meta title="Foundation/RuntimeCSS" />
+
+# Runtime CSS
+
+There are several items in CSS managed by the adonis-design-service that are available and useful in the css.
+
+## var(--dynamic-pad)
+
+Script in the design-service will set a variable called "dynamic-pad" to a variable amount depending on the screen width.
+This allows variable spacing as the screen gets smaller. Values are 16, 24, or 32 px depending on the width of the screen.
+
+## body.using-key | body.using-mouse
+
+These are classes applied to the body tag when a mouse is clicked or when a tab is hit.
+
+It allows a control to render focus styling only when keyboard input is being used; highly useful. This can be done for a specific css class for a control (e.g. foo) by
+defining its css as:
+
+body.using-key .foo:focus {
+
+}
+
+You can turn off/on the global css in storybook with these commands
+
+<RuntimeCSSTest />

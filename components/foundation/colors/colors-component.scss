@@ -1,0 +1,99 @@
+@import '../../assets/styles/colors.scss';
+
+.color--wrapper {
+  border: 1px solid $N300;
+  margin-bottom: 30px;
+
+  .color--header {
+    background-color: $N100;
+    border-bottom: 1px solid $N300;
+    padding: 10px;
+
+    h2 {
+      margin: 0;
+    }
+  }
+  .color--info-header {
+    border-top: none;
+    padding: 10px;
+  }
+  .color--description {
+    color: $N700;
+    font-size: 14px;
+  }
+  .color--info {
+    display: flex;
+    flex-wrap: wrap;
+
+    .color--info-wrapper {
+      border: 1px solid $N300;
+      padding: 10px;
+      width: 17.89%;
+
+      div {
+        height: 110px;
+        margin: 0 auto;
+      }
+      .color--hex-cod {
+        margin-bottom: 0;
+      }
+      .color--rgb-cod {
+        margin-top: 0;
+      }
+      .color--name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .color--Neutral {
+    .color--info-wrapper {
+      &:nth-child(-n + 10) {
+        border-bottom: none;
+      }
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(9),
+      &:nth-child(12),
+      &:nth-child(14) {
+        border-left: none;
+        border-right: none;
+      }
+      &:nth-child(1),
+      &:nth-child(6),
+      &:nth-child(11) {
+        border-left: none;
+      }
+      &:nth-child(5),
+      &:nth-child(10),
+      &:nth-child(15) {
+        border-right: none;
+      }
+    }
+  }
+  .color--Blue,
+  .color--Purple,
+  .color--Green,
+  .color--Yellow,
+  .color--Red {
+    .color--info-header {
+      border-bottom: 1px solid $N300;
+    }
+    .color--info-wrapper {
+      border-top: none;
+    }
+    .color--info-wrapper {
+      &:nth-child(1) {
+        border-left: none;
+      }
+      &:nth-child(even) {
+        border-left: none;
+        border-right: none;
+      }
+      &:nth-child(4) {
+        border-right: 1px solid $N300;
+      }
+    }
+  }  
+}

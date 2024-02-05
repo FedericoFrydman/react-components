@@ -1,0 +1,85 @@
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/colors.scss';
+
+.lsux-text {
+  margin: 0;
+
+  // Text Weights
+  &--normal {
+    font-weight: normal;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+  &--semibold {
+    font-weight: 600;
+  }
+
+  // Text Sizes
+  &--tiny {
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    line-height: 12px;
+  }
+  &--description,
+  &--small {
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: -0.006em;
+    line-height: 16px;
+  }
+  &--body,
+  &--medium {
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: -0.006em;
+    line-height: 18px;
+  }
+  &--large {
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: -0.011em;
+    line-height: 22px;
+  }
+  &--extra-large {
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: -0.014em;
+    line-height: 24px;
+  }
+
+  // Text Styles
+  &--italic {
+    font-style: italic;
+  }
+  &--strike {
+    text-decoration: line-through;
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+
+  &--separator {
+    align-items: center;
+    display: flex;
+    text-transform: lowercase;
+
+    &::before,
+    &::after {
+      background-color: $N300;
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+    }
+
+    &::before {
+      margin-right: 16px;
+    }
+
+    &::after {
+      margin-left: 16px;
+    }
+  }
+}

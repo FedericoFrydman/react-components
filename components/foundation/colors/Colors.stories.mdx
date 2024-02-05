@@ -1,0 +1,31 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { Source } from '@storybook/addon-docs';
+import { globalColors } from './index';
+import { brandColors } from './index';
+import { Colors } from './Colors';
+
+<Meta title="Foundation/Colors" />
+
+# Colors
+
+Colors at PPLSI create visual interests, call for attention, and distinguish our products. Our color system provides guidelines to help create an interface with predictable experiences. The use of our colors must have a sufficient contrast ratio and adheres to [Web Content Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+
+**Helpful link:** [Color contrast checker](https://webaim.org/resources/contrastchecker/)
+
+**Helpful link:** [Link contrast checker](https://webaim.org/resources/linkcontrastchecker/)
+
+<Colors
+  colors={globalColors}
+  sectionTitle="Global colors"
+  sectionDescription="Global colors are default colors regardless of brand or product."
+/>
+
+## Usage
+
+If you need to use some color in a custom component, these are also being exported as css variables so they can be used like the following example once you have the dist/index.css file imported in your project.
+
+```css
+.some-class {
+  color: var(--b10); // $B10
+}
+```

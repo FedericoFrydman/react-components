@@ -1,0 +1,57 @@
+import { FC } from 'react';
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { List } from './List';
+import { ListTest } from './ListTest';
+import { Container } from '../../atoms/container/Container';
+import { Input } from '../../molecules/input/Input';
+import { FormField } from '../../organisms/form-field/FormField';
+import { Heading } from '../../atoms/heading/Heading';
+
+<Title />
+
+A List component is a special type of Container that displays similar data or controls.
+Use a List to display grouped data or grouped controls such as similar settings or mult-select lists.
+
+<Meta component={List} title={List} />
+
+<ArgsTable of={List} />
+
+## Components
+
+<br />
+
+### List
+
+The List component handles top level logic and styling for a group of list items.
+
+### ListItem
+
+A ListItem is a container for a single item in a List. It handles styling and spacing for a single item.
+
+### ListItemInput
+
+A ListItemInput is a ListItem that contains an input control such as a Button, Checkbox, Radio Button, or Switch.
+
+You can call selection inputs with the following syntax:
+
+```tsx
+<ListItemInput.Checkbox  {...props} />
+<ListItemInput.Radio  {...props} />
+<ListItemInput.Switch  {...props} />
+```
+
+## Usage Guidelines
+
+- Only display similar grouped data
+- Keep content short to avoid scrolling on small screens
+- **Do not** nest Lists with controls
+
+## Example Code
+
+```tsx
+// Example code
+```
+
+### Demo
+
+<ListTest />

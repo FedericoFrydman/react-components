@@ -1,0 +1,13 @@
+@import '../../../assets/styles/colors.scss';
+
+.lsux-download-app {
+  text-align: center;
+  .lsux-text {
+    &--dark {
+      color: $N00;
+    }
+    &--light {
+      color: $N1000;
+    }
+  }
+}

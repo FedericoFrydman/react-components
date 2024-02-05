@@ -1,0 +1,120 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-link-content {
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+
+  &--divider {
+    border-bottom: 1px solid $N300;
+  }
+
+  &--topdivider {
+    border-top: 1px solid $N300;
+  }
+
+  &--padding {
+    padding: 8px;
+  }
+
+  &--margin {
+    margin: 8px;
+  }
+
+  &--dynamic-left {
+    padding-left: calc(var(--dynamic-pad) - 8px);
+  }
+
+  &--dynamic-right {
+    padding-right: calc(var(--dynamic-pad) - 8px);
+  }
+
+  .lsux-icon-container {
+    padding-right: 23px;
+  }
+
+  &--icon-right {
+    padding-left: 5px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.lsux-link-content--disabled,
+  &.lsux-link-content--active {
+    cursor: auto;
+    pointer-events: none;
+  }
+
+  &.lsux-link-content--menu {
+    color: $N1000;
+    padding: 12px 24px;
+
+    &:hover {
+      background: $N100;
+      border-radius: 4px;
+    }
+
+    &.lsux-link-content--active {
+      background: $N100;
+      border-radius: 4px;
+      color: $N1000;
+    }
+
+    &.lsux-link-content--active img {
+      filter: var(--brand-color-prim300-filter);
+    }
+
+    &.lsux-link-content--disabled {
+      background: $N100;
+      color: $N500;
+      pointer-events: none;
+    }
+
+    &.lsux-link-content--hidden {
+      display: none;
+    }
+
+    &.lsux-link-content--disabled img {
+      filter: $filter-light-gray;
+      pointer-events: none;
+    }
+  }
+
+  &.lsux-link-content--link {
+    color: var(--link-content-default);
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: var(--link-content-focus);
+      text-decoration: none;
+    }
+
+    &:active {
+      color: var(--link-content-active);
+    }
+
+    img {
+      filter: $filter-blue;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    &.lsux-link-content--disabled {
+      color: $N300;
+      pointer-events: none;
+
+      img {
+        filter: $filter-light-gray;
+      }
+
+      &:hover,
+      &:focus {
+        color: $N300;
+        text-decoration: underline;
+      }
+    }
+  }
+}

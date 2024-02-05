@@ -1,0 +1,157 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-dropdown-content,
+.lsux-dropdown-subcontent {
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  min-width: 220px;
+  will-change: transform, opacity;
+}
+.lsux-dropdown-content[data-side='top'],
+.lsux-dropdown-subcontent[data-side='top'] {
+  animation-name: slideDownAndFade;
+}
+.lsux-dropdown-content[data-side='right'],
+.lsux-dropdown-subcontent[data-side='right'] {
+  animation-name: slideLeftAndFade;
+}
+.lsux-dropdown-content[data-side='bottom'],
+.lsux-dropdown-subcontent[data-side='bottom'] {
+  animation-name: slideUpAndFade;
+}
+.lsux-dropdown-content[data-side='left'],
+.lsux-dropdown-subcontent[data-side='left'] {
+  animation-name: slideRightAndFade;
+}
+
+.lsux-dropdown-scroll-area {
+  max-height: 72vh; // Adjust this to suit your needs
+  overflow: auto;
+}
+
+.lsux-dropdown-item,
+.lsux-dropdown-checkbox-item,
+.lsux-dropdown-radio-item,
+.lsux-dropdown-sub-trigger {
+  align-items: center;
+  border-radius: 3px;
+  color: $N800;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  height: 25px;
+  letter-spacing: -0.006em;
+  line-height: 18px;
+  line-height: 1;
+  min-height: 40px;
+  outline: none;
+  padding: 8px 16px 8px 25px;
+  position: relative;
+  text-align: left;
+  user-select: none;
+  .right-slot {
+    color: $N800;
+    margin-left: auto;
+    padding-left: 20px;
+  }
+  [data-highlighted] > .right-slot {
+    color: $N800;
+  }
+  [data-disabled] .right-slot {
+    color: $N100;
+  }
+}
+.lsux-dropdown-sub-trigger[data-state='open'] {
+  background-color: $N100;
+  color: $N800;
+}
+.lsux-dropdown-item[data-disabled],
+.lsux-dropdown-checkbox-item[data-disabled],
+.lsux-dropdown-radio-item[data-disabled],
+.lsux-dropdown-sub-trigger[data-disabled] {
+  color: $N400;
+  pointer-events: none;
+}
+.lsux-dropdown-item[data-highlighted],
+.lsux-dropdown-checkbox-item[data-highlighted],
+.lsux-dropdown-radio-item[data-highlighted],
+.lsux-dropdown-sub-trigger[data-highlighted] {
+  background-color: $N100;
+  color: var(--brand-color-prim400);
+}
+
+.lsux-dropdown-label {
+  color: $N800;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  padding: 16px 16px 8px 16px;
+}
+
+.lsux-dropdown-separator {
+  background-color: $N200;
+  height: 1px;
+  margin: 5px;
+}
+
+.lsux-dropdown-item-indicator {
+  align-items: center;
+  color: $N700;
+  display: inline-flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 25px;
+}
+
+.lsux-dropdown-arrow {
+  fill: $N00;
+}
+
+@keyframes slideUpAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRightAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

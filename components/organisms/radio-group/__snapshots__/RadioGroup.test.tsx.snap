@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup Component should render the component 1`] = `
+<div
+  className="lsux-rbg-container checkbox-section"
+>
+  <ForwardRef(HeadingComponent)
+    as="T20"
+    className="lsux-checkbox-title"
+    text="Plan add-ons"
+  />
+  <div
+    className="lsux-checkbox-options-section"
+  >
+    <ul
+      className="lsux-checkbox-option-div"
+    >
+      <li
+        className="lsux-option-li"
+        key="Trial Defense"
+        onClick={[Function]}
+      >
+        <div
+          className="lsux-option-div"
+        >
+          <div
+            className="lsux-option-subdiv"
+          >
+            <label
+              htmlFor="helper-radio-0"
+            >
+              <ForwardRef(TextComponent)
+                classNames={
+                  Array [
+                    "mb-1",
+                  ]
+                }
+                text="Trial Defense"
+                textWeight="normal"
+              />
+              <ForwardRef(TextComponent)
+                text="$14.95/mo"
+                textWeight="semibold"
+              />
+            </label>
+          </div>
+          <div
+            className="lsux-checked-icon"
+          >
+            <ForwardRef(IconComponent)
+              color="N700"
+              name="warning_circle"
+              size="medium"
+            />
+          </div>
+        </div>
+      </li>
+      <li
+        className="lsux-option-li"
+        key="Gun Owner"
+        onClick={[Function]}
+      >
+        <div
+          className="lsux-option-div"
+        >
+          <div
+            className="lsux-option-subdiv"
+          >
+            <label
+              htmlFor="helper-radio-1"
+            >
+              <ForwardRef(TextComponent)
+                classNames={
+                  Array [
+                    "mb-1",
+                  ]
+                }
+                text="Gun Owner"
+                textWeight="normal"
+              />
+              <ForwardRef(TextComponent)
+                text="$14.95/mo"
+                textWeight="semibold"
+              />
+            </label>
+          </div>
+          <div
+            className="lsux-checked-icon"
+          >
+            <ForwardRef(IconComponent)
+              color="N700"
+              name="warning_circle"
+              size="medium"
+            />
+          </div>
+        </div>
+      </li>
+      <li
+        className="lsux-option-li"
+        key="Ride Share"
+        onClick={[Function]}
+      >
+        <div
+          className="lsux-option-div"
+        >
+          <div
+            className="lsux-option-subdiv"
+          >
+            <label
+              htmlFor="helper-radio-2"
+            >
+              <ForwardRef(TextComponent)
+                classNames={
+                  Array [
+                    "mb-1",
+                  ]
+                }
+                text="Ride Share"
+                textWeight="normal"
+              />
+              <ForwardRef(TextComponent)
+                text="$14.95/mo"
+                textWeight="semibold"
+              />
+            </label>
+          </div>
+          <div
+            className="lsux-checked-icon"
+          >
+            <ForwardRef(IconComponent)
+              color="N700"
+              name="warning_circle"
+              size="medium"
+            />
+          </div>
+        </div>
+      </li>
+      <li
+        className="lsux-option-li"
+        key="Home Business"
+        onClick={[Function]}
+      >
+        <div
+          className="lsux-option-div"
+        >
+          <div
+            className="lsux-option-subdiv"
+          >
+            <label
+              htmlFor="helper-radio-3"
+            >
+              <ForwardRef(TextComponent)
+                classNames={
+                  Array [
+                    "mb-1",
+                  ]
+                }
+                text="Home Business"
+                textWeight="normal"
+              />
+              <ForwardRef(TextComponent)
+                text="$14.95/mo"
+                textWeight="semibold"
+              />
+            </label>
+          </div>
+          <div
+            className="lsux-checked-icon"
+          >
+            <ForwardRef(IconComponent)
+              color="P200"
+              name="warning_circle_check"
+              size="medium"
+            />
+          </div>
+        </div>
+      </li>
+      <li
+        className="lsux-option-li"
+        key="Business Builder"
+        onClick={[Function]}
+      >
+        <div
+          className="lsux-option-div"
+        >
+          <div
+            className="lsux-option-subdiv"
+          >
+            <label
+              htmlFor="helper-radio-4"
+            >
+              <ForwardRef(TextComponent)
+                classNames={
+                  Array [
+                    "mb-1",
+                  ]
+                }
+                text="Business Builder"
+                textWeight="normal"
+              />
+              <ForwardRef(TextComponent)
+                text="$14.95/mo"
+                textWeight="semibold"
+              />
+            </label>
+          </div>
+          <div
+            className="lsux-checked-icon"
+          >
+            <ForwardRef(IconComponent)
+              color="N700"
+              name="warning_circle"
+              size="medium"
+            />
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

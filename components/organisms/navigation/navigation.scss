@@ -1,0 +1,32 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-navigation--wrapper {
+  box-shadow: inset -1px 0px 0px #dfe1e6;
+
+  .lsux-navigation {
+    height: calc(100vh - var(--impersonateplusheaderheight));
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 256px;
+
+    .lsux-navigation--children {
+      padding-left: 38px;
+    }
+
+    .lsux-link-content--menu {
+      font-weight: 600;
+      padding: 12px 24px;
+
+      &:hover,
+      &.lsux-link-content--active {
+        background-color: var(--brand-color-prim50);
+        border-radius: 0px 50px 50px 0px;
+        color: var(--brand-color-prim300);
+
+        img {
+          filter: var(--brand-color-prim300-filter);
+        }
+      }
+    }
+  }
+}

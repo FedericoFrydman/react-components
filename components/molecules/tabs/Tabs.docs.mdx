@@ -1,0 +1,57 @@
+import { FC } from 'react';
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { TabsTest } from './TabsTest';
+import { Tabs } from './Tabs';
+import { Container } from '../../../components/atoms/container/Container';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="navigation-tabs--pills-variant" />
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={Tabs} />
+
+## Usage guidelines
+
+- **Do** order the tabs according to user needs/current context
+- **Keep** Tab label 1-2 words, simple and straightforward
+- **Do not** use Tabs to show of sequential pages of content, use Pagination instead
+- **Do not** put another Tabs into an existing Tab
+- **Recommend** no more than 5 tabs - more than that will become too many choices for user to choose or too many to consider. In that case, looking architecture to re-group content instead.
+- **Consider** letting keyboard users switch tabs with left or right keys
+
+## Example code
+
+```tsx
+export const TabsTest: FC = ({}) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const setSelectedIndex = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  return (
+    <Tabs
+      tabNames={['One', 'Two', 'Three', 'Four', 'Five', 'Six']}
+      activeIndex={activeIndex}
+      onClick={setSelectedIndex}
+    ></Tabs>
+  );
+};
+```
+
+### Result
+
+<Container classNames={['mb-5']}>
+  <TabsTest variant="tabs" />
+</Container>
+<Container classNames={['mb-5']}>
+  <TabsTest variant="pills" />
+</Container>
+<Container classNames={['mb-5']}>
+  <TabsTest variant="bar" />
+</Container>

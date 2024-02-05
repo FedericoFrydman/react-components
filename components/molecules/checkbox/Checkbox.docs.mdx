@@ -1,0 +1,123 @@
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Checkbox } from './Checkbox';
+import { FormField } from '../../organisms/form-field/FormField';
+import { Alert } from '../alert/Alert';
+
+# Checkbox
+
+Checkbox allows multiple selections from a set of options. User can select none, one or multiple.
+Checkbox component is always paired with a label. It can be single, as a group, or nested.
+Checkbox recieves an onClick prop in order to handle preventDefault or stopPropagation functions. The onClick prop is not required, and it should work without it.
+
+**This documentantion is just to display the input props where you can interact with them and see how it behaves. For implementation please use [FormField](/?path=/docs/forms-form-fields--checkbox-field) docs to gide.**
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  The Input component must be used as a child of a FormField component.
+</Alert>
+
+<Canvas>
+  <Story id="controls-form-fields-checkbox-props--unchecked" />
+</Canvas>
+
+<ArgsTable of={Checkbox} />
+
+## Example Code
+
+```tsx
+<FormField id="checox-field">
+  <Checkbox rightLabel="Checkbox Label" name="checkbox-field" checked={true} onChange={() => null} readOnly />
+</FormField>
+```
+
+### Result
+
+<FormField id="checox-field">
+  <Checkbox rightLabel="Checkbox Label" name="checkbox-field" checked={true} onChange={() => null} readOnly />
+</FormField>
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  The readOnly property here is just to avoid the ReactJS warning that indicates all checkox should have an onChange to
+  handle the value state. Please use an onChange function.
+</Alert>
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+## Types
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+### Checkbox group
+
+Checkboxes can be grouped for users to pick from a set of related options. _(This is just the way it could be disabled)_
+
+<Canvas>
+  <Story id="controls-form-fields-checkbox-props--group" />
+</Canvas>
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  Please use ReactJS Hook to handle the state for each checkbox.
+</Alert>
+
+### Nested Checkboxes
+
+Checkboxes may be nested to show a hierarchy of selections. Selecting a parent will automatically activate and select all children.
+
+Deselecting a parent checkbox will deactivate and deselect all children. If a group of child checkboxes contains a mixture of checked and unchecked, show an indeterminate state with a dash.
+
+<Canvas>
+  <Story id="controls-form-fields-checkbox-props--nested" />
+</Canvas>
+
+## Variants
+
+The `Checkbox` component now has two variants: `outlined` and `filled`. The `filled` variant is the default.
+
+### Outlined
+
+<Canvas>
+  <Story id="controls-form-fields-checkbox-props--checked-outlined" />
+</Canvas>
+
+### Filled
+
+<Canvas>
+  <Story id="controls-form-fields-checkbox-props--checked-filled" />
+</Canvas>
+
+## Guidelines
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+- **Do** Always provide a label.
+- **Do** Write labels in sentence case.
+- **Do not** Use punctuation in labels or after checkbox fields.
+- **Do** Keep labels short so users can select quickly and confidently.
+- **Do** Write labels as statements that the selected state makes true and the unselected state makes false.
+- **Do** Title a checkbox group if the content of a group of checkboxes is not immediately apparent, provide a title to clarify.
+- **Do** Both the checkbox and label should trigger selection.
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  Remember, when you make a list of components, you must add a unique key to each component.
+</Alert>
+
+## States
+
+### Disbled
+
+<Canvas>
+  <Story id="controls-form-fields-checkbox-props--disabled-filled" />
+</Canvas>
+
+### Mixed
+
+<Canvas>
+  <Story id="controls-form-fields-checkbox-props--mixed-filled" />
+</Canvas>
+
+### Error
+
+<Canvas>
+  <Story id="controls-form-fields-checkbox-props--error" />
+</Canvas>

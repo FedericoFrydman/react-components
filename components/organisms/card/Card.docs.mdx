@@ -1,0 +1,323 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Button } from '../../../';
+import { Card } from './Card';
+import { Grid } from '../../foundation/grid/Grid';
+import { GridRow } from '../../foundation/grid/GridRow';
+import { GridCol } from '../../foundation/grid/GridCol';
+import { Text } from '../../atoms/text/Text';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="layout-card--default" />
+</Canvas>
+
+<ArgsTable of={Card} />
+
+## Usage Guidelines
+
+1. **Do** use the same type of cards when in a group
+2. **Do** limit body content length and give a button to view details instead
+3. **Recommend** including a title to give clear context to users
+4. **Do not** use Card simply for decorative purposes
+
+## Sub Components
+
+### Image
+
+The `<Card.Image>` component is used for displaying an image in the `Card` while applying the correct styling.
+
+```tsx
+<Card cardWidth="320px">
+  <Card.Image
+    imageURL="https://www.iliketowastemytime.com/sites/default/files/imagecache/blog_image/Abu-Dhabi-United-Arab-Emirates-infinity-dunes-wallpaper-by-daniel-olah-iltwmt.jpg"
+    imageAltText="Picture description"
+  />
+  <Card.Content>
+    <Card.Title>Card with Image</Card.Title>
+    <Text text="Description of image" />
+  </Card.Content>
+</Card>
+```
+
+<Container>
+  <Card cardWidth="320px">
+    <Card.Image
+      imageURL="https://www.iliketowastemytime.com/sites/default/files/imagecache/blog_image/Abu-Dhabi-United-Arab-Emirates-infinity-dunes-wallpaper-by-daniel-olah-iltwmt.jpg"
+      imageAltText="Picture description"
+    />
+    <Card.Content>
+      <Card.Title>Card with Image</Card.Title>
+      <Text text="Description of image" />
+    </Card.Content>
+  </Card>
+</Container>
+
+### Content
+
+The `<Card.Content>` component provides padding for the content of the `Card`. A `Title` or `Text` is typically used within this component.
+
+```tsx
+<Card cardWidth="320px">
+  <Card.Content>
+    <Card.Title>Card with Content</Card.Title>
+    <Text text="Description of image" />
+  </Card.Content>
+</Card>
+```
+
+<Container>
+  <Card cardWidth="320px">
+    <Card.Content>
+      <Card.Title>Card with Content</Card.Title>
+      <Text text="Description of image" />
+    </Card.Content>
+  </Card>
+</Container>
+
+### Title
+
+The `<Card.Title>` component provides styling for a title in the `Card`.
+
+```tsx
+<Card cardWidth="320px">
+  <Card.Content>
+    <Card.Title>Card with Title</Card.Title>
+    <Text text="Content text goes here" />
+  </Card.Content>
+</Card>
+```
+
+<Container>
+  <Card cardWidth="320px">
+    <Card.Content>
+      <Card.Title>Card with Content</Card.Title>
+      <Text text="Content text goes here" />
+    </Card.Content>
+  </Card>
+</Container>
+
+### Actions
+
+The `<Card.Actions>` component provides styling for `Button` components that need to be displayed in a `Card`.
+
+```tsx
+<Card cardWidth="320px">
+  <Card.Content>
+    <Card.Title>Card with Title</Card.Title>
+    <Text text="Content text goes here" />
+  </Card.Content>
+  <Card.Actions align="left">
+    <Button label="Buy Now" />
+    <Button label="Learn More" />
+  </Card.Actions>
+</Card>
+```
+
+<Container>
+  <Card cardWidth="320px">
+    <Card.Content>
+      <Card.Title>Card with Title</Card.Title>
+      <Text text="Content text goes here" />
+    </Card.Content>
+    <Card.Actions align="left">
+      <Button label="Buy Now" />
+      <Button label="Learn More" />
+    </Card.Actions>
+  </Card>
+</Container>
+
+## Card Height
+
+This component has the prop `cardHeight` which you can define the card height.
+**If you are using the card inside the Grid Component you need to define the height as well in the GridCol.**
+If the card contains bottom components (like buttons, checkboxes, etc...) and they need to be align, please consider to define the height of the components above the bottom components. The card title has the option to define its height with the prop `cardTitleHeight`
+
+In case the card height needs to be dynamic base on window size, use the component [`useViewportSize`](?path=/docs/foundation-colors--page).
+This is an example of how to use the `useViewportSize` component to modify the height (this is pseudo code):
+
+```tsx
+const [height, setHeight] = useState('100%');
+const { width } = useViewportSize();
+
+switch (width) {
+  case width > '1023':
+    setHeight('100px');
+    break;
+  case width > '769':
+    setHeight('150px');
+    break;
+  default:
+    break;
+}
+
+<Card id="card-id" cardHeight={setHeight} cardTitleHeight="100px" cardTextHeight="150px">
+  <Card.Content>
+    <Card.Title>Card Title</Card.Title>
+  </Card.Content>
+</Card>;
+```
+
+This is an example of how to implement the card inside a grid with right height, which means they would be aligned when window is resize:
+
+### Example Code
+
+```tsx
+<Grid>
+  <GridRow variant="thirds">
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+  </GridRow>
+</Grid>
+```
+
+### Result
+
+<Grid>
+  <GridRow variant="thirds">
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+    <GridCol contentHeight="100%">
+      <Card id="card-id" cardHeight="100%">
+        <Card.Content>
+          <Card.Title>Card Title</Card.Title>
+          <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+        </Card.Content>
+      </Card>
+    </GridCol>
+  </GridRow>
+</Grid>
+
+<Canvas>
+  <Story id="layout-card--default" />
+</Canvas>
+
+<Canvas>
+  <Story id="layout-card--with-image" />
+</Canvas>
+
+<Canvas>
+  <Story id="layout-card--selectable" />
+</Canvas>
+
+<Canvas>
+  <Story id="layout-card--only-children" />
+</Canvas>
+
+## Example Code
+
+```tsx
+<div style={{ width: '25%' }}>
+  <Card>
+    <Card.Image imageURL="https://inconceivable.com/img/inconceivable.gif" imageAltText="inconceivable gif" />
+    <Card.Content>
+      <Card.Title>Card Title</Card.Title>
+      <Text text="My content" />
+    </Card.Content>
+    <Card.Actions>
+      <Button label="Hello" />
+    </Card.Actions>
+  </Card>
+</div>
+```
+
+### Result
+
+<div style={{ width: '25%' }}>
+  <Card>
+    <Card.Image imageURL="https://inconceivable.com/img/inconceivable.gif" imageAltText="inconceivable gif" />
+    <Card.Content>
+      <Card.Title>Card Title</Card.Title>
+      <Text text="My content" />
+    </Card.Content>
+    <Card.Actions>
+      <Button label="Hello" />
+    </Card.Actions>
+  </Card>
+</div>

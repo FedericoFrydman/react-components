@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link Component should render the component 1`] = `
+<a
+  className="lsux-link"
+  href=""
+>
+  <ForwardRef(TextComponent)
+    text="button"
+    textSize="medium"
+    textWeight="normal"
+  />
+</a>
+`;

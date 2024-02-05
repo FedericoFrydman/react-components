@@ -1,0 +1,35 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Heading } from '../heading/Heading';
+import { ProgressBar } from './ProgressBar';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="components-progressbar--default">
+  <ProgressBar />
+  </Story>
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={ProgressBar} />
+
+## Usage guideline
+
+- **Do** include proper ARIA tags to ensure Progress Bar is fully accessible for all users, including screen readers.
+- Our progress bar can be located anywhere but should be vertically and horizontally centered into space.
+- Animated loader bar is used for preloading exclusively.
+- Progress bar can be altered by changing the number value in the progressNumber property.
+- If a progress bar is triggered by a button, place the progress bar in the button, and disable the button while the progress bar is visible.
+- If only a portion of a page is displaying new content or being updated, place the progress bar in that part of the page.
+- If you are unsure where to place the progress bar, place it where you want the user's attention to be when loading is finished.
+- Only show animated loader bar if the expected wait time is more than a second.
+
+## Types
+
+| <Heading as="T16" text="Default Progress Bar" />     | <Heading as="T16" text="Animated Loader" />   |
+| ---------------------------------------------------- | --------------------------------------------- |
+|                                                      |                                               |
+| <ProgressBar progressBarType="progress" />           | <ProgressBar progressBarType="loop" />        |

@@ -1,0 +1,162 @@
+@import './variables.scss';
+@import './mixins/grid.scss';
+@import './mixins/breakpoints.scss';
+@import './mixins/grid-framework.scss';
+@import './flex.scss';
+
+@if $enable-grid-classes {
+  .container,
+  .container-fluid {
+    @include make-container;
+  }
+
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    .container-#{$breakpoint} {
+      @extend .container-fluid;
+    }
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      %responsive-container-#{$breakpoint} {
+        max-width: $container-max-width;
+      }
+
+      $extend-breakpoint: true;
+
+      @each $name, $width in $grid-breakpoints {
+        @if ($extend-breakpoint) {
+          .container#{breakpoint-infix($name, $grid-breakpoints)} {
+            @extend %responsive-container-#{$breakpoint};
+          }
+          @if ($breakpoint == $name) {
+            $extend-breakpoint: false;
+          }
+        }
+      }
+    }
+  }
+}
+
+@if $enable-grid-classes {
+  .lsux-row {
+    @include make-row();
+  }
+  .no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+
+    > .lsux-col,
+    > [class*='col-'] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}
+
+@if $enable-grid-classes {
+  div.lsux-grid > div.container-fluid > div.lsux-row > div.lsux-col > div.content {
+    padding-top: 1rem;
+  }
+
+  div.lsux-grid > div.container-fluid > div.lsux-row > div.lsux-col {
+    margin-bottom: 1rem;
+  }
+
+  div.lsux-grid > div.container-fluid > div.lsux-row > div.lsux-col:only-child {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  /* Variant Rules */
+
+  /* Row - Single Column Centered, Pillar */
+  div.lsux-grid > div.container-fluid > div.lsux-row.pillar,
+  div.lsux-grid > div.container-fluid > div.lsux-row.center {
+    justify-content: center;
+  }
+
+  div.lsux-grid > div.container-fluid > div.lsux-row.half > div,
+  div.lsux-grid > div.container-fluid > div.lsux-row.halves-fixed > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  @media (min-width: 320px) {
+    /* Row - Three/Two Column */
+    div.lsux-grid > div.container-fluid > div.lsux-row.thirds > div {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 640px) {
+    /* Row - Two Column - Full Column on Mobile - Single Column Pillared */
+    div.lsux-grid > div.container-fluid > div.lsux-row.pillar > div.lsux-col,
+    div.lsux-grid > div.container-fluid > div.lsux-row.mobile-full > div.lsux-col,
+    div.lsux-grid > div.container-fluid > div.lsux-row.halves > div.lsux-col {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    /* Row - Two Column -  4xleft 8xright */
+    div.lsux-grid > div.container-fluid > div.lsux-row.four-eight > div.lsux-col:first-of-type {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+
+    div.lsux-grid > div.container-fluid > div.lsux-row.four-eight > div.lsux-col:last-child {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%;
+    }
+
+    /* Row - Two Column -  9xleft 3xright */
+    div.lsux-grid > div.container-fluid > div.lsux-row.nine-three > div.lsux-col:first-of-type {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    div.lsux-grid > div.container-fluid > div.lsux-row.nine-three > div.lsux-col:last-child {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    /* Row - Four Column */
+    div.lsux-grid > div.container-fluid > div.lsux-row.quarters > div {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Row - Single Column Centered */
+    div.lsux-grid > div.container-fluid > div.lsux-row.center > div.lsux-col {
+      flex: 0 0 83.33333%;
+      max-width: 83.33333%;
+    }
+
+    /* Row - Single Column Pillared */
+    div.lsux-grid > div.container-fluid > div.lsux-row.pillar > div.lsux-col {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+
+    /* Row - Two Column -  8xleft 4xright */
+    div.lsux-grid > div.container-fluid > div.lsux-row.eight-four > div.lsux-col:first-of-type {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%;
+    }
+
+    div.lsux-grid > div.container-fluid > div.lsux-row.eight-four > div.lsux-col:last-child {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+
+    /* Row - Three Column */
+    div.lsux-grid > div.container-fluid > div.lsux-row.thirds > div {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Avatar } from './Avatar';
+import { Alert } from '../alert/Alert';
+
+# Avatar
+
+Avatars is an indicator to visually represent people or companies. It can be static or actionable. When actionable, it is commonly use as a trigger to see details of user account information.
+
+<ArgsTable of={Avatar} />
+
+## Types
+
+1. **Icon** - _default_
+
+<Canvas>
+  <Story id="components-avatar--user-icon" />
+</Canvas>
+
+2. **Photo**
+
+<Canvas>
+  <Story id="components-avatar--user-photo" />
+</Canvas>
+
+3. **Initials**
+
+<Canvas>
+  <Story id="components-avatar--user-initials" />
+</Canvas>
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  Define the avatar you need to use in the avatarType prop.
+</Alert>
+
+## Sizes
+
+- **Large** - 64x64px
+- **Medium** - 48x48px - _default_
+- **Small** - 40x40px
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  The default size is medium, if you want to change it just modify the avatarSize prop.
+</Alert>
+
+## Usage guideline
+
+When available, use photos to represent people or companies. Otherwise, if technically feasible, use Initials Avatar to give better context. As fallback, use generic icon as default.
+
+- Do not modify the shape
+- Place avatar alongside additional information about the person or company an avatar represents

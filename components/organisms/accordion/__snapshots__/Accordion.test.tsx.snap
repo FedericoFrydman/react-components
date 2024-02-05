@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion Component should render the component 1`] = `
+<ForwardRef(ContainerComponent)
+  classNames={
+    Array [
+      "lsux-accordion",
+      Array [],
+    ]
+  }
+>
+  <ForwardRef(ContainerComponent)
+    classNames="lsux-accordion__header lsux-accordion__header--border"
+    onClick={[Function]}
+  >
+    <ForwardRef(ContainerComponent)>
+      <ForwardRef(ContainerComponent)
+        alignItems="center"
+        flexbox={true}
+      >
+        <ForwardRef(TitleComponent)
+          classNames={
+            Array [
+              "mr-4",
+            ]
+          }
+          text="Test Accordion"
+          textSize="large"
+          textWeight="semibold"
+        />
+      </ForwardRef(ContainerComponent)>
+    </ForwardRef(ContainerComponent)>
+    <ForwardRef(ContainerComponent)
+      classNames={
+        Array [
+          "lsux-accordion__header__toggle-icon-container",
+        ]
+      }
+    >
+      <ForwardRef(IconComponent)
+        classNames={
+          Array [
+            "lsux-icon--chevron--closed",
+          ]
+        }
+        color="N800"
+        name="arrow_chevron_down"
+        onClick={[Function]}
+        size="medium"
+      />
+    </ForwardRef(ContainerComponent)>
+  </ForwardRef(ContainerComponent)>
+  <ForwardRef(ContainerComponent) />
+  <ForwardRef(ContainerComponent)
+    classNames="lsux-accordion__children lsux-accordion__children--border lsux-accordion__children-collapsed"
+  />
+</ForwardRef(ContainerComponent)>
+`;

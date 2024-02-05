@@ -1,0 +1,92 @@
+import { Meta, ArgsTable, Story, Canvas, Description, Stories } from '@storybook/addon-docs';
+import { MultiSelect } from './MultiSelect';
+import { FormField } from '../../organisms/form-field/FormField';
+import { Alert } from '../alert/Alert';
+
+# MultiSelect Props
+
+<Description />
+
+**This documentantion is just to display the select props where you can interact with them and see how it behaves. For implementation please use [FormField](/?path=/docs/forms-form-fields--select-field) docs to gide.**
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  The MultiSelect component must be used as a child of a FormField component.
+</Alert>
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--default" />
+</Canvas>
+
+### MultiSelect Placeholder
+
+In order to have a placeholder in your select component, you need to set the placeholder and placeholerValue prop. The defaultValue on select will take the placeholerValue and make it appear on the select component.
+
+### Label
+
+Pass a `label` prop to the `FormField` component for a11y reasons.
+
+## Example Code
+
+```tsx
+<FormField id="select-formfield" label="Some label:">
+  <MultiSelect
+    options={[
+      {
+        label: 'United States',
+        value: 'US',
+      },
+      {
+        label: 'Germany',
+        value: 'DE',
+      },
+    ]}
+  />
+</FormField>
+```
+
+### Result
+
+<FormField id="select-formfield">
+  <MultiSelect
+    options={[
+      {
+        label: 'United States',
+        value: 'US',
+      },
+      {
+        label: 'Germany',
+        value: 'DE',
+      },
+    ]}
+  />
+</FormField>
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+## States
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+### Invalid
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--invalid" />
+</Canvas>
+
+### Warning
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--warning" />
+</Canvas>
+
+### Success
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--success" />
+</Canvas>
+
+### Disbled
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--disabled" />
+</Canvas>

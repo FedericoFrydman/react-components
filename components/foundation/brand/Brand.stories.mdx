@@ -1,0 +1,65 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { Source } from '@storybook/addon-docs';
+import { Heading } from '../../atoms/heading/Heading';
+import { BrandColors } from './BrandColors';
+import { BrandRadius } from './BrandRadius';
+
+<Meta title="Foundation/Brand" />
+
+# Brand
+
+Customization is available based on the brand allowing for differentiation. Brand data is set into css variables at runtime. Elements of the UX framework uses these variables.
+
+# Typography
+
+The brand font is availalbe as var(--brand-font-family). Its use is limited to the key marque areas. As such, the &lt;Heading&gr; component allows for the useBrand attribute.
+
+Fonts in the heading when the brand is used will have different sizes, as the intent is that it is for calling out brand data.
+
+For LegalShield this is the font "Iner". This is a serif font.
+
+<Heading as="T28" text="Inter" />
+
+# Colors
+
+Shades of the brand color are available as the following variables (examples are shown for the LegalShield brand)
+
+Color: var(--brand-color-prim300)
+
+Image filter: var(--brand-color-prim300-filter)
+
+<BrandColors shade="300" />
+
+Color: var(--brand-color-prim200)
+
+Image filter: var(--brand-color-prim200-filter)
+
+<BrandColors shade="200" />
+
+Color: var(--brand-color-prim100)
+
+Image filter: var(--brand-color-prim100-filter)
+
+<BrandColors shade="100" />
+
+Color: var(--brand-color-prim50)
+
+Image filter: var(--brand-color-prim50-filter)
+
+<BrandColors shade="50" />
+
+# Corners
+
+The amount of rounding on the corners of UX elements is availabe as:
+
+var(--brand-border-radius)
+
+<BrandRadius />
+
+# Header Background
+
+The header can have a custom background color available as:
+
+var(--brand-color-header)
+
+<BrandColors shade="4" />

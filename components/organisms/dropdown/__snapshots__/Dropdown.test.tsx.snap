@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown Component should render the component 1`] = `
+<DropdownMenu>
+  <DropdownTrigger />
+  <DropdownPortal>
+    <DropdownLabel>
+      Actions
+    </DropdownLabel>
+    <DropdownItem
+      onClick={[Function]}
+    >
+      New Tab
+      <div
+        className="right-slot"
+      >
+        ⌘+T
+      </div>
+    </DropdownItem>
+    <DropdownItem
+      onClick={[Function]}
+    >
+      New Window
+      <div
+        className="right-slot"
+      >
+        ⌘+N
+      </div>
+    </DropdownItem>
+    <DropdownItem
+      disabled={true}
+    >
+      New Private Window
+    </DropdownItem>
+    <DropdownSeparator />
+    <DropdownLabel>
+      Preferences
+    </DropdownLabel>
+    <DropdownCheckboxItem
+      checked={false}
+      onCheckedChange={[Function]}
+    >
+      Show Bookmarks 
+      <div
+        className="right-slot"
+      >
+        ⌘+B
+      </div>
+    </DropdownCheckboxItem>
+    <DropdownCheckboxItem
+      checked={true}
+      onCheckedChange={[Function]}
+    >
+      Show Full URLs
+    </DropdownCheckboxItem>
+    <DropdownSeparator />
+    <DropdownLabel>
+      Radio Buttons
+    </DropdownLabel>
+    <DropdownRadioGroup
+      onValueChange={[Function]}
+      value="one"
+    >
+      <DropdownRadioItem
+        value="one"
+      >
+        Option One
+      </DropdownRadioItem>
+      <DropdownRadioItem
+        value="two"
+      >
+        Option Two
+      </DropdownRadioItem>
+    </DropdownRadioGroup>
+    <DropdownSeparator />
+    <DropdownItemWithSubMenu
+      subMenu={
+        <React.Fragment>
+          <DropdownItem>
+            Create Shortcut…
+          </DropdownItem>
+          <DropdownItem>
+            Name Window…
+          </DropdownItem>
+          <DropdownSeparator />
+          <DropdownItem>
+            Developer Tools
+          </DropdownItem>
+        </React.Fragment>
+      }
+    >
+      Demo
+    </DropdownItemWithSubMenu>
+  </DropdownPortal>
+</DropdownMenu>
+`;

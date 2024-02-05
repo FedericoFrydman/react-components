@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Component should render the component 1`] = `
+<ForwardRef(ContainerComponent)
+  background="none"
+  classNames={
+    Array [
+      "lsux-icon-container",
+      "flex-row",
+    ]
+  }
+  flexDirection="row"
+  flexbox={true}
+>
+  <img
+    alt="action_add."
+    className="lsux-icon lsux-icon--medium "
+    src={[Function]}
+  />
+</ForwardRef(ContainerComponent)>
+`;

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Associate Badge Component should render the component 1`] = `
+<ForwardRef(ContainerComponent)
+  classNames={
+    Array [
+      "lsux-associate-badge",
+      "px-4",
+      "py-5",
+      "",
+    ]
+  }
+  data-testid="test-associate-badge"
+>
+  <div>
+    <ForwardRef(AvatarComponent)
+      avatarType="user-photo"
+      imageURL="https://api.legalshield.com/v2/public/associates/avatar/127525095-1596790237.195000.jpg"
+    />
+  </div>
+  <div
+    className="pl-2"
+  >
+    <ForwardRef(HeadingComponent)
+      as="T16"
+      classNames={
+        Array [
+          "lsux-associate-badge--title",
+          "pl-3",
+        ]
+      }
+      text="LegalShield Independent Associate"
+    />
+    <DropdownRoot>
+      <DropdownTrigger>
+        <ForwardRef(ButtonComponent)
+          aria-label="Menu button"
+          iconColor="P200"
+          iconRight="arrow_caret_down_md"
+          iconSize="medium"
+          label="Sherry Swedenborg"
+          shape="round"
+          variant="tertiary"
+        />
+      </DropdownTrigger>
+      <DropdownPortal>
+        <DropdownItem
+          onClick={[Function]}
+        >
+          Call 
+          (238) 432-6343
+          <div
+            className="right-slot"
+          >
+            <ForwardRef(IconComponent)
+              name="comm_phone_default"
+              size="small"
+            />
+          </div>
+        </DropdownItem>
+        <DropdownItem
+          onClick={[Function]}
+        >
+          Message Me
+          <div
+            className="right-slot"
+          >
+            <ForwardRef(IconComponent)
+              name="comm_email_default"
+              size="small"
+            />
+          </div>
+        </DropdownItem>
+      </DropdownPortal>
+    </DropdownRoot>
+  </div>
+</ForwardRef(ContainerComponent)>
+`;

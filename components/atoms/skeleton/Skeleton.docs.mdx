@@ -1,0 +1,51 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Heading } from '../heading/Heading';
+import { Skeleton } from './Skeleton';
+import { Container } from '../../atoms/container/Container';
+
+<Title />
+
+<Description>
+The Skeleton component should be used directly in your components in place of content that is loading. The Skeleton component is automatically sized to the correct dimensions.
+
+</Description>
+
+<Canvas>
+  <Container>
+    <Skeleton id="components-skeleton--default" />
+  </Container>
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={Skeleton} />
+
+```tsx
+import { useHistory } from 'react-router-dom';
+
+const MyComponent = () => {
+  return (
+    <div className="loader">
+      <Skeleton circle={true} height="100px" width="100px" containerClassName="avatar-skeleton" />
+      <Skeleton width={'200px'} />
+      <Skeleton width={'100px'} count="2" />
+      <Skeleton width={'100px'} height={'100px'} />
+    </div>
+  );
+};
+```
+
+### Result
+
+<Container>
+  <Skeleton circle={true} height="100px" width="100px" containerClassName="avatar-skeleton" />
+  <Skeleton width={'200px'} />
+  <Skeleton width={'100px'} count="2" />
+  <Skeleton width={'100px'} height={'100px'} />
+</Container>
+
+## Usage guideline
+
+- If only a portion of a page is displaying new content or being updated, place the Skeleton in that part of the page.
+- If you are unsure where to place the Skeleton, place it where you want the user's attention to be when loading is finished.
+- Only show a Skeleton if the expected wait time is more than a second.

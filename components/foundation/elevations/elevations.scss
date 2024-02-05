@@ -1,0 +1,26 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/shadows.scss';
+
+.elevation--wrapper {
+  background-color: $N100;
+  border-radius: var(--brand-border-radius);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  overflow: scroll;
+  padding: 50px;
+
+  .elevation--box-right {
+    margin: 0 auto;
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  .elevation--box {
+    background-color: $N00;
+    height: 141px;
+    width: 190px;
+  }
+}

@@ -1,0 +1,176 @@
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/colors.scss';
+
+@mixin createBorder($color) {
+  border: 1px solid $color;
+  -webkit-border-color: none;
+  border-radius: var(--brand-border-radius);
+  -moz-box-sizing: border-box; /* Firefox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome */
+  box-sizing: border-box;
+}
+
+@mixin focusState($color) {
+  border-color: $color;
+}
+
+.lsux-input-container {
+  flex: 1;
+  position: relative;
+
+  &__input {
+    background-color: $N00;
+    -moz-box-sizing: border-box; /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari/Chrome */
+    box-sizing: border-box;
+    color: $N800;
+    @include createBorder($N350);
+    font-style: normal;
+    height: 44px;
+    letter-spacing: -0.011em;
+    line-height: 22px;
+    outline: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    -moz-transition: border-color ease-in-out 0.15s; /* Firefox */
+    -webkit-transition: border-color ease-in-out 0.15s; /* Safari/Chrome */
+    transition: border-color ease-in-out 0.15s;
+    width: 100%;
+
+    &:focus:not(:read-only) {
+      @include focusState(var(--brand-color-prim200));
+      outline: none;
+    }
+
+    &--warning {
+      background: $Y10;
+      outline: none;
+      @include createBorder($Y200);
+
+      &:focus {
+        @include focusState($Y200);
+      }
+    }
+
+    &--valid {
+      @include createBorder($G200);
+      outline: none;
+
+      &:focus {
+        @include focusState($G200);
+      }
+    }
+
+    &--invalid {
+      background: $R10;
+      outline: none;
+      @include createBorder($R200);
+
+      &:focus {
+        @include focusState($R200);
+      }
+
+      &:not(:focus) {
+        color: $R200;
+        & + .lsux-text {
+          color: $R200;
+        }
+      }
+    }
+
+    &--icon-left {
+      padding-left: 40px;
+    }
+
+    &--icon-right {
+      padding-right: 40px;
+    }
+
+    &:disabled {
+      background-color: $N50;
+      color: $N350;
+      cursor: not-allowed;
+    }
+
+    &:-moz-read-only {
+      border: none;
+      color: $N700;
+    }
+
+    &:read-only {
+      border: none;
+      color: $N700;
+    }
+
+    &::-webkit-inner-spin-button {
+      background: $N100;
+      border: 1px solid $N500;
+      border-radius: var(--brand-border-radius);
+      height: 40px;
+      margin: 0;
+      opacity: 1;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      background: none;
+      cursor: pointer;
+      display: block;
+      height: 20px;
+      margin-right: 10px;
+      outline: none;
+      width: 20px;
+    }
+
+    &::placeholder {
+      align-items: center;
+      color: $N500;
+      display: flex;
+      right: 8px;
+      top: 8px;
+    }
+
+    &--date-number::-webkit-inner-spin-button,
+    &--date-number::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      border: none;
+      margin: 0;
+    }
+  }
+
+  .lsux-input__icon {
+    top: 8px;
+    &-left {
+      left: 8px;
+    }
+    &-right {
+      right: 8px;
+    }
+    &-hide-icon {
+      border-radius: var(--brand-border-radius);
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 34px;
+      img {
+        top: 12px;
+      }
+    }
+    &-search-icon {
+      left: 8px;
+      position: absolute;
+      top: 8px;
+    }
+  }
+
+  .lsux-button {
+    background-color: transparent;
+  }
+
+  .lsux-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+  }
+}

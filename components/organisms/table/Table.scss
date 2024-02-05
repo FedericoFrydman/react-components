@@ -1,0 +1,86 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-table {
+  display: table;
+  width: 100%;
+
+  &--border {
+    border-bottom: 1px solid $N300;
+    border-right: 1px solid $N300;
+
+    & .lsux-table__row__cell {
+      border-left: 1px solid $N300;
+      border-top: 1px solid $N300;
+    }
+  }
+
+  &__row {
+    display: table-row;
+    position: relative;
+    width: 100%;
+
+    &--header {
+      background-color: $N300;
+      font-weight: bold;
+    }
+
+    &--odd {
+      background-color: $N100;
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+
+    &--large {
+      height: 6rem;
+    }
+
+    &--medium {
+      height: 4rem;
+    }
+
+    &--small {
+      height: 3rem;
+    }
+
+    &--auto {
+      height: 3rem;
+    }
+
+    &__cell {
+      display: table-cell;
+      height: auto;
+      padding: 8px;
+      text-overflow: ellipsis;
+
+      &--text--left {
+        text-align: left;
+      }
+
+      &--text--right {
+        text-align: right;
+      }
+
+      &--text--center {
+        text-align: center;
+      }
+
+      &--nowrap {
+        white-space: nowrap;
+      }
+
+      &--content--top {
+        vertical-align: top;
+      }
+
+      &--content--center {
+        vertical-align: middle;
+      }
+
+      &--content--bottom {
+        vertical-align: bottom;
+      }
+    }
+  }
+}

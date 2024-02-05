@@ -1,0 +1,17 @@
+@import '../../../assets/styles/colors.scss';
+
+.lsux-marketpicker {
+  &--dark {
+    button > p {
+      color: $N00;
+      font-weight: 400;
+    }
+  }
+
+  &--light {
+    button > p {
+      color: $N1000;
+      font-weight: 400;
+    }
+  }
+}

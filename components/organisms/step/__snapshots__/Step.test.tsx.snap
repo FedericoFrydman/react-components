@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Step Component should render the component 1`] = `
+<div
+  className="lsux-step-bar"
+>
+  <ForwardRef(ContainerComponent)
+    background="white"
+    classNames={
+      Array [
+        "lsux-step-bar--container",
+      ]
+    }
+    flexbox={true}
+  >
+    <div
+      className="step-container"
+      key="0"
+      style={
+        Object {
+          "minWidth": "140px",
+          "width": "140px",
+        }
+      }
+    >
+      <div
+        className="auto-divider-left blank"
+      />
+      <a
+        className="step"
+        onClick={[Function]}
+        style={
+          Object {
+            "minWidth": 140,
+            "width": 140,
+          }
+        }
+      >
+        <div
+          className="step-circle step-circle--complete"
+        >
+          <ForwardRef(IconComponent)
+            name="interface_check"
+            size="medium-small"
+          />
+        </div>
+        <div
+          className="step-label"
+          style={
+            Object {
+              "width": 120,
+            }
+          }
+        >
+          <ForwardRef(TextComponent)
+            as="p"
+            text="One"
+            textSize="small"
+          />
+        </div>
+      </a>
+      <div
+        className="auto-divider-right"
+      />
+    </div>
+    <div
+      className="step-container"
+      key="1"
+      style={
+        Object {
+          "minWidth": "140px",
+          "width": "140px",
+        }
+      }
+    >
+      <div
+        className="auto-divider-left"
+      />
+      <div
+        className="step"
+        style={
+          Object {
+            "minWidth": 140,
+            "width": 140,
+          }
+        }
+      >
+        <div
+          className="step-circle step-circle--current"
+        >
+          2
+        </div>
+        <div
+          className="step-label"
+          style={
+            Object {
+              "width": 120,
+            }
+          }
+        >
+          <ForwardRef(TextComponent)
+            as="p"
+            text="Two"
+            textSize="small"
+          />
+        </div>
+      </div>
+      <div
+        className="auto-divider-right"
+      />
+    </div>
+    <div
+      className="step-container"
+      key="2"
+      style={
+        Object {
+          "minWidth": "140px",
+          "width": "140px",
+        }
+      }
+    >
+      <div
+        className="auto-divider-left"
+      />
+      <div
+        className="step"
+        style={
+          Object {
+            "minWidth": 140,
+            "width": 140,
+          }
+        }
+      >
+        <div
+          className="step-circle"
+        >
+          3
+        </div>
+        <div
+          className="step-label"
+          style={
+            Object {
+              "width": 120,
+            }
+          }
+        >
+          <ForwardRef(TextComponent)
+            as="p"
+            text="Three"
+            textSize="small"
+          />
+        </div>
+      </div>
+      <div
+        className="auto-divider-right blank"
+      />
+    </div>
+  </ForwardRef(ContainerComponent)>
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Component should render the component 1`] = `
+<ForwardRef(TextComponent)
+  classNames={
+    Array [
+      "custom--class",
+    ]
+  }
+  text="some text"
+  textSize="medium"
+  textWeight="semibold"
+/>
+`;

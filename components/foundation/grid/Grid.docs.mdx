@@ -1,0 +1,29 @@
+import { Title, ArgsTable, Story, Canvas, Source } from '@storybook/addon-docs';
+import { Grid } from './Grid';
+
+<Title />
+
+Grid is the foundation blueprint of our layout. It helps us position elements to remain consistent and harmonious across screens.
+
+Our grid is responsive and for the content area only; Header and Sidebar are excluded from the grid. The width of each column is fluid depending on the width of the browser.
+
+**The number of columns, gutters, margin, and padding will change per Breakpoint:**
+
+- **Small:** 4 columns, 16px gutter/margin/padding
+- **Medium:** 8 columns, 24px gutter/margin/padding
+- **Large:** 12 columns, 32px gutter/margin/padding
+
+**Breakpoints:**
+`$grid-breakpoints: ( xs: 0, sm: 320px, md: 640px, lg: 1024px, )`
+
+Content box also is max width at `1680px` without sidebar and `1424px` with `256px` side bar included.
+
+**Dev note: please consider using the [Container Component](path=/docs/layout-container--background-color) inside grid to positioning your components. In this way you are going to avoid extra paddings.**
+
+1024+ grid and layout types
+
+<ArgsTable of={Grid} />
+
+<Canvas>
+  <Story id="layout-grid--primary" />
+</Canvas>

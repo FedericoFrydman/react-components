@@ -1,0 +1,71 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/shadows.scss';
+
+.lsux-card {
+  border-radius: 11px;
+  box-shadow: 0px -1px 12px rgba(0, 0, 0, 0.015), 0px 6px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.15s ease-in-out;
+
+  &--bg {
+    &--light-gray {
+      background: $N200;
+    }
+    &--white {
+      background: $N00;
+    }
+    &--none {
+      background: transparent;
+    }
+  }
+
+  &--selectable:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &--selected {
+    box-shadow: 0px -1px 12px rgba(0, 0, 0, 0.015), 0px 6px 8px rgba(0, 0, 0, 0.08),
+      0 0 0 1.5px var(--brand-color-prim300);
+    .lsux-card__image > img {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+
+  &--unselected {
+    .lsux-card__image > img {
+      border-top-left-radius: 11px;
+      border-top-right-radius: 11px;
+    }
+  }
+
+  &__content {
+    background: none;
+    border-radius: 11px;
+  }
+
+  &__image > img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &.lsux-card--bg--none .lsux-card__image > img {
+    border-radius: 11px;
+  }
+
+  &--card-actions {
+    display: flex;
+    flex-direction: row;
+    margin: 0.75rem;
+    .lsux-button {
+      padding: 0;
+      &:not(:last-child) {
+        margin-right: 0.3rem;
+      }
+    }
+  }
+}

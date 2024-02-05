@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`XUser Component should render the component 1`] = `
+<div
+  className="lsux-xuser"
+>
+  <ForwardRef(TextComponent)
+    as="p"
+    text="User in legalshield.com: Loading..."
+  />
+  <ForwardRef(SpinnerComponent)
+    spinnerSize="small"
+  />
+</div>
+`;

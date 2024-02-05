@@ -1,0 +1,71 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/shadows.scss';
+@import '../../assets/styles/utilities.scss';
+
+.lsux-associate-badge {
+  background-color: $N00;
+  cursor: pointer;
+  display: flex;
+  height: 1rem;
+  &--title {
+    margin-left: 4px;
+  }
+  .lsux-col {
+    display: flex;
+    &:first {
+      flex-basis: 100px;
+    }
+  }
+  .lsux-button {
+    border-style: none;
+    padding: 0.2rem 0.5rem;
+    .lsux-text--large {
+      padding-right: 0.3rem;
+    }
+  }
+  .link-style {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .lsux-accordion {
+    &.lsux-accordion--border {
+      border: 1px solid $N300;
+      box-shadow: $elevation-1;
+    }
+
+    &--titlerow {
+      align-items: center;
+    }
+
+    &--click:hover {
+      cursor: pointer;
+    }
+
+    &__title {
+      align-items: center;
+      display: flex;
+    }
+
+    &__icon-wrapper {
+      align-items: center;
+      display: flex;
+    }
+
+    &__inner-children-wrapper {
+      display: grid;
+    }
+
+    &__children-height {
+      overflow: auto;
+    }
+
+    &__children-background--white {
+      background-color: $N00;
+    }
+
+    &__children-background--gray {
+      background-color: $N100;
+    }
+  }
+}

@@ -1,0 +1,220 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { LinkContent, LinkContentProps } from '../../molecules/link-content/LinkContent';
+import { Dropdown } from './Dropdown';
+import { Container } from '../../atoms/container/Container';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="controls-dropdown--default" />
+</Canvas>
+
+<Meta />
+
+# Dropdown
+
+Dropdowns are used for user-triggered actions or for presenting a list of options that are related to a specific context.
+
+<ArgsTable of={Dropdown} />
+
+<Stories />
+
+## General Usage
+
+- Always place dropdowns in a location where they won't be obscured or cut off.
+- Use `DropdownLabel` to create groups of related content.
+- Use `DropdownSeparator` to divide content into clear, easy-to-scan sections.
+- When using `DropdownCheckboxItem` or `DropdownRadioItem`, ensure that the associated actions or changes are apparent.
+
+## Sub-Components
+
+A dropdown menu can contain several types of sub-component:
+
+### Essential Components
+
+- `Dropdown.Root`: The parent element that contains the trigger and the portal.
+- `Dropdown.Trigger`: The element that triggers the dropdown to appear.
+- `Dropdown.Portal`: The element that contains the dropdown items.
+- `DropdownItem`: Standard items that trigger a specific action when selected.
+
+### Optional Components
+
+- `DropdownLabel`: Text labels used to describe a group of options.
+- `DropdownSeparator`: Horizontal lines used to divide groups of related content.
+- `DropdownCheckboxItem`: Items that can be toggled on or off.
+- `DropdownRadioItem`: Items that allow one selection within a group.
+- `DropdownItemWithSubMenu`: Item that leads to a nested submenu. Menu JSX is passed into the `subMenu` prop.
+
+## Usage
+
+The component is structured with a parent `<Dropdown.Root>` element which contains a `<Dropdown.Trigger>` element and a `<Dropdown.Portal>` element.
+The `<Dropdown.Portal>` element appears when the trigger is pressed and contains the dropdown items.
+
+Here is a simple example of a dropdown with three items:
+
+```jsx
+import { Dropdown, DropdownItem, DropdownSeparator } from '@LegalShield/adonis-ux-framework';
+
+<Dropdown.Root>
+  <Dropdown.Trigger />
+  <Dropdown.Portal>
+    <DropdownItem>Action 1</DropdownItem>
+    <DropdownItem>Action 2</DropdownItem>
+    <DropdownItem>Action 3</DropdownItem>
+  </Dropdown.Portal>
+</Dropdown.Root>;
+```
+
+### Dropdown with label and separator
+
+```jsx
+import { Dropdown, DropdownItem, DropdownLabel, DropdownSeparator } from '@LegalShield/adonis-ux-framework';
+
+<Dropdown.Root>
+  <Dropdown.Trigger />
+  <Dropdown.Portal>
+    <DropdownLabel>Group 1</DropdownLabel>
+    <DropdownItem>Action 1</DropdownItem>
+    <DropdownItem>Action 2</DropdownItem>
+    <DropdownItem>Action 3</DropdownItem>
+    <DropdownSeparator />
+    <DropdownLabel>Group 2</DropdownLabel>
+    <DropdownItem>Action 4</DropdownItem>
+    <DropdownItem>Action 5</DropdownItem>
+    <DropdownItem>Action 6</DropdownItem>
+  </Dropdown.Portal>
+</Dropdown.Root>;
+```
+
+### Dropdown with checkbox items
+
+```jsx
+import { Dropdown, DropdownCheckboxItem } from '@LegalShield/adonis-ux-framework';
+
+<Dropdown.Root>
+  <Dropdown.Trigger />
+  <Dropdown.Portal>
+    <DropdownCheckboxItem>Checkbox 1</DropdownCheckboxItem>
+    <DropdownCheckboxItem>Checkbox 2</DropdownCheckboxItem>
+    <DropdownCheckboxItem>Checkbox 3</DropdownCheckboxItem>
+  </Dropdown.Portal>
+</Dropdown.Root>;
+```
+
+### Dropdown with radio items
+
+```jsx
+import { Dropdown, DropdownRadioGroup, DropdownRadioItem } from '@LegalShield/adonis-ux-framework';
+
+<Dropdown.Root>
+  <Dropdown.Trigger />
+  <Dropdown.Portal>
+    <DropdownRadioGroup value={person} onValueChange={setPerson}>
+      <DropdownRadioItem>Radio 1</DropdownRadioItem>
+      <DropdownRadioItem>Radio 2</DropdownRadioItem>
+      <DropdownRadioItem>Radio 3</DropdownRadioItem>
+    </DropdownRadioGroup>
+  </Dropdown.Portal>
+</Dropdown.Root>;
+```
+
+### Dropdown with sub-menu
+
+```jsx
+import { Dropdown, DropdownItem, DropdownItemWithSubMenu } from '@LegalShield/adonis-ux-framework';
+
+<Dropdown.Root>
+  <Dropdown.Trigger />
+  <Dropdown.Portal>
+    <DropdownItemWithSubMenu
+      subMenu={
+        <>
+          <DropdownItem>Sub Item 1</DropdownItem>
+        </>
+      }
+    >
+      Item with SubMenu
+    </DropdownItemWithSubMenu>
+  </Dropdown.Portal>
+</Dropdown.Root>;
+```
+
+### Dropdown with custom trigger
+
+```jsx
+import { Button, Dropdown, DropdownItem } from '@LegalShield/adonis-ux-framework';
+
+<Dropdown.Root>
+  <Dropdown.Trigger>
+    <Button variant="primary">Custom Trigger</Button>
+  </Dropdown.Trigger>
+  <Dropdown.Portal>
+    <DropdownItem>Action 1</DropdownItem>
+    <DropdownItem>Action 2</DropdownItem>
+    <DropdownItem>Action 3</DropdownItem>
+  </Dropdown.Portal>
+</Dropdown.Root>;
+```
+
+### DropdownItem with right slot content
+
+Use the `right-slot` class to add content to the right side of a `DropdownItem`, such as a keyboard shortcut or an icon.
+
+```jsx
+import { Dropdown, DropdownItem, Icon } from '@LegalShield/adonis-ux-framework';
+
+<Dropdown.Root>
+  <Dropdown.Trigger />
+  <Dropdown.Portal>
+    <DropdownItem>
+      Bold
+      <div className="right-slot">⌘+B</div>
+    </DropdownItem>
+    <DropdownItem>
+      Save File
+      <div className="right-slot">
+        <Icon name="system_save" size="small" />
+      </div>
+    </DropdownItem>
+  </Dropdown.Portal>
+</Dropdown.Root>;
+```
+
+## Guidelines
+
+`DropdownItem`
+
+- **Do** use for triggering an action or navigation.
+- **Do not** use for displaying static information.
+
+`DropdownLabel`
+
+- **Do** use to organize and describe groups of items.
+
+`DropdownSeparator`
+
+- **Do** use to visually separate groups of related content.
+
+`DropdownCheckboxItem`
+
+- **Do** use to let the user toggle an option on or off.
+- **Do not** use for triggering an action or navigation.
+
+`DropdownRadioItem`
+
+- **Do** use to let the user select one option from a group.
+- **Do not** use for triggering an action or navigation.
+
+`DropdownItemWithSubMenu`
+
+- **Do** use to nest a submenu within a dropdown.
+
+```
+
+```
+
+```
+
+```

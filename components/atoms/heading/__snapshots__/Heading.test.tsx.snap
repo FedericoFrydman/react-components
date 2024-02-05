@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading Component should render the component 1`] = `
+<h2
+  className="lsux-heading lsux-heading--t26"
+  style={Object {}}
+>
+  some text
+</h2>
+`;

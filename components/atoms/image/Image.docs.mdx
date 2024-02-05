@@ -1,0 +1,27 @@
+import { FC } from 'react';
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Image } from './Image';
+
+# Image
+
+<Canvas>
+  <Story id="components-image--default" />
+</Canvas>
+
+## Image Props
+
+<ArgsTable of={Image} />
+
+<Stories />
+
+### Example Code
+
+This is an example of how to use Image
+
+```tsx
+export const ImageTest: FC = ({}) => {
+  return (
+    <Image alt="LegalShield Logo" src="https://design.api.dev-legalshield.com/assets/logos/pplsi-logo.svg"></Image>
+  );
+};
+```

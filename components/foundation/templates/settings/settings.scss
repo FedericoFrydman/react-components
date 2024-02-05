@@ -1,0 +1,19 @@
+.Settings {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  .card {
+    width: 100%;
+  }
+  &--controls-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+  }
+  &--control-row {
+    justify-content: space-between;
+  }
+  .lsux-form-field-container:first-of-type {
+    margin-top: 0;
+  }
+}

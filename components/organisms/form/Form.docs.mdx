@@ -1,0 +1,38 @@
+import { FC } from 'react';
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Form } from './Form';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="controls-form--default" />
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={Form}/>
+
+## Example code
+
+```tsx
+export const SomeForm: FC = ({}) => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert('Form Submitted');
+  };
+
+  return (
+    <Form onSubmit={handleSubmit}>
+      <FormField id="name" label="Name">
+        <Input placeholder="First Name" name="name" />
+      </FormField>
+      <FormField id="lastName" label="Last Name">
+        <Input placeholder="Last Name" name="lastName" />
+      </FormField>
+      <Button type="submit" label="Submit Form" stretch classNames={['mt-5']} />
+    </Form>
+  );
+};
+```

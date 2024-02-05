@@ -1,0 +1,16 @@
+@import '../../../assets/styles/colors.scss';
+
+.lsux-footerbreak {
+  &--dark {
+    border-bottom: 1px solid $N750;
+    height: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  &--light {
+    border-bottom: 1px solid $N400;
+    height: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}

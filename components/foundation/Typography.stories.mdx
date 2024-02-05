@@ -1,0 +1,113 @@
+import { Meta, Canvas } from '@storybook/addon-docs';
+import { AppTitle } from '../atoms/app-title/AppTitle';
+import { Heading } from '../atoms/heading/Heading';
+import { Label } from '../atoms/label/Label';
+import { Text } from '../atoms/text/Text';
+import { Title } from '../atoms/title/Title';
+
+<Meta title="Foundation/Typography" />
+
+# Typography
+
+The Design System leverages a limited and purposeful set of typographic style to deliver PPLSI's core values.
+
+---
+
+### Primary font in our UI
+
+<br />
+
+<Heading as="T26" text="System font" />
+
+Primary font family for almost all headings and body text.
+
+| <Text text="Regular" /> | <Text text="Bold" bold /> | <Text text="Italic" italic /> |
+| ----------------------- | ------------------------- | ----------------------------- |
+
+Bold Brand font, display font size only for product.
+
+<Heading as="T28" text="Inter" />
+
+### Secondary font
+
+<br />
+
+<Heading as="T28" text="Poppins" />
+
+| <Text text="Regular" style={{ fontFamily: 'var(--secondary-font-family)' }} /> | <Text text="Bold" style={{ fontFamily: 'var(--secondary-font-family)' }} bold /> | <Text text="Italic" style={{ fontFamily: 'var(--secondary-font-family)' }} italic /> |
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+
+## Sizes
+
+### Heading Sizes
+
+- $T95: normal 700 95px/116px
+- $T76: normal 700 76px/92px
+- $T61: normal 700 61px/74px
+- $T49: normal 700 49px/60px
+- $T39: normal 700 39px/48px
+- $T31: normal 700 31px/38px
+- $T28: normal 600 28px/32px
+- $T26: normal 500 26px/32px
+- $T20: normal 500 20px/24px
+- $T16: normal 500 16px/24px
+- $T14: normal 600 14px/16px
+
+### Text Sizes
+
+- Tiny
+- Small
+- Medium
+- Large
+- Extra Large
+- Body (deprecated)
+- Description (deprecated)
+
+## Usage
+
+If you need to use some font in a custom component, these are also being exported as css variables so they can be used like the following example once you have the dist/index.css file imported in your project.
+
+```css
+.some-class {
+  font: var(--t14); // $T14
+}
+```
+
+Also you can use these as a React component using the **`Heading`** component
+
+<Canvas>
+  <Heading as="T28" text="Heading Example" />
+</Canvas>
+
+or using the **`Text`** component
+
+<Canvas>
+  <Text text="Tiny Text Example" textSize="tiny" />
+  <Text text="Small Text Example" textSize="small" />
+  <Text text="Normal Text Example" textSize="medium" />
+  <Text text="Large Text Example" textSize="large" />
+  <Text text="Extra Large Text Example" textSize="extra-large" />
+</Canvas>
+
+or using the **`Title`** component
+
+<Canvas>
+  <Title text="Small Text Example" textSize="small" />
+  <Title text="Normal Text Example" textSize="medium" />
+  <Title text="Large Text Example" textSize="large" />
+</Canvas>
+
+or using the **`Label`** component
+
+<Canvas>
+  <Label text="Tiny Text Example" textSize="tiny" />
+  <Label text="Small Text Example" textSize="small" />
+  <Label text="Normal Text Example" textSize="medium" />
+  <Label text="Large Text Example" textSize="large" />
+</Canvas>
+
+or using the **`AppTitle`** component
+
+<Canvas>
+  <AppTitle text="Text Example" />
+</Canvas>

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Component should render the component 1`] = `
+<div
+  className="lsux-avatar lsux-avatar--user-icon lsux-avatar--medium"
+>
+  <ForwardRef(IconComponent)
+    color="N700"
+    name="action_user_single"
+    size="medium"
+  />
+</div>
+`;

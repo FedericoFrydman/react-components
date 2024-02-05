@@ -1,0 +1,35 @@
+@import '../../assets/styles/colors.scss';
+
+.profile-picture {
+  &__avatar-container {
+    position: relative;
+  }
+  &__round {
+    border-radius: 50%;
+  }
+  &__avatar-image {
+    border: 3px solid black;
+    display: block;
+    object-fit: cover;
+  }
+  &__dropdown-link {
+    display: flex;
+  }
+  &__cropper {
+    height: 90%;
+    position: relative;
+  }
+
+  &__slider {
+    height: 10%;
+  }
+
+  &__dialog {
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+}

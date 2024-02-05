@@ -1,0 +1,29 @@
+@import '../../assets/styles/colors.scss';
+
+
+.lsux-tree {
+  border-left: 3px solid $N300;
+}
+
+.lsux-tree-row {
+  align-items: center;
+  display: flex;
+  justify-content:space-between;
+}
+
+.lsux-tree-row-label{
+  align-items:center;
+  display:flex;
+}
+
+.lsux-tree-row-allow-select:hover {
+  cursor: pointer;
+}
+
+.lsux-tree-row-selected {
+  background-color: $N300;
+}
+
+.lsux-tree-row-highlighted {
+  color: $R200;
+}

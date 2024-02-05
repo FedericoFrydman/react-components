@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Component should render the component 1`] = `
+<p
+  className="lsux-text lsux-text--medium lsux-text--normal custom--class"
+  style={Object {}}
+>
+  some text
+</p>
+`;

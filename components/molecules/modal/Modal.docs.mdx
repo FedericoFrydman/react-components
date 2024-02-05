@@ -1,0 +1,131 @@
+import { FC } from 'react';
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { ModalTest } from './ModalTest';
+import { Modal } from './Modal';
+import { Container } from '../../atoms/container/Container';
+import { Input } from '../../molecules/input/Input';
+import { FormField } from '../../organisms/form-field/FormField';
+import { Heading } from '../../atoms/heading/Heading';
+
+<Title />
+
+A "dialog" is also a type of Modal especially when system speaks to the user, requesting user's response e.g. "Are you sure you want to cancel? Yes/No".
+Use a modal to request immediate action from users, show informational or criterial content while maintaining context.
+It is always shown with an overlaying background color to cover underlying content.
+Our modal is web-first. For mobile apps, use native modal and/or dialog instead.
+
+<Meta component={Modal} title={Modal} />
+
+<ArgsTable of={Modal} />
+
+Implements the core scaffolding of a modal popup window. The modal window, when displayed, will block all interaction with
+UX on the screen. It renders centered on the top of the visible page. It renders a title, an optional close button, and two
+additional optional buttons (an OK and a Cancel).
+
+The contents of the modal are determined by the caller. The caller can include `Button` components in `<Modal.Actions>`
+to make the actions clear to the user.
+
+## Types
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        <Heading as="T16" text="Non-Dismissible" />
+      </th>
+      <th>
+        <Heading as="T16" text="Dismissible" />
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>Use for critical information</li>
+          <li>Use to request immediate actions from user</li>
+          <li>Requires actions from user</li>
+          <li>Can include buttons or other form elements</li>
+          <li>Cannot be dismissed by "Esc" key or clicking on the overlay background</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Gives helpful or related information without losing context</li>
+          <li>Can include buttons or other form elements</li>
+          <li>Clicking on the "X" means the same thing as "Cancel" button, if available.</li>
+          <li>Can be dismissed by clicking on the "X", "Esc" key or clicking on the overlay background.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+To make the `Modal` dismissible, set `closeButton` to `true` and define a `closeFunction` callback handler.
+
+## Usage Guidelines
+
+- Modal is disruptive so use it sparingly
+- Consider other components if action from user is not required:
+  [Alert](https://ux-framework-svc-sandbox-us.app.pplsicorp.com/?path=/docs/components-alert--default), Accordion or [Popover](https://ux-framework-svc-sandbox-us.app.pplsicorp.com/?path=/story/components-popover--with-title) are good alternatives
+- Keep content short to avoid scrolling on small screens
+- Ability to use "Esc" key to dismiss Modal
+- **Do not** nest Modal within another Modal
+- Clicking or tapping on background will dismiss the modal for non-criterial modals only
+
+## Example Code
+
+```tsx
+export const ModalTest: FC<ModalTestProps> = ({ first, last }: ModalTestProps) => {
+  const [showModal, setShowModal] = useState(false);
+  const [firstName, setFirstName] = useState(first);
+  const [lastName, setLastName] = useState(last);
+  const editFunction = useCallback(() => {
+    setShowModal(true);
+  }, []);
+
+  const closeFunction = useCallback(() => {
+    setShowModal(false);
+  }, []);
+
+  const firstNameInput = useRef<HTMLInputElement>();
+  const lastNameInput = useRef<HTMLInputElement>();
+
+  const okFunction = useCallback(() => {
+    setFirstName(firstNameInput.current.value);
+    setLastName(lastNameInput.current.value);
+    setShowModal(false);
+  }, []);
+
+  return (
+    <Container>
+      <FormField>
+        <Input name="name" value={`${firstName} ${lastName}`} readOnly />
+      </FormField>
+      <Button label="Edit" onClick={editFunction} variant="secondary" />
+      {showModal && (
+        <Modal title="Edit Name" closeButton={true} closeFunction={closeFunction} position="center">
+          <div>
+            <FormField classNames={[]} id="first" label="First Name">
+              <Input ref={firstNameInput} name="name" placeholder="First Name" defaultValue={firstName} />
+            </FormField>
+            <FormField classNames={[]} id="last" label="Last Name">
+              <Input ref={lastNameInput} name="name" placeholder="Last Name" defaultValue={lastName} />
+            </FormField>
+          </div>
+          <Modal.Actions>
+            <Button variant="primary" label="Save" onClick={okFunction} />
+            <Button variant="secondary" label="Cancel" onClick={closeFunction} />
+          </Modal.Actions>
+        </Modal>
+      )}
+    </Container>
+  );
+};
+```
+
+### Demo
+
+The example below renders the modal with two form fields allowing the name to be edited.
+
+<ModalTest first="John" last="Doe" position="center" />

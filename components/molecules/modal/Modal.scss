@@ -1,0 +1,149 @@
+@import '../../assets/styles/shadows.scss';
+@import '../../assets/styles/colors.scss';
+
+$modal-border-radius: 15px;
+$modal-max-height: 95%;
+$modal-max-width: 335px;
+
+.lsux-modal-blocker {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+
+  .lsux-modal {
+    background-color: $N00;
+    border-radius: $modal-border-radius;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12), 0px 24px 32px rgba(0, 0, 0, 0.16);
+    max-height: var(--modal-max-height);
+    max-width: var(--modal-max-width);
+    overflow-y: overlay;
+    width: 100%;
+
+    &-position {
+      &-bottom {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        bottom: 0%;
+        left: 0%;
+        margin: 0 auto;
+        position: absolute;
+        right: 0%;
+      }
+      &-center {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &-top {
+        margin: 10px auto;
+      }
+    }
+
+    .lsux-modal__content {
+      border-radius: $modal-border-radius;
+    }
+  }
+}
+
+.lsux-modal::-webkit-scrollbar {
+  width: 10px;
+}
+.lsux-modal::-webkit-scrollbar-track {
+  background-color: transparent;
+  margin: 10px;
+}
+.lsux-modal::-webkit-scrollbar-thumb {
+  background-color: rgba(115, 115, 115, 0.8);
+  border: 2px solid white;
+  border-radius: 20px;
+  display: none;
+}
+.isScrolling::-webkit-scrollbar-thumb {
+  display: block;
+}
+.lsux-modal::-webkit-scrollbar-thumb:hover {
+  background-color: #c4c4c4;
+  display: block;
+}
+
+.lsux-modal__button-bar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  width: 100%;
+  > .lsux-button {
+    margin-top: 8px;
+  }
+  > .lsux-button:first-of-type {
+    margin-top: 16px;
+  }
+}
+
+.lsux-modal__button-bar-full {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  left: 0;
+  padding: 24px 8px;
+  position: relative;
+  right: 0;
+  width: 100%;
+  > .lsux-button {
+    margin-right: 8px;
+  }
+  > .lsux-button:last-child {
+    margin-right: 0;
+  }
+}
+
+.lsux-modal__header {
+  border-top-left-radius: $modal-border-radius;
+  border-top-right-radius: $modal-border-radius;
+  display: flex;
+  flex-direction: row-reverse;
+
+  > .lsux-button {
+    border-radius: 30px;
+    padding: 0;
+  }
+}
+
+.lsux-modal-blocker-full {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+
+  .lsux-modal-full {
+    background-color: $N00;
+    border-color: $N300;
+    border-radius: var(--brand-border-radius);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+    > .lsux-modal-close {
+      float: right;
+      margin-right: 8px;
+      margin-top: 8px;
+    }
+  }
+
+  &--children {
+    align-items: flex-end;
+    display: flex;
+    flex: 1;
+  }
+}

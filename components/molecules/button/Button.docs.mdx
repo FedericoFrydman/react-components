@@ -1,0 +1,187 @@
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Button } from './Button';
+
+# Button
+
+Buttons are used to initiate an action. It contains a combination of label, and can be supplemented with an icon.
+Button label should be concise and clearly describe action occurs after user’s interaction.
+
+<ArgsTable of={Button} />
+
+## Button Variants
+
+There are three Button variants: `primary`, `secondary`, and `tertiary`. They indicate the heirachary of
+actions types and relative importance in the UI. There are three former variants that have been deprecated
+but are supported for now: `standard`, `link`, and `destructive`. These will be removed in a future version.
+
+<p>&nbsp;</p>
+
+### Primary Button
+
+---
+
+**Primary button** calls attention to important actions. Use them to emphasize a preferred action. Not all interfaces require a primary button.
+
+<Canvas>
+  <Story id="controls-button--primary" />
+</Canvas>
+
+- **Do** Limit use of Primary Button on a UI to build visual hierarchy.
+- **Do** use Primary Button for submit a form or go to next step in the process.
+- **Do not** use Primary Button to open external link.
+
+<p>&nbsp;</p>
+
+### Secondary Button
+
+---
+
+**Secondary button** are secondary buttons for lesser consequential actions, such as Edit or Cancel. Often these are placed alongside a Primary button.
+
+A screen can contain multiple secondary buttons.
+
+<Canvas>
+  <Story id="controls-button--secondary" />
+</Canvas>
+
+- **Do not** use Secondary Button to open external link
+
+<p>&nbsp;</p>
+
+### Tertiary button
+
+---
+
+**Tertiary Button** is used to navigate to another page and should open in the current window unless:
+
+- Information may be lost, e.g. when someone is filling out a form
+- The destination is an external site, e.g. for a knowledge base article
+
+<Canvas>
+  <Story id="controls-button--tertiary" />
+</Canvas>
+
+- **Do** use Tertiary button for navigational action, such as “Back” or “Next”
+
+<p>&nbsp;</p>
+
+## Destructive Buttons
+
+A Destructive button indicates in the UI that the associated action will delete or remove a relevant item.
+When the `destructive` prop is `true`, the button will turn red to indiciate that action type. This can be used with any of the button variants.
+
+### Primary
+
+<Canvas>
+  <Story id="controls-button--primary-destructive" />
+</Canvas>
+
+### Secondary
+
+<Canvas>
+  <Story id="controls-button--secondary-destructive" />
+</Canvas>
+
+### Tertiary
+
+<Canvas>
+  <Story id="controls-button--tertiary-destructive" />
+</Canvas>
+
+## Icon Buttons
+
+<p>&nbsp;</p>
+
+### Icon-only Button
+
+---
+
+**Icon only Button** is a standalone button without any visible text label. Extra care is needed when choosing an icon making sure it is well understood and follow common convention (example: magnify glass for search, person icon for user, trash for delete). This button type is often used to trigger an overflow menu on mobile.
+
+Alt text and other accessibility considerations need to be included to make sure this button makes sense to all users.
+
+<Canvas>
+  <Story id="controls-button--icon-button" />
+</Canvas>
+
+- **Do** include alt text so user can hover and understand
+- **Do** follow common well-known convention when choosing an icon
+
+<p>&nbsp;</p>
+
+### Button with Icon
+
+---
+
+Buttons can have one or two icons, which can present on the left and/or right side of the button.
+
+#### Left Side
+
+<Canvas>
+  <Story id="controls-button--btn-w-icon-left" />
+</Canvas>
+
+#### Right Side
+
+<Canvas>
+  <Story id="controls-button--btn-w-icon-right" />
+</Canvas>
+
+#### Custom Color
+
+<Canvas>
+  <Story id="controls-button--btn-w-colored-icon-left" />
+</Canvas>
+
+<p>&nbsp;</p>
+
+### Stretch Button
+
+---
+
+<Canvas>
+  <Story id="controls-button--stretch" />
+</Canvas>
+
+- **Do** use `stretch` prop on Button to have more visual impact
+
+<p>&nbsp;</p>
+
+### Button with an icon
+
+---
+
+Buttons can have an icon, the icon can be on the left or right
+These is how the btn looks with the icon
+
+- To the **left**
+  <Canvas>
+    <Story id="controls-button--btn-w-icon-left" />
+  </Canvas>
+  <p>&nbsp;</p>
+- To the **right**
+  <Canvas>
+    <Story id="controls-button--btn-w-icon-right" />
+  </Canvas>
+- To the **left with color**
+  <Canvas>
+    <Story id="controls-button--btn-w-colored-icon-left" />
+  </Canvas>
+
+<p>&nbsp;</p>
+
+## General Usage
+
+- Use only one primary button per screen
+- Always place buttons in easy-to-spot locations
+- Avoid modifying or disabling interactive states
+- Where possible, make system actions like copying links and opening in new tabs available
+- When pairing Primary and Standard buttons together such as “Send” and “Cancel”, our buttons are right aligned and Primary button should be the farthest right in the group.
+  <p>&nbsp;</p>
+
+## Label Considerations
+
+- Write the label in concise, clear terms so that users know what will happen if they click.
+- Use title case in the button text.
+- Aim for a low character count (four words or fewer).
+- Check for text legibility and sufficient contrast when using transparent button styles.

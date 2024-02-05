@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner Component should render the component 1`] = `
+<div
+  className="lsux-spinner lsux-spinner--medium lsux-spinner--neutral spin"
+>
+  <div
+    className="lsux-spinner__center lsux-spinner__center--neutral"
+  />
+</div>
+`;

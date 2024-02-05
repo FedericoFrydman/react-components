@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea Component should render the component 1`] = `
+<textarea
+  aria-invalid={false}
+  className="lsux-text-area lsux-text-area--resize-both pt-4"
+  id="text-area"
+  rows={5}
+/>
+`;

@@ -1,0 +1,34 @@
+import { ArgsTable, Story, Canvas, Stories } from '@storybook/addon-docs';
+import { Alert } from '../../molecules/alert/Alert';
+import { Container } from './Container';
+
+# Container
+
+<Canvas>
+  <Story id="layout-container--light-gray-background" />
+</Canvas>
+
+<Alert title="Dev Note" dismissible={false} severity="warning" icon="alert_warning">
+  This component is just to use it when the child container has special specifications, like background, position,
+  etc...
+</Alert>
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+<ArgsTable of={Container}/>
+
+## Example Code
+
+```tsx
+<Container background="light-gray" fixed={true}>
+  // the children go here
+<Container/>
+```
+
+## Usage Guideline
+
+| Prop       | Usage                                                                                                                                                             |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| background | This prop should be equal to "light-gray" in order to add a class to the container that will provied the background color. Now it only support light-gray ($N100) |
+| fixed      | When it is true, it adds a class to the container to make it position fixed with 99 z-index                                                                       |
+| flexbox    | When it is true, it adds a class to the container to make it display flex                                                                                         |

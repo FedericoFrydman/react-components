@@ -1,0 +1,113 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-badge {
+  align-items: flex-start;
+  border: 1px solid;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+
+  &--square {
+    border-radius: 3px;
+    padding: 2px 8px;
+  }
+
+  &--circle {
+    border-radius: 12px;
+    padding: 2px 8px;
+  }
+
+  &--default {
+    &--bold {
+      background: $N700;
+      border-color: $N800;
+      color: $N00;
+    }
+
+    &--subtle {
+      background: $N100;
+      border-color: $N300;
+      color: $N1000;
+    }
+  }
+
+  &--success {
+    &--bold {
+      background: $G200;
+      border-color: $G300;
+      color: $N00;
+    }
+
+    &--subtle {
+      background: $G10;
+      border-color: $G200;
+      color: $G300;
+    }
+  }
+
+  &--attention {
+    &--bold {
+      background: $Y200;
+      border-color: $Y300;
+      color: $N1000;
+    }
+
+    &--subtle {
+      background: $Y10;
+      border-color: $Y200;
+      color: $N1000;
+    }
+  }
+
+  &--important {
+    &--bold {
+      background: $R200;
+      border-color: $R300;
+      color: $N00;
+    }
+
+    &--subtle {
+      background: $R10;
+      border-color: $R200;
+      color: $R300;
+    }
+  }
+
+  &--new {
+    &--bold {
+      background: $B200;
+      border-color: $B300;
+      color: $N00;
+    }
+
+    &--subtle {
+      background: $B10;
+      border-color: $B200;
+      color: $B300;
+    }
+  }
+
+  &--primary {
+    &--bold {
+      background: var(--badge-primary-bold-background);
+      border-color: var(--badge-primary-bold-border);
+      color: var(--badge-primary-bold-text);
+    }
+
+    &--subtle {
+      background: var(--badge-primary-subtle-background);
+      border-color: var(--badge-primary-subtle-border);
+      color: var(--badge-primary-subtle-text);
+    }
+  }
+
+  &--small {
+    padding: 2px 6px;
+  }
+
+  &--dot {
+    background: $R200;
+    margin-left: auto;
+    padding: 5px;
+  }
+}

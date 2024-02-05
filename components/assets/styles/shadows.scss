@@ -1,0 +1,107 @@
+$elevation-1: 0px 2px 4px rgba(0, 0, 0, 0.12);
+$elevation-2: 0px -1px 12px rgba(0, 0, 0, 0.015), 0px 6px 8px rgba(0, 0, 0, 0.08);
+$elevation-3: 0px 4px 14px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06);
+$elevation-4: 0px 4px 16px rgba(0, 0, 0, 0.06), 0px 24px 32px rgba(0, 0, 0, 0.08);
+
+$first-shadow: rgba(34, 34, 34, 0.04);
+$second-shadow: rgba(34, 34, 34, 0.08);
+
+$shadow100-bottom: 0px 3px 2px $first-shadow, 0px 1px 3px $second-shadow;
+$shadow200-bottom: 0px 5px 3px $first-shadow, 0px 8px 5px $second-shadow;
+$shadow300-bottom: 0px 8px 5px $first-shadow, 0px 15px 12px $second-shadow;
+$shadow400-bottom: 0px 18px 12px $first-shadow, 0px 24px 18px $second-shadow;
+
+$shadow100-right: 3px 0px 2px $first-shadow, 1px 0px 3px $second-shadow;
+$shadow200-right: 5px 0px 3px $first-shadow, 8px 0px 5px $second-shadow;
+$shadow300-right: 8px 0px 5px $first-shadow, 15px 0px 12px $second-shadow;
+$shadow400-right: 18px 0px 12px $first-shadow, 24px 0px 18px $second-shadow;
+
+$shadow100-left: -3px 0px 2px $first-shadow, -1px 0px 3px $second-shadow;
+$shadow200-left: -5px 0px 3px $first-shadow, -8px 0px 5px $second-shadow;
+$shadow300-left: -8px 0px 5px $first-shadow, -15px 0px 12px $second-shadow;
+$shadow400-left: -18px 0px 12px $first-shadow, -24px 0px 18px $second-shadow;
+
+$shadow100-top: 0px -3px 2px $first-shadow, 0px -1px 3px $second-shadow;
+$shadow200-top: 0px -5px 3px $first-shadow, 0px -8px 5px $second-shadow;
+$shadow300-top: 0px -8px 5px $first-shadow, 0px -15px 12px $second-shadow;
+$shadow400-top: 0px -18px 12px $first-shadow, 0px -24px 18px $second-shadow;
+
+.elevation-1 {
+  box-shadow: $elevation-1;
+}
+
+.elevation-2 {
+  box-shadow: $elevation-2;
+}
+
+.elevation-3 {
+  box-shadow: $elevation-3;
+}
+
+.elevation-4 {
+  box-shadow: $elevation-4;
+}
+
+.shadow100-bottom {
+  box-shadow: $shadow100-bottom;
+}
+
+.shadow200-bottom {
+  box-shadow: $shadow200-bottom;
+}
+
+.shadow300-bottom {
+  box-shadow: $shadow300-bottom;
+}
+
+.shadow400-bottom {
+  box-shadow: $shadow400-bottom;
+}
+
+.shadow100-right {
+  box-shadow: $shadow100-right;
+}
+
+.shadow200-right {
+  box-shadow: $shadow200-right;
+}
+
+.shadow300-right {
+  box-shadow: $shadow300-right;
+}
+
+.shadow400-right {
+  box-shadow: $shadow400-right;
+}
+
+.shadow100-left {
+  box-shadow: $shadow100-left;
+}
+
+.shadow200-left {
+  box-shadow: $shadow200-left;
+}
+
+.shadow300-left {
+  box-shadow: $shadow300-left;
+}
+
+.shadow400-left {
+  box-shadow: $shadow400-left;
+}
+
+.shadow100-top {
+  box-shadow: $shadow100-top;
+}
+
+.shadow200-top {
+  box-shadow: $shadow200-top;
+}
+
+.shadow300-top {
+  box-shadow: $shadow300-top;
+}
+
+.shadow400-top {
+  box-shadow: $shadow400-top;
+}

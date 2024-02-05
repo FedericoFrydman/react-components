@@ -1,0 +1,69 @@
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Snackbar } from './Snackbar';
+
+# Snackbar
+
+Snackbar is used to display brief information or system feedback that fades in at the top right of the screen. It is designed to be less intrusive than
+[Alert banner](https://ux-framework-svc-sandbox-us.app.pplsicorp.com/?path=/docs/components-alert--type-dismissible). Toast can be persistent that stays on screen or temporary that disappears after five seconds.
+
+Use Persistent Snackbar to deliver contextual message. It must include a close link to dismiss and can include a title and/or description.
+
+Temporary Snackbar is for low priority, task related messages. It should not require any actions from users, example “Your email address has been updated”. Temporary Snackbar will fades and disappears after five seconds.
+
+<ArgsTable of={Snackbar} />
+
+## Anatomy
+
+<p>&nbsp;</p>
+
+<Canvas>
+  <Story id="components-snackbar--default" />
+</Canvas>
+
+Snackbar is fixed width at 355px on large and medium screen sizes. On mobile, Snackbar is 100% width within the screen margin.
+
+## Severity
+
+<p>&nbsp;</p>
+
+### Default
+
+<Canvas>
+  <Story id="components-snackbar--with-alert-default" />
+</Canvas>
+
+### Success
+
+<Canvas>
+  <Story id="components-snackbar--with-alert-success" />
+</Canvas>
+
+### Error
+
+<Canvas>
+  <Story id="components-snackbar--with-alert-error" />
+</Canvas>
+
+### Information
+
+<Canvas>
+  <Story id="components-snackbar--with-alert-information" />
+</Canvas>
+
+<p>&nbsp;</p>
+
+## Usage guidelines
+
+- **DO** Keep title brief and to the point
+- **DO** Keep message under two lines for quick consumption
+- **DO** Limit to only one Snackbar appear on the screen
+- Consider using `autoHideDuration` to display message or simple system feedback temporarily that does not need extra attention
+- Use Alert component inside `Snackbar` for important destructive message
+
+| **Style**   | **Usage examples**                                                                  | **Importance**      |
+| ----------- | ----------------------------------------------------------------------------------- | ------------------- |
+| Default     | "Please try again”                                                                  | 4 (Least important) |
+| Information | "Web site maintenance is scheduled on Thursday, November 15, 2020 at 11:00 pm CST.” | 4 (Least important) |
+| Success     | “Your payment information has been updated.”                                        | 3                   |
+| Warning     | “Your idle session will end in 30 seconds.”                                         | 2                   |
+| Error       | “There was an error in your form.”                                                  | 1 (Most important)  |

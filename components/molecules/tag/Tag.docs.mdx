@@ -1,0 +1,59 @@
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Tag } from './Tag';
+
+# Tag
+
+Tags can be used to sort or filter through results or organize and categorize similar items.
+All tags can be interacted by the users, use Badge instead for static display or show static status of an item. For mobile apps, use native “Chips”.
+
+<ArgsTable of={Tag} />
+
+## Tag types
+
+| DEFAULT                                           | DISMISSIBLE                                                          | SELECTED                                                             |
+| ------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <Tag text="Default" />                            | <Tag text="Dismissible" onDismissible={() => alert('X clicked')} />   | <Tag text="Dismissible" onSelected={() => alert('Text clicked')} />   |
+
+---
+
+## Usage guideline
+
+- **Do** keep Tag label length at 1-2 words max
+- **Do** keep all Tags in one line
+- Tag label should be title case
+- **Do not** mix dismissible and non-dismissible Tags in the same Tag group
+
+### Default Tag
+
+---
+
+<Canvas>
+  <Story id="components-tag--default" />
+</Canvas>
+
+### Dismissible Tag
+
+---
+
+<Canvas>
+  <Story id="components-tag--dismissible" />
+  <Story id="components-tag--dismissible" />
+</Canvas>
+
+### Selected Tag
+
+---
+
+<Canvas>
+  <Story id="components-tag--selected" />
+  <Story id="components-tag--selected" />
+</Canvas>
+
+### Selected and Dismissible Tag
+
+---
+
+<Canvas>
+  <Story id="components-tag--both" />
+  <Story id="components-tag--both" />
+</Canvas>

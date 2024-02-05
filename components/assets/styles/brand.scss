@@ -1,0 +1,315 @@
+// This css file is not included in the platform output, and is determined at runtime by the design service
+
+// It contains the brand settings, and also "global" css settings needed by the design assumptions
+
+// Included in storybook and included by the brand documentation, but not output
+@import './colors.scss';
+
+// Variables determined by the brand
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Brand */
+$brand-color-prim50: #ebddf8;
+$brand-color-prim100: #c29aea;
+$brand-color-prim200: #8231d4;
+$brand-color-prim300: #521d87;
+
+$brand-color-prim50-filter: brightness(0) saturate(100%) invert(85%) sepia(26%) saturate(256%) hue-rotate(216deg)
+  brightness(102%) contrast(94%);
+$brand-color-prim100-filter: brightness(0) saturate(100%) invert(71%) sepia(70%) saturate(2028%) hue-rotate(208deg)
+  brightness(103%) contrast(83%);
+$brand-color-prim200-filter: brightness(0) saturate(100%) invert(23%) sepia(95%) saturate(2961%) hue-rotate(261deg)
+  brightness(85%) contrast(95%);
+$brand-color-prim300-filter: brightness(0) saturate(100%) invert(10%) sepia(52%) saturate(5280%) hue-rotate(265deg)
+  brightness(103%) contrast(95%);
+
+/* Buttons */
+
+// Primary - Default
+$btn-primary-default-background: $brand-color-prim200;
+$btn-primary-default-border: $brand-color-prim200;
+$btn-primary-default-halo: transparent;
+$btn-primary-default-text: $N00;
+
+// Primary - Hover
+$btn-primary-hover-background: #9152d1;
+$btn-primary-hover-border: #9152d1;
+$btn-primary-hover-halo: transparent;
+$btn-primary-hover-text: $N00;
+
+// Primary - Focus
+$btn-primary-focus-background: $brand-color-prim200;
+$btn-primary-focus-border: $brand-color-prim200;
+$btn-primary-focus-halo: rgba($brand-color-prim200, 0.65);
+$btn-primary-focus-text: $N00;
+
+// Primary - Active
+$btn-primary-active-background: rgba($brand-color-prim300, 0.8);
+$btn-primary-active-border: rgba($brand-color-prim300, 0.8);
+$btn-primary-active-halo: transparent;
+$btn-primary-active-text: $N00;
+
+// Primary - Disabled
+$btn-primary-disabled-background: $N500;
+$btn-primary-disabled-border: $N00;
+$btn-primary-disabled-halo: transparent;
+$btn-primary-disabled-text: $N500;
+
+// Secondary - Default
+$btn-secondary-default-background: transparent;
+$btn-secondary-default-border: $brand-color-prim200;
+$btn-secondary-default-halo: transparent;
+$btn-secondary-default-text: $brand-color-prim200;
+
+// Secondary - Hover
+$btn-secondary-hover-background: transparent;
+$btn-secondary-hover-border: #8231d4;
+$btn-secondary-hover-halo: transparent;
+$btn-secondary-hover-text: #8231d4;
+
+// Secondary - Focus
+$btn-secondary-focus-background: transparent;
+$btn-secondary-focus-border: $brand-color-prim200;
+$btn-secondary-focus-halo: #8231d447;
+$btn-secondary-focus-text: $brand-color-prim200;
+
+// Secondary - Active
+$btn-secondary-active-background: transparent;
+$btn-secondary-active-border: rgba($brand-color-prim300, 0.8);
+$btn-secondary-active-halo: transparent;
+$btn-secondary-active-text: rgba($brand-color-prim300, 0.8);
+
+// Secondary - Disabled
+$btn-secondary-disabled-background: $brand-color-prim200;
+$btn-secondary-disabled-border: $brand-color-prim200;
+$btn-secondary-disabled-halo: transparent;
+$btn-secondary-disabled-text: $N300;
+
+// Tertiary - Default
+$btn-tertiary-default-background: transparent;
+$btn-tertiary-default-border: transparent;
+$btn-tertiary-default-halo: transparent;
+$btn-tertiary-default-text: $brand-color-prim200;
+
+// Tertiary - Hover
+$btn-tertiary-hover-background: transparent;
+$btn-tertiary-hover-border: transparent;
+$btn-tertiary-hover-halo: transparent;
+$btn-tertiary-hover-text: #8231d4;
+
+// Tertiary - Focus
+$btn-tertiary-focus-background: transparent;
+$btn-tertiary-focus-border: $brand-color-prim200;
+$btn-tertiary-focus-halo: #8231d447;
+$btn-tertiary-focus-text: $brand-color-prim200;
+
+// Tertiary - Active
+$btn-tertiary-active-background: transparent;
+$btn-tertiary-active-border: transparent;
+$btn-tertiary-active-halo: transparent;
+$btn-tertiary-active-text: rgba($brand-color-prim300, 0.8);
+
+// Tertiary - Disabled
+$btn-tertiary-disabled-background: transparent;
+$btn-tertiary-disabled-border: transparent;
+$btn-tertiary-disabled-halo: transparent;
+$btn-tertiary-disabled-text: $N500;
+
+/* Badge */
+$badge-primary-bold-background: $brand-color-prim200;
+$badge-primary-bold-border: $brand-color-prim300;
+$badge-primary-bold-text: $N00;
+$badge-primary-subtle-background: $brand-color-prim50;
+$badge-primary-subtle-border: $brand-color-prim200;
+$badge-primary-subtle-text: $brand-color-prim300;
+
+/* Radio */
+$radio-cb-enabled-checked-background: $brand-color-prim200;
+$radio-cb-enabled-checked-border: $brand-color-prim200;
+$radio-cb-disabled-checked-background: $N100;
+$radio-cb-disabled-checked-border: $N500;
+$radio-cb-disabled-unchecked-background: $N100;
+$radio-cb-disabled-unchecked-border: $N500;
+
+/* Checkbox */
+$checkbox-cb-enabled-focus-halo: $brand-color-prim200;
+$checkbox-cb-enabled-unchecked-border: $N600;
+$checkbox-cb-enabled-checked-filled-background: $brand-color-prim200;
+$checkbox-cb-enabled-checked-filled-border: $brand-color-prim200;
+$checkbox-cb-enabled-checked-outlined-background: $N00;
+$checkbox-cb-enabled-checked-outlined-border: inherit;
+$checkbox-cb-disabled-checked-filled-background: $N500;
+$checkbox-cb-disabled-checked-filled-border: $N500;
+$checkbox-cb-disabled-checked-outlined-background: $N00;
+$checkbox-cb-disabled-checked-outlined-border: $N500;
+
+/* Switch */
+$switch--enabled-unchecked-background: $N350;
+$switch--enabled-checked-background: $brand-color-prim200;
+$switch--disabled-unchecked-background: $N100;
+$switch--disabled-checked-background: $N350;
+
+/* PlanCard */
+$plan-card-default: $brand-color-prim200;
+
+/* LinkContent */
+$link-content-default: $brand-color-prim200;
+$link-content-focus: $brand-color-prim200;
+$link-content-active: $brand-color-prim300;
+
+/* ProgressBar */
+$progress-bar-default: $brand-color-prim200;
+
+:root {
+  --brand-color-prim50: #{$brand-color-prim50};
+  --brand-color-prim100: #{$brand-color-prim100};
+  --brand-color-prim200: #{$brand-color-prim200};
+  --brand-color-prim300: #{$brand-color-prim300};
+  --brand-font-family: 'Inter', 'Times New Roman', sans-serif;
+  --brand-color-prim300-filter: #{$brand-color-prim300-filter};
+  --brand-color-prim200-filter: #{$brand-color-prim200-filter};
+  --brand-color-prim100-filter: #{$brand-color-prim100-filter};
+  --brand-color-prim50-filter: #{$brand-color-prim50-filter};
+  --brand-border-radius: 3px;
+  --main-font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  --secondary-font-family: 'Poppins', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+
+  /* Buttons */
+
+  /* Primary Button */
+  --btn-primary-active-background: #{$btn-primary-active-background};
+  --btn-primary-active-border: #{$btn-primary-active-border};
+  --btn-primary-active-halo: #{$btn-primary-active-halo};
+  --btn-primary-active-text: #{$btn-primary-active-text};
+  --btn-primary-default-background: #{$btn-primary-default-background};
+  --btn-primary-default-border: #{$btn-primary-default-border};
+  --btn-primary-default-halo: #{$btn-primary-default-halo};
+  --btn-primary-default-text: #{$btn-primary-default-text};
+  --btn-primary-disabled-background: #{$btn-primary-disabled-background};
+  --btn-primary-disabled-border: #{$btn-primary-disabled-border};
+  --btn-primary-disabled-halo: #{$btn-primary-disabled-halo};
+  --btn-primary-disabled-text: #{$btn-primary-disabled-text};
+  --btn-primary-focus-background: #{$btn-primary-focus-background};
+  --btn-primary-focus-border: #{$btn-primary-focus-border};
+  --btn-primary-focus-halo: #{$btn-primary-focus-halo};
+  --btn-primary-focus-text: #{$btn-primary-focus-text};
+  --btn-primary-hover-background: #{$btn-primary-hover-background};
+  --btn-primary-hover-border: #{$btn-primary-hover-border};
+  --btn-primary-hover-halo: #{$btn-primary-hover-halo};
+  --btn-primary-hover-text: #{$btn-primary-hover-text};
+
+  /* Secondary Button */
+  --btn-secondary-active-background: #{$btn-secondary-active-background};
+  --btn-secondary-active-border: #{$btn-secondary-active-border};
+  --btn-secondary-active-halo: #{$btn-secondary-active-halo};
+  --btn-secondary-active-text: #{$btn-secondary-active-text};
+  --btn-secondary-default-background: #{$btn-secondary-default-background};
+  --btn-secondary-default-border: #{$btn-secondary-default-border};
+  --btn-secondary-default-halo: #{$btn-secondary-default-halo};
+  --btn-secondary-default-text: #{$btn-secondary-default-text};
+  --btn-secondary-disabled-background: #{$btn-secondary-disabled-background};
+  --btn-secondary-disabled-border: #{$btn-secondary-disabled-border};
+  --btn-secondary-disabled-halo: #{$btn-secondary-disabled-halo};
+  --btn-secondary-disabled-text: #{$btn-secondary-disabled-text};
+  --btn-secondary-focus-background: #{$btn-secondary-focus-background};
+  --btn-secondary-focus-border: #{$btn-secondary-focus-border};
+  --btn-secondary-focus-halo: #{$btn-secondary-focus-halo};
+  --btn-secondary-focus-text: #{$btn-secondary-focus-text};
+  --btn-secondary-hover-background: #{$btn-secondary-hover-background};
+  --btn-secondary-hover-border: #{$btn-secondary-hover-border};
+  --btn-secondary-hover-halo: #{$btn-secondary-hover-halo};
+  --btn-secondary-hover-text: #{$btn-secondary-hover-text};
+
+  /* Tertiary Button */
+  --btn-tertiary-active-background: #{$btn-tertiary-active-background};
+  --btn-tertiary-active-border: #{$btn-tertiary-active-border};
+  --btn-tertiary-active-halo: #{$btn-tertiary-active-halo};
+  --btn-tertiary-active-text: #{$btn-tertiary-active-text};
+  --btn-tertiary-default-background: #{$btn-tertiary-default-background};
+  --btn-tertiary-default-border: #{$btn-tertiary-default-border};
+  --btn-tertiary-default-halo: #{$btn-tertiary-default-halo};
+  --btn-tertiary-default-text: #{$btn-tertiary-default-text};
+  --btn-tertiary-disabled-background: #{$btn-tertiary-disabled-background};
+  --btn-tertiary-disabled-border: #{$btn-tertiary-disabled-border};
+  --btn-tertiary-disabled-halo: #{$btn-tertiary-disabled-halo};
+  --btn-tertiary-disabled-text: #{$btn-tertiary-disabled-text};
+  --btn-tertiary-focus-background: #{$btn-tertiary-focus-background};
+  --btn-tertiary-focus-border: #{$btn-tertiary-focus-border};
+  --btn-tertiary-focus-halo: #{$btn-tertiary-focus-halo};
+  --btn-tertiary-focus-text: #{$btn-tertiary-focus-text};
+  --btn-tertiary-hover-background: #{$btn-tertiary-hover-background};
+  --btn-tertiary-hover-border: #{$btn-tertiary-hover-border};
+  --btn-tertiary-hover-halo: #{$btn-tertiary-hover-halo};
+  --btn-tertiary-hover-text: #{$btn-tertiary-hover-text};
+
+  /* Badge */
+  --badge-primary-bold-background: #{$badge-primary-bold-background};
+  --badge-primary-bold-border: #{$badge-primary-bold-border};
+  --badge-primary-bold-text: #{$badge-primary-bold-text};
+  --badge-primary-subtle-background: #{$badge-primary-subtle-background};
+  --badge-primary-subtle-border: #{$badge-primary-subtle-border};
+  --badge-primary-subtle-text: #{$badge-primary-subtle-text};
+
+  /* Radio */
+  --radio-cb-enabled-checked-background: #{$radio-cb-enabled-checked-background};
+  --radio-cb-enabled-checked-border: #{$radio-cb-enabled-checked-border};
+  --radio-cb-disabled-checked-background: #{$radio-cb-disabled-checked-background};
+  --radio-cb-disabled-checked-border: #{$radio-cb-disabled-checked-border};
+  --radio-cb-disabled-unchecked-background: #{$radio-cb-disabled-unchecked-background};
+  --radio-cb-disabled-unchecked-border: #{$radio-cb-disabled-unchecked-border};
+
+  /* Checkbox */
+  --checkbox-cb-enabled-focus-halo: #{$checkbox-cb-enabled-focus-halo};
+  --checkbox-cb-enabled-unchecked-border: #{$checkbox-cb-enabled-unchecked-border};
+  --checkbox-cb-enabled-checked-filled-background: #{$checkbox-cb-enabled-checked-filled-background};
+  --checkbox-cb-enabled-checked-filled-border: #{$checkbox-cb-enabled-checked-filled-border};
+  --checkbox-cb-enabled-checked-outlined-background: #{$checkbox-cb-enabled-checked-outlined-background};
+  --checkbox-cb-enabled-checked-outlined-border: #{$checkbox-cb-enabled-checked-outlined-border};
+  --checkbox-cb-disabled-checked-filled-background: #{$checkbox-cb-disabled-checked-filled-background};
+  --checkbox-cb-disabled-checked-filled-border: #{$checkbox-cb-disabled-checked-filled-border};
+  --checkbox-cb-disabled-checked-outlined-background: #{$checkbox-cb-disabled-checked-outlined-background};
+  --checkbox-cb-disabled-checked-outlined-border: #{$checkbox-cb-disabled-checked-outlined-border};
+
+  /* Switch */
+  --switch--enabled-unchecked-background: #{$switch--enabled-unchecked-background};
+  --switch--enabled-checked-background: #{$switch--enabled-checked-background};
+  --switch--disabled-unchecked-background: #{$switch--disabled-unchecked-background};
+  --switch--disabled-checked-background: #{$switch--disabled-checked-background};
+
+  /* PlanCard */
+  --plan-card-default: #{$plan-card-default};
+
+  /* LinkContent */
+  --link-content-default: #{$link-content-default};
+  --link-content-focus: #{$link-content-focus};
+  --link-content-active: #{$link-content-active};
+
+  /* Progress Bar */
+  --progress-bar-default: #{$progress-bar-default};
+}
+
+// Variables calculated by the design service
+:root {
+  --dynamic-pad: 32px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: var(--main-font-family);
+  font-size: 100%;
+}
+
+body {
+  background-color: white;
+  margin: 0px;
+  min-width: 320px;
+}

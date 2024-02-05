@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider Component should render the component 1`] = `
+<div
+  className="lsux-divider lsux-divider__text lsux-divider--tint-light"
+>
+  <ForwardRef(TextComponent)
+    as="p"
+    text="or"
+  />
+</div>
+`;

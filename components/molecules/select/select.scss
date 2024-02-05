@@ -1,0 +1,174 @@
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/colors.scss';
+
+button {
+  all: unset;
+}
+
+@mixin createBorder($color) {
+  border: 1px solid $color;
+}
+
+@mixin focusState($color) {
+  border: 1px solid $color;
+}
+
+.lsux-select__trigger {
+  align-items: center;
+  background-color: white;
+  @include createBorder($N300);
+  border-radius: 4px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: $N800;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  font-size: 16px;
+  gap: 8px;
+  height: 35px;
+  justify-content: flex-start;
+  line-height: 1;
+  min-height: 44px;
+  min-width: 200px;
+  padding: 0 16px;
+  user-select: none;
+
+  &--stretch {
+    width: 100%;
+  }
+
+  &--warning {
+    background: $Y10;
+    @include createBorder($Y200);
+    outline: none;
+
+    &:focus {
+      @include focusState($Y200);
+    }
+  }
+
+  &--valid {
+    @include createBorder($G200);
+
+    &:focus {
+      @include focusState($G200);
+    }
+  }
+
+  &--invalid {
+    background: $R10;
+    @include createBorder($R200);
+  }
+
+  &__row {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  &__value {
+    font-size: 16px;
+  }
+
+  &__icon {
+    color: var(--brand-color-prim200);
+  }
+
+  &:not(:disabled):hover {
+    background-color: $N50;
+  }
+
+  &:focus {
+    border: 1px solid var(--brand-color-prim200);
+  }
+
+  &[data-disabled] {
+    background-color: $N50;
+    color: $N400;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &[data-placeholder] {
+    color: $N700;
+  }
+}
+
+.lsux-select__content {
+  background-color: white;
+  border: 1px solid $N300;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.lsux-select__viewport {
+  padding: 5px;
+}
+
+.lsux-select__content__button {
+  align-items: center;
+  background-color: white;
+  cursor: default;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+}
+
+.lsux-select-item {
+  align-items: center;
+  border-radius: 3px;
+  color: $N800;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: normal;
+  height: 25px;
+  line-height: 1;
+  overflow: hidden;
+  padding: 16px 16px 16px 28px;
+  position: relative;
+  text-overflow: ellipsis;
+  user-select: none;
+  white-space: nowrap;
+
+  &[data-disabled] {
+    color: $N400;
+    pointer-events: none;
+  }
+
+  &[data-highlighted] {
+    background-color: $N100;
+    color: $N1000;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $N50;
+  }
+
+  &--indicator {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 25px;
+  }
+
+  &--label {
+    color: $N500;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 6px 25px 2px 25px;
+  }
+
+  &--separator {
+    background-color: $N300;
+    height: 1px;
+    margin: 5px;
+  }
+}

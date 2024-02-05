@@ -1,0 +1,40 @@
+@import '../../assets/styles/colors.scss';
+
+$business-card-bg-color: #f5f5f5;
+
+.lsux-business-card {
+  align-items: center;
+  background-color: var(--business-card-bg-color);
+  display: flex;
+  justify-content: flex-end;
+  padding-left: var(--dynamic-pad);
+  padding-right: var(--dynamic-pad);
+
+  &__display-name {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &__image {
+    border: solid $N00;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+
+  &__link,
+  &__link a,
+  &__link a:link,
+  &__link a:visited {
+    color: $N1000;
+    font-size: small;
+    text-decoration: none;
+  }
+  .no-clickable {
+    cursor: default;
+    pointer-events: none;
+  }
+}

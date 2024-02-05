@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs Component should render the component 1`] = `
+<div
+  className="lsux-tab--bar"
+>
+  <ul
+    className="lsux-tab"
+    key="0"
+    onClick={[Function]}
+  >
+    <li
+      className="my-3 mx-4"
+    >
+      <a
+        href="#"
+      >
+        <ForwardRef(LabelComponent)
+          labelSize="medium"
+          text="One"
+        />
+      </a>
+    </li>
+  </ul>
+  <ul
+    className="lsux-tab"
+    key="1"
+    onClick={[Function]}
+  >
+    <li
+      className="my-3 mx-4"
+    >
+      <a
+        href="#"
+      >
+        <ForwardRef(LabelComponent)
+          labelSize="medium"
+          text="Two"
+        />
+      </a>
+    </li>
+  </ul>
+  <ul
+    className="lsux-tab lsux-tab--bar-selected"
+    key="2"
+    onClick={null}
+  >
+    <li
+      className="my-3 mx-4"
+    >
+      <ForwardRef(LabelComponent)
+        labelSize="medium"
+        text="Three"
+      />
+    </li>
+  </ul>
+</div>
+`;

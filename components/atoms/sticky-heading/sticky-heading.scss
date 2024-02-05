@@ -1,0 +1,16 @@
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/colors.scss';
+
+.lsux-sticky-heading {
+  &__header,
+  &__footer {
+    position: sticky;
+    z-index: 100;
+  }
+  &__footer {
+    bottom: 0;
+  }
+  &__header {
+    top: 0;
+  }
+}

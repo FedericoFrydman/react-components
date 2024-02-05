@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Component should render the component 1`] = `
+<div
+  className="lsux-table"
+>
+  <ForwardRef(TableRowComponent)
+    isHeader={true}
+    key="1"
+  >
+    <ForwardRef(TableCellComponent)>
+      Column 1
+    </ForwardRef(TableCellComponent)>
+    <ForwardRef(TableCellComponent)>
+      Column 2
+    </ForwardRef(TableCellComponent)>
+  </ForwardRef(TableRowComponent)>
+  <ForwardRef(TableRowComponent)
+    key="2"
+  >
+    <ForwardRef(TableCellComponent)>
+      Cell 1, 1
+    </ForwardRef(TableCellComponent)>
+    <ForwardRef(TableCellComponent)>
+      Cell 1, 2
+    </ForwardRef(TableCellComponent)>
+  </ForwardRef(TableRowComponent)>
+  <ForwardRef(TableRowComponent)
+    isOdd={true}
+    key="3"
+  >
+    <ForwardRef(TableCellComponent)>
+      Cell 2, 1
+    </ForwardRef(TableCellComponent)>
+    <ForwardRef(TableCellComponent)>
+      Cell 2, 2
+    </ForwardRef(TableCellComponent)>
+  </ForwardRef(TableRowComponent)>
+  <ForwardRef(TableRowComponent)
+    key="4"
+  >
+    <ForwardRef(TableCellComponent)>
+      Cell 3, 1
+    </ForwardRef(TableCellComponent)>
+    <ForwardRef(TableCellComponent)>
+      Cell 3, 2
+    </ForwardRef(TableCellComponent)>
+  </ForwardRef(TableRowComponent)>
+  <ForwardRef(TableRowComponent)
+    disabled={true}
+    isOdd={true}
+    key="5"
+  >
+    <ForwardRef(TableCellComponent)>
+      Cell 4, 1 (disabled)
+    </ForwardRef(TableCellComponent)>
+    <ForwardRef(TableCellComponent)>
+      Cell 4, 2 (disabled)
+    </ForwardRef(TableCellComponent)>
+  </ForwardRef(TableRowComponent)>
+</div>
+`;

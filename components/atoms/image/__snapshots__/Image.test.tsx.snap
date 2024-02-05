@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Component should render the component 1`] = `
+<img
+  alt=""
+  className="lsux-image"
+  src="https://www.iliketowastemytime.com/sites/default/files/imagecache/blog_image/Abu-Dhabi-United-Arab-Emirates-infinity-dunes-wallpaper-by-daniel-olah-iltwmt.jpg"
+  style={
+    Object {
+      "width": "initial",
+    }
+  }
+/>
+`;

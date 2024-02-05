@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelect Component should render the component 1`] = `
+<div
+  className="lsux-select-container__select"
+>
+  <select
+    hidden={true}
+    id="multiselect"
+  >
+    <option
+      key="unitedstates"
+      onChange={[Function]}
+      value="unitedstates"
+    >
+      United States
+    </option>
+    <option
+      disabled={true}
+      key="germany"
+      onChange={[Function]}
+      value="germany"
+    >
+      Germany
+    </option>
+    <option
+      key="france"
+      onChange={[Function]}
+      value="france"
+    >
+      France
+    </option>
+    <option
+      disabled={true}
+      key="costarica"
+      onChange={[Function]}
+      value="costarica"
+    >
+      Costa Rica
+    </option>
+    <option
+      key="england"
+      onChange={[Function]}
+      value="england"
+    >
+      England
+    </option>
+    <option
+      key="denmark"
+      onChange={[Function]}
+      value="denmark"
+    >
+      Denmark
+    </option>
+    <option
+      key="iceland"
+      onChange={[Function]}
+      value="iceland"
+    >
+      Iceland
+    </option>
+    <option
+      key="scotland"
+      onChange={[Function]}
+      value="scotland"
+    >
+      Scotland
+    </option>
+    0
+  </select>
+  <div
+    className="select--nav_dropdown_arrow_down"
+    hidden={true}
+  >
+    <ForwardRef(IconComponent)
+      name="arrow_caret_down_md"
+    />
+  </div>
+  <ForwardRef(ContainerComponent)
+    classNames={
+      Array [
+        "lsux-input-container",
+        false,
+      ]
+    }
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    tabIndex={0}
+  >
+    <ForwardRef(ContainerComponent)
+      classNames={
+        Array [
+          "lsux-input-container__input",
+          "lsux-input-container__input--undefined",
+        ]
+      }
+    >
+      <ForwardRef(TextComponent)
+        text="Select a country"
+        textSize="large"
+      />
+    </ForwardRef(ContainerComponent)>
+    <ForwardRef(IconComponent)
+      classNames={
+        Array [
+          "lsux-select-button--icon-right",
+        ]
+      }
+      name="arrow_caret_down_md"
+    />
+  </ForwardRef(ContainerComponent)>
+</div>
+`;

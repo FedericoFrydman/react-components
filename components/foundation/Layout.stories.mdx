@@ -1,0 +1,93 @@
+import { Meta } from '@storybook/addon-docs';
+import { Source } from '@storybook/addon-docs';
+
+<Meta title="Layout/-Layout" />
+
+# Layouts
+
+## Components
+
+There are several components on a page worth noting. These include:
+
+### Header
+
+The header contains the logo, the name of the application, the help icon, and the sign-in/sign-out button. On smaller screens it optionally contains a hamburger menu that should invoke a slide out.
+
+The header content is fixed in height.
+
+Note: The height of the header can be found in the css variable –impersonateplusheaderheight.
+
+### Navigation
+
+Many applications render a side navigation. On large screens this is on the left. The framework has the flexibility to scroll this with the page, or fixed relative to the main content.
+
+### Content
+
+The main content is where the application renders its primary or main content. Ideally this is done with a switch router statement and each individual page renders its own Grid Components.
+
+### Footer
+
+A small footer is rendered at the bottom right of the main content area. There is a React Control called “Footer” that can render this.
+
+Note: If the content doesn’t fill the page, the page is grown to be full screen so the footer renders at the bottom of the window.
+
+## Simple (w/o navigation)
+
+```js
+<Layout variant="simple">
+  <Switch>
+    <Route exact path="/" component={Home} />
+  </Switch>
+  <Footer {...footerProps}></Footer>
+</Layout>
+```
+
+## Scrolling Navigation
+
+```js
+<Layout variant="scroll" navigation={<Navigation {...navigationProps} />}>
+  <Switch>
+    <Route exact path="/" component={Home} />
+  </Switch>
+  <Footer {...footerProps}></Footer>
+</Layout>
+```
+
+## Fixed Navigation
+
+```js
+<Layout variant="fixed" navigation={<Navigation {...navigationProps} />}>
+  <Switch>
+    <Route exact path="/" component={Home} />
+  </Switch>
+  <Footer {...footerProps}></Footer>
+</Layout>
+```
+
+## Sample Home.js
+
+```js
+import { Grid, GridRow, GridCol } from '@legalshield/adonis-ux-framework';
+
+function Home() {
+  return (
+    <Grid>
+      <GridRow variant="plain">
+        <GridCol>
+          <h2>Home</h2>
+        </GridCol>
+        <GridCol>
+          Bacon ipsum dolor amet ribeye biltong meatloaf shoulder hamburger. Fatback frankfurter pastrami, sirloin
+          tri-tip venison drumstick biltong. Bresaola shoulder chicken pork chop ham. Landjaeger picanha pork chop
+          meatloaf drumstick, beef ribs turducken doner andouille hamburger short ribs prosciutto cow. Shankle ribeye
+          short loin alcatra.
+        </GridCol>
+      </GridRow>
+    </Grid>
+  );
+}
+
+export default Home;
+```
+
+\*Everything is better with bacon.

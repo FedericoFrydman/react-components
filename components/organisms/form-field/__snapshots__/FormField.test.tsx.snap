@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField Component should render the component 1`] = `
+<div
+  className="lsux-form-field-container"
+  data-testid="test-form-field"
+>
+  <label
+    className="lsux-form-field-container__label"
+    htmlFor="input"
+  >
+    text
+  </label>
+  <ForwardRef(InputComponent) />
+</div>
+`;

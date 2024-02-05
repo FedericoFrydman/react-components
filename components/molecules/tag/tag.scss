@@ -1,0 +1,46 @@
+@import '../../assets/styles/colors.scss';
+
+@mixin selected() {
+  background: $B10;
+  border-color: $B200;
+  color: $B200;
+
+  .lsux-tag-icon {
+    filter: $filter-blue;
+  }
+}
+
+.lsux-tag {
+  align-items: flex-start;
+  background: $N100;
+  border: 1px solid;
+  border-color: $N300;
+  border-radius: 86px;
+  box-sizing: border-box;
+  color: $N1000;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 9px 12px;
+  transition: all 0.15s ease-in-out;
+
+  &--dismissible {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &-icon {
+    margin-left: 0.2rem;
+  }
+
+  &--selectable {
+    &:hover {
+      border-color: $B200;
+      color: $B200;
+      cursor: pointer;
+    }
+  }
+
+  &--selected {
+    @include selected();
+  }
+}

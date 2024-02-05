@@ -1,0 +1,302 @@
+@import '../../assets/styles/brand.scss';
+@import '../../assets/styles/colors.scss';
+
+/* Button States */
+
+@mixin default($bgColor, $borderColor, $textColor) {
+  background-color: $bgColor;
+  box-shadow: 0 0 0 1.5px $borderColor;
+  color: $textColor;
+}
+
+@mixin active($bgColor, $borderColor, $textColor) {
+  background-color: $bgColor;
+  box-shadow: 0 0 0 1.5px $borderColor;
+  color: $textColor;
+}
+
+@mixin disabled($bgColor, $borderColor, $textColor) {
+  &:disabled,
+  &:disabled:hover,
+  body.using-key &:disabled:focus,
+  &:disabled:active {
+    background-color: $bgColor;
+    box-shadow: 0 0 0 1.5px $borderColor;
+    color: $textColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+@mixin hover($bgColor, $borderColor, $haloColor, $textColor) {
+  background-color: $bgColor;
+  box-shadow: 0 0 0 1.5px $haloColor;
+  color: $textColor;
+  transition: box-shadow ease-in 0.15s;
+}
+
+@mixin focus($bgColor, $borderColor, $haloColor, $textColor) {
+  background-color: $bgColor;
+  box-shadow: 0 0 0 1.5px $borderColor, 0 0 0 5px $haloColor;
+  color: $textColor;
+  transition: box-shadow ease-out 0.15s;
+}
+
+/* Button Styling */
+
+.lsux-button {
+  align-items: center;
+  border: 4px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-weight: 600;
+  height: auto;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  transition: all ease-in-out 0.1s;
+  width: auto;
+
+  > .lsux-icon {
+    + span {
+      margin-left: 5px;
+    }
+  }
+
+  > .lsux-text {
+    align-items: center;
+    display: flex;
+    letter-spacing: -0.011em;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 0.25rem;
+  }
+
+  > span {
+    + .lsux-icon {
+      margin-left: 10px;
+    }
+  }
+
+  &--icon-only {
+    border: none;
+    &-no-pad {
+      padding: 0px;
+    }
+  }
+
+  &--stretch {
+    width: 100%;
+  }
+
+  /* Button Shapes */
+
+  &--rectangular {
+    border-radius: 9px;
+  }
+  &--round {
+    border-radius: 50px;
+  }
+
+  /* Button Padding */
+
+  &--primary,
+  &--secondary {
+    padding: 7px 6px;
+  }
+  &--tertiary {
+    padding: 2px 6px;
+  }
+
+  /* Button Variants */
+
+  &--primary {
+    @include default(
+      var(--btn-primary-default-background),
+      var(--btn-primary-default-border),
+      var(--btn-primary-default-text)
+    );
+
+    @include disabled(
+      var(--btn-primary-disabled-text),
+      var(--btn-primary-disabled-background),
+      var(--btn-primary-disabled-border)
+    );
+
+    &:hover {
+      @include hover(
+        var(--btn-primary-hover-background),
+        var(--btn-primary-hover-border),
+        var(--btn-primary-default-border),
+        var(--btn-primary-hover-text)
+      );
+    }
+
+    body.using-key &:focus,
+    &:focus {
+      @include focus(
+        var(--btn-primary-focus-background),
+        var(--btn-primary-focus-border),
+        var(--btn-primary-focus-halo),
+        var(--btn-primary-focus-text)
+      );
+    }
+
+    &:active {
+      @include active(
+        var(--btn-primary-active-background),
+        var(--btn-primary-active-border),
+        var(--btn-primary-active-text)
+      );
+    }
+
+    &.lsux-button--destructive {
+      @include default($R100, $R100, $N00);
+
+      @include disabled($N00, $R100, $R100);
+
+      &:hover {
+        @include hover(lighten($R100, 5%), $R100, transparent, $N00);
+      }
+
+      body.using-key &:focus,
+      &:focus {
+        @include focus(lighten($R100, 5%), lighten($R100, 35%), lighten($R100, 35%), $N00);
+      }
+
+      &:active {
+        @include active(lighten($R100, 8%), $R100, $N00);
+      }
+    }
+  }
+
+  &--secondary {
+    @include default(
+      var(--btn-secondary-default-background),
+      var(--btn-secondary-default-border),
+      var(--btn-secondary-default-text)
+    );
+
+    @include disabled(
+      var(--btn-secondary-disabled-text),
+      var(--btn-secondary-disabled-background),
+      var(--btn-secondary-disabled-border)
+    );
+
+    &:hover {
+      @include hover(
+        var(--btn-secondary-hover-background),
+        var(--btn-secondary-hover-border),
+        var(--btn-secondary-default-border),
+        var(--btn-secondary-hover-text)
+      );
+    }
+
+    body.using-key &:focus,
+    &:focus {
+      @include focus(
+        var(--btn-secondary-focus-background),
+        var(--btn-secondary-focus-border),
+        var(--btn-secondary-focus-halo),
+        var(--btn-secondary-focus-text)
+      );
+    }
+
+    &:active {
+      @include active(
+        var(--btn-secondary-active-background),
+        var(--btn-secondary-active-border),
+        var(--btn-secondary-active-text)
+      );
+    }
+
+    > .flex-row {
+      align-items: center;
+    }
+
+    &.lsux-button--destructive {
+      @include default(transparent, $R100, $R100);
+
+      @include disabled($R100, rgba(0, 0, 0, 0), $R100);
+
+      &:hover {
+        box-shadow: 0 0 0 1.5px lighten($R100, 5%);
+        color: lighten($R100, 5%);
+      }
+
+      body.using-key &:focus,
+      &:focus {
+        @include focus($N00, $R100, lighten($R100, 35%), $R100);
+      }
+
+      &:active {
+        @include active($N00, $R100, lighten($R100, 7%));
+      }
+    }
+  }
+
+  &--tertiary {
+    @include default(
+      var(--btn-tertiary-default-background),
+      var(--btn-tertiary-default-border),
+      var(--btn-tertiary-default-text)
+    );
+
+    @include disabled(
+      var(--btn-tertiary-disabled-background),
+      var(--btn-tertiary-disabled-border),
+      var(--btn-tertiary-disabled-text)
+    );
+
+    &:hover {
+      @include hover(
+        var(--btn-tertiary-hover-background),
+        var(--btn-tertiary-hover-border),
+        var(--btn-tertiary-default-border),
+        var(--btn-tertiary-hover-text)
+      );
+    }
+
+    body.using-key &:focus,
+    &:focus {
+      @include focus(
+        var(--btn-tertiary-focus-background),
+        var(--btn-tertiary-focus-border),
+        var(--btn-tertiary-focus-halo),
+        var(--btn-tertiary-focus-text)
+      );
+    }
+
+    &:active {
+      @include active(
+        var(--btn-tertiary-active-background),
+        var(--btn-tertiary-active-border),
+        var(--btn-tertiary-active-text)
+      );
+    }
+
+    &.lsux-button--destructive {
+      @include default(transparent, $N00, $R100);
+
+      @include disabled($R100, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+
+      &:hover {
+        color: lighten($R100, 5%);
+      }
+
+      body.using-key &:focus,
+      &:focus {
+        @include focus($N00, $R100, lighten($R100, 35%), lighten($R100, 5%));
+      }
+
+      &:active {
+        box-shadow: 0 0 0 1.5px lighten($R100, 8%);
+        color: lighten($R100, 7%);
+      }
+    }
+  }
+}

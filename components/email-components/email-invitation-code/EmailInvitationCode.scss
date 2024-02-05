@@ -1,0 +1,23 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-email-invitation-code {
+  margin: 0 auto;
+
+  &--text {
+    .lsux-text {
+      color: $N800;
+      margin-bottom: 8px;
+    }
+  }
+  &--code {
+    background-color: $N100;
+    padding: 24px 0;
+    width: 504px;
+
+    .lsux-text {
+      font-size: 36px;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

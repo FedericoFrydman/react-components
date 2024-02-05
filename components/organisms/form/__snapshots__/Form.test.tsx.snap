@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Component should render the component 1`] = `
+<form
+  className="lsux-form"
+>
+  <ForwardRef(FormFieldComponent)
+    id="input"
+    label="text"
+  >
+    <ForwardRef(InputComponent) />
+  </ForwardRef(FormFieldComponent)>
+</form>
+`;

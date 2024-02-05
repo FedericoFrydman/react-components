@@ -1,0 +1,71 @@
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/colors.scss';
+
+.lsux-form-field-container {
+  margin-top: 24px;
+  position: relative;
+  width: auto;
+
+  &--stretch {
+    width: 100%;
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+
+  &--day,
+  &--month {
+    width: 60px;
+  }
+
+  &--year {
+    width: 112px;
+  }
+
+  &__label {
+    color: $N700;
+    display: block;
+    font: $T14;
+    font-weight: normal;
+    left: 0;
+    letter-spacing: -0.006em;
+    line-height: 18px;
+    margin-bottom: 8px;
+    top: 0;
+
+    &.disabled {
+      color: $N500;
+    }
+
+    .required {
+      color: $R100;
+      line-height: 0;
+      margin-left: 3px;
+    }
+  }
+
+  &__description {
+    color: $N700;
+    display: block;
+    margin-top: 8px;
+  }
+
+  &__hint {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    .lsux-icon {
+      height: 14px;
+    }
+
+    &__text {
+      color: $N700;
+
+      &--invalid {
+        color: $R200;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component should render the component 1`] = `
+<button
+  className="lsux-button lsux-button--primary lsux-button--rectangular"
+  disabled={false}
+  style={Object {}}
+  type="button"
+>
+  <ForwardRef(TextComponent)
+    classNames={Array []}
+    text="button"
+    textSize="large"
+    textWeight="semibold"
+  />
+</button>
+`;

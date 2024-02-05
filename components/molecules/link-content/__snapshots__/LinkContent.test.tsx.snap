@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkContent Component should render the component 1`] = `
+<div
+  className="lsux-link-content lsux-link-content--link"
+>
+  some text
+</div>
+`;

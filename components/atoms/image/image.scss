@@ -1,0 +1,28 @@
+@import '../../assets/styles/colors.scss';
+
+img.lsux-image {
+  max-width: 100%;
+}
+
+img.lsux-image--fluid[width] {
+  width: auto; /* Defer to max-width */
+}
+
+img.lsux-image--fluid[width][height] {
+  height: auto; /* Preserve aspect ratio */
+}
+
+img.lsux-image--fluid[src$=".svg"] {
+  height: auto;
+  max-width: none;
+  width: 100%;
+}
+
+img.lsux-image--rounded {
+  border-radius: .25rem;
+}
+
+img.lsux-image--circle {
+  border-radius: 50%;
+}
+

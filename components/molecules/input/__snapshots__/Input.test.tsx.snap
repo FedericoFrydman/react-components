@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component should render the component 1`] = `
+<div
+  className="lsux-input-container"
+>
+  <input
+    className="lsux-input-container__input"
+    type="text"
+  />
+</div>
+`;

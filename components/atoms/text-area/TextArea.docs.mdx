@@ -1,0 +1,65 @@
+import { ArgsTable, Story, Canvas, Stories } from '@storybook/addon-docs';
+import { Alert } from '../../molecules/alert/Alert';
+import { TextArea } from './TextArea';
+
+# Text Area Props
+
+**This documentantion is just to display the text area props where you can interact with them and see how it behaves. For implementation please use [FormField](/?path=/docs/forms-form-fields--text-area-field) docs to guide.**
+
+<Canvas>
+  <Story id="controls-form-fields-text-area-props--default" />
+</Canvas>
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  The TextArea component must be used as a child of a FormField component.
+</Alert>
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+## Example Code
+
+```tsx
+<FormField id="text-area-field" label="Text Area" type="text-area" required>
+  <TextArea name="text-area-field" placeholder="Message" type="text-area" required />
+</FormField>
+```
+
+### Result
+
+<FormField id="text-area-field" label="Text Area" type="text-area">
+  <TextArea name="text-area-field" placeholder="Message" type="text-area" />
+</FormField>
+
+## States
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+### Invalid
+
+<Canvas>
+  <Story id="controls-form-fields-text-area-props--invalid" />
+</Canvas>
+
+### Warning
+
+<Canvas>
+  <Story id="controls-form-fields-text-area-props--warning" />
+</Canvas>
+
+### Success
+
+<Canvas>
+  <Story id="controls-form-fields-text-area-props--success" />
+</Canvas>
+
+### Disabled
+
+<Canvas>
+  <Story id="controls-form-fields-text-area-props--disabled" />
+</Canvas>
+
+### Read Only
+
+<Canvas>
+  <Story id="controls-form-fields-text-area-props--read-only" />
+</Canvas>

@@ -1,0 +1,134 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/shadows.scss';
+
+.lsux-plan-card {
+  /* Card Header (Logo, Plan Name, Plan Type, Checkbox */
+  &__header {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+
+    &__logo-container {
+      margin-right: 10px;
+      &__icon {
+        border-radius: 8px;
+      }
+    }
+
+    &__title-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      .pc-plan-name {
+        line-height: 22px;
+      }
+      .pc-plan-type {
+        color: $N700;
+      }
+    }
+  }
+  &__icon-checkmark {
+    float: right;
+    font-weight: 400;
+    text-align: right;
+    width: 100%;
+  }
+
+  /* Price */
+  &__plan-info {
+    &-price {
+      .plan-fee-text {
+        color: $N700;
+      }
+    }
+    /* Description ("Legal protection for your family") */
+    &-description {
+      color: $N700;
+      font-weight: 400;
+    }
+    /* "See Details" button */
+    &-selection-label {
+      color: $N700;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    /* Selection label */
+  }
+
+  /* Region Selector */
+  &__region-selector {
+    &__alert {
+      border-bottom: none;
+      padding: 12px;
+    }
+    &__validation-message {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      .lsux-text {
+        color: $N800;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  /* Add ons Section (Title, List of Inputs) */
+  &__add-ons.lsux-card__content {
+    border-radius: 0;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    &__heading {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+
+    .pc-add-on-coverage-name {
+      color: $N800;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.006em;
+      line-height: 18px;
+    }
+    .pc-add-on-coverage-price {
+      color: $N800;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+    .lsux-list--border .lsux-list-item:not(:last-child) {
+      border-bottom-color: $N300;
+    }
+  }
+
+  &__tier-radio-button-group {
+    .lsux-rbg-container {
+      margin: 0px;
+    }
+  }
+
+  &__tier-list-item-input {
+    a {
+      border: 1px solid #d3d3d3;
+      border-radius: 10px;
+      margin: 3.5px 0;
+    }
+    p.lsux-list-item__text-primary {
+      color: black;
+    }
+    p.lsux-list-item__text-secondary {
+      color: black;
+      font-weight: 600;
+    }
+    a.lsux-list-item-input__button {
+      height: 72px;
+    }
+  }
+}

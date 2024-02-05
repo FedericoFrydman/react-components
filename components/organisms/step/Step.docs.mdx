@@ -1,0 +1,87 @@
+import { FC } from 'react';
+import { Meta, ArgsTable, Story, Canvas, Stories, Title, Description } from '@storybook/addon-docs';
+import { StepTest } from './StepTest';
+import { Step } from './Step';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="navigation-step--default" />
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={Step} />
+
+<Stories />
+
+## Usage Guidelines
+
+- **Do** use when tasks are linear
+- **Do** use for the larger task that spans multiple screens
+- **Limit** the amount to 3-6 steps
+- **Do not** use if the amount of steps can change based on conditions
+- Keep label short and precise
+- Position the Step Indicator near the top, and same location across screens
+
+## Mobile version
+
+- The mobile version will be displayed when the window size is < 1023px.
+- The brand prop is to define the bar color in mobbile version.
+- Use size prop as auto in order to get the right display for mobile version
+
+## Variant
+
+The default variant is bubbles (desktop view). When it is define to slider (mobile view), the mobile variant is always display. Please have in mind, when variant is bubbles, it will display the mobile view when browser window width is less than breakpoint (1023).
+
+## Example Code
+
+```tsx
+export const StepTest: FC = ({}) => {
+  const [activeStep, setActiveStep] = useState(0);
+  const [completed, setCompleted] = useState([]);
+
+  const stepClicked = (index: number) => {
+    setActiveStep(index);
+  };
+
+  const switchClicked = () => {
+    if (completed.includes(activeStep)) {
+      const index = completed.indexOf(activeStep);
+      if (index > -1) {
+        completed.splice(index, 1);
+      }
+    } else {
+      completed.push(activeStep);
+    }
+
+    setCompleted([...completed]);
+  };
+
+  const isChecked = completed.includes(activeStep) ? true : false;
+
+  return (
+    <div>
+      <Step
+        stepNames={['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six']}
+        completed={completed}
+        clickable={[0, 1, 2, 3, 4, 5, 6]}
+        activeIndex={activeStep}
+        onClick={stepClicked}
+      />
+      <div>
+        <h3>Please check the item for step {activeStep + 1}</h3>
+        <Switch isChecked={isChecked} onClick={switchClicked} />
+      </div>
+    </div>
+  );
+};
+```
+
+### Result
+
+A step control. In our example, you must check the switch in each step.
+
+<StepTest />

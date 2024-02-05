@@ -1,0 +1,47 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-email-testimonial {
+  margin: 0 auto;
+  max-width: 469px;
+
+  &--section-title {
+    margin: 0 auto 32px;
+    max-width: 348px;
+    text-align: center;
+  }
+
+  &--default {
+    border: solid $N300;
+    border-width: 1px 1px 1px 0;
+    padding: 43px 49px 43px 40px;
+    position: relative;
+
+    &::before {
+      background-color: var(--brand-color-prim200);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 16px;
+    }    
+
+    .lsux-email-testimonial-text {
+      padding-left: 24px;
+      position: relative;
+      &::before {
+        content: '"';
+        font-size: 42px;
+        left: 0;
+        position: absolute;
+      }
+    }
+    .lsux-email-testimonial-author {
+      margin-top: 24px;
+      padding-left: 24px;
+    }
+    .lsux-email-testimonial-author-description {
+      padding-left: 24px;
+    }
+  }
+}

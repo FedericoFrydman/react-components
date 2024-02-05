@@ -1,0 +1,39 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Popover } from './Popover';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story name="components-popover--with-title" id="components-popover--with-title" />
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={Popover}/>
+
+<Stories />
+
+## Example Code
+
+```tsx
+<Popover>
+  <div style={{ height: '200px' }}>Content</div>
+</Popover>
+```
+## Usage guidelines
+
+- Only one Popover should be opened at any time
+- Popover can be position above or below the trigger
+- Popover has a minimum width of 288px but width can be adjusted base on the content length following the ["optimal line length"](https://baymard.com/blog/line-length-readability) idea.
+- **Do use** to show non-criterial information
+- **Do** use Popover to reduce visual clutter, making overall screen easier to scan with human eyes
+- Popover title (optional) should be written in sentence case
+- Use Tooltip instead for short, pure text content like "tips"
+
+### Result
+
+<Popover>
+  <div style={{ height: '200px' }}>Content</div>
+</Popover>

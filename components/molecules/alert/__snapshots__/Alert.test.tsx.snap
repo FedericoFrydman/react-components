@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert Component should render the component 1`] = `
+<div
+  className="lsux-alert lsux-alert--error--subtle p-4"
+>
+  <div
+    className="lsux-alert__header lsux-alert__header-wrapper"
+  >
+    <ForwardRef(GridColComponent)>
+      <ForwardRef(IconComponent)
+        classNames={
+          Array [
+            "lsux-alert__icon",
+          ]
+        }
+        color="R300"
+        name="edit_close_circle"
+      />
+    </ForwardRef(GridColComponent)>
+    <ForwardRef(GridColComponent)>
+      <div
+        className="lsux-alert--content-text"
+      >
+        <ForwardRef(TextComponent)
+          textSize="small"
+        >
+          Actionable
+        </ForwardRef(TextComponent)>
+      </div>
+    </ForwardRef(GridColComponent)>
+    <ForwardRef(GridColComponent) />
+  </div>
+</div>
+`;

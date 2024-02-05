@@ -1,0 +1,48 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/shadows.scss';
+
+.lsux-multi-select-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lsux-multi-select-card {
+  background-color: $N00;
+  border: 1px solid $N300;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  position: relative;
+
+  &-selected {
+    background: var(--brand-color-prim300);
+    border: 1px solid var(--brand-color-prim300);
+  }
+}
+
+.lsux-multi-select-card-text {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.lsux-multi-select-card-text-selected {
+  color: $N00;
+}
+
+.lsux-multi-select-card-icon-container {
+  padding: 16px 16px 0px;
+}
+
+.lsux-multi-select-card-icon-selected {
+  filter: $filter-white;
+}

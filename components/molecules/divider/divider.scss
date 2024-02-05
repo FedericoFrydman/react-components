@@ -1,0 +1,49 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-divider {
+  align-items: center;
+  display: flex;
+
+  &__text,
+  &__line {
+    align-items: center;
+    display: flex;
+    text-transform: lowercase;
+
+    &::before,
+    &::after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+    }
+  }
+
+  &__text {
+    &::before {
+      margin-right: 16px;
+    }
+
+    &::after {
+      margin-left: 16px;
+    }
+  }
+
+  &--tint-light {
+    &::before,
+    &::after {
+      background-color: $N350;
+    }
+  }
+  &--tint-medium {
+    &::before,
+    &::after {
+      background-color: $N700;
+    }
+  }
+  &--tint-dark {
+    &::before,
+    &::after {
+      background-color: $N800;
+    }
+  }
+}

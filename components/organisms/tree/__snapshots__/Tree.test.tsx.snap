@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tree Component should render the component 1`] = `
+<div
+  className=""
+>
+  <div
+    className="lsux-tree-row lsux-tree-row-allow-select"
+    onClick={[Function]}
+  >
+    <div
+      className="lsux-tree-row-label"
+    >
+      <ForwardRef(ButtonComponent)
+        iconLeft="nav_chevron_single_right"
+        onClick={[Function]}
+        variant="tertiary"
+      />
+      <span
+        className="pl-2"
+      >
+        Arnold Blinn
+      </span>
+    </div>
+  </div>
+  <div
+    className="pt-2"
+    style={
+      Object {
+        "paddingLeft": "17px",
+      }
+    }
+  />
+</div>
+`;

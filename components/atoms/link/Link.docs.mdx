@@ -1,0 +1,41 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Link } from './Link';
+
+# Link
+
+<Canvas>
+  <Story id="navigation-link--default" />
+</Canvas>
+
+<Meta />
+
+## Link Props
+
+<ArgsTable of={Link}/>
+
+<Stories />
+
+### Example Code
+
+This is an example of how to use Link as a router based on [React Router Docs](https://reactrouter.com/web/api/Hooks)
+
+```tsx
+import { useHistory } from "react-router-dom";
+
+const MyComponent = () => {
+
+  const history = useHistory();
+
+  const handleRoute = (e: React.MouseEvent) => {
+    e.preventDefault();
+    history.push('/your-path')
+  }
+
+  return (
+    <div>
+        Example Routing
+        <Link onClick={handleRoute}>
+    </div>
+  )
+}
+```

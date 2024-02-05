@@ -1,0 +1,50 @@
+@import '../../assets/styles/colors.scss';
+
+.file-upload {
+  &__table {
+    border: 1px solid $N300;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  &__table thead {
+    background-color: $B10;
+    border-color: $B100;
+    padding: 1rem;
+  }
+
+  &__table thead tr {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+  }
+  &__buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__table tbody:before {
+    color: transparent;
+    content: '-';
+    display: block;
+    line-height: 10px;
+  }
+  &__table tbody tr {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    & > td {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__item_text {
+    display: list-item;
+    list-style: disc inside;
+  }
+  &__item_rejected {
+    color: $R200;
+  }
+}

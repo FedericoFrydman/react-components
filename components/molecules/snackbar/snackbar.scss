@@ -1,0 +1,120 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
+@mixin createBorder($color) {
+  border: 1px solid $color;
+  -webkit-border-color: none;
+  border-radius: var(--brand-border-radius);
+  -moz-box-sizing: border-box; /* Firefox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome */
+  box-sizing: border-box;
+}
+
+.lsux-snackbar {
+  background-color: $N100;
+  border-radius: 8px;
+  opacity: 0;
+  padding: 0;
+  width: 355px;
+
+  > .lsux-alert {
+    border-bottom: none;
+    border-radius: 8px;
+    padding: 12px;
+
+    &--default {
+      &--subtle {
+        @include createBorder($N800);
+      }
+    }
+    &--error {
+      &--subtle {
+        @include createBorder($R200);
+      }
+    }
+    &--information {
+      &--subtle {
+        @include createBorder($B200);
+      }
+    }
+    &--success {
+      &--subtle {
+        @include createBorder($G200);
+      }
+    }
+    &--warning {
+      &--subtle {
+        @include createBorder($Y200);
+      }
+    }
+  }
+
+  span {
+    margin-bottom: 0;
+  }
+
+  /* Positions */
+  &.lsux-snackbar--position-top-left {
+    left: 1rem;
+    position: absolute;
+    top: 1rem;
+  }
+  &.lsux-snackbar--position-top-right {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  &.lsux-snackbar--position-default {
+    position: relative;
+  }
+  &.lsux-snackbar--position-bottom-left {
+    bottom: 1rem;
+    left: 1rem;
+    position: absolute;
+  }
+  &.lsux-snackbar--position-bottom-right {
+    bottom: 1rem;
+    position: absolute;
+    right: 1rem;
+  }
+
+  /* Visibility */
+  &.lsux-snackbar--hidden {
+    opacity: 0;
+    transition: visibility 0s 0.4s, opacity 0.4s linear;
+    visibility: hidden;
+  }
+  &.lsux-snackbar--visible {
+    opacity: 1;
+    transition: opacity 0.3s linear;
+    visibility: visible;
+  }
+
+  /* Animations */
+  &.lsux-snackbar--animation-fade-in {
+    animation: fade-in 0.7s;
+  }
+  &.lsux-snackbar--animation-slide-up {
+    animation: slide-in 0.7s, fade-in 0.7s;
+  }
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 320px) {
+  .lsux-snackbar {
+    width: 100%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.3s linear;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0.3s linear;
+    transform: translateY(var(--_travel-distance, 10px));
+  }
+}

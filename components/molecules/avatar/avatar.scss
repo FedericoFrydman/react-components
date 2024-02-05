@@ -1,0 +1,44 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
+.lsux-avatar {
+  align-items: center;
+  border: 2px solid $N100;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+
+  &--small {
+    height: 40px;
+    width: 40px;
+  }
+  &--medium {
+    height: 48px;
+    width: 48px;
+  }
+  &--large {
+    height: 64px;
+    width: 64px;
+  }
+  &--user-initials {
+    background-color: $N800;
+    color: $N00;
+
+    &.lsux-avatar--large {
+      p {
+        font-size: 26px;
+      }
+    }
+  }
+  &--user-icon {
+    background-color: $N300;
+  }
+  &--user-photo {
+    img {
+      border-radius: 50%;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/colors.scss';
+
+.lsux-link {
+  align-items: center;
+  color: $N800;
+  display: inline-flex;
+  text-decoration: none;
+
+  &:visited {
+    color: $N800;
+  }
+
+  &:hover,
+  &:focus {
+    color: $N800;
+    text-decoration: underline;
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+
+  &--decoration {
+    text-decoration: underline;
+  }
+
+  &--no-decoration {
+    text-decoration: none;
+  }
+}

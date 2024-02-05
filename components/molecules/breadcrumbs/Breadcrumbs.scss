@@ -1,0 +1,39 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-crumbs {
+  align-items: center;
+  display: flex;
+
+  & &__crumb {
+    align-items: center;
+    display: flex;
+  }
+
+  & &__crumb--ellipsis {
+    margin: 2px;
+    padding: 3px;
+  }
+
+  & &__crumb--link {
+    color: $B200;
+    margin: 2px;
+    padding: 3px;
+    text-decoration: none;
+  }
+
+  & &__crumb--leaf {
+    margin: 2px;
+    padding: 3px;
+  }
+
+  & &__crumb--link:hover {
+    text-decoration: underline;
+  }
+
+  & &__dropdown-items--wrapper {
+    background-color: white;
+    border: 1px solid $N300;
+    border-radius: var(--brand-border-radius);
+    z-index: 1;
+  }
+}

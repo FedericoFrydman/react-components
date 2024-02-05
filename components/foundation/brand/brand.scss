@@ -1,0 +1,49 @@
+@import '../../assets/styles/brand.scss';
+
+.brandColorPrimary300 {
+  background-color: var(--brand-color-prim300);
+  border: 1px solid black;
+  height: 100px;
+  margin: 20px;
+  width: 100px;
+}
+
+.brandColorPrimary200 {
+  background-color: var(--brand-color-prim200);
+  border: 1px solid black;
+  height: 100px;
+  margin: 20px;
+  width: 100px;
+}
+
+.brandColorPrimary100 {
+  background-color: var(--brand-color-prim100);
+  border: 1px solid black;
+  height: 100px;
+  margin: 20px;
+  width: 100px;
+}
+
+.brandColorPrimary50 {
+  background-color: var(--brand-color-prim50);
+  border: 1px solid black;
+  height: 100px;
+  margin: 20px;
+  width: 100px;
+}
+
+.brandHeader {
+  background-color: var(--brand-color-header);
+  border: 1px solid black;
+  height: 100px;
+  margin: 20px;
+  width: 100px;
+}
+
+.brandRadiusBox {
+  border: 1px solid black;
+  border-radius: var(--brand-border-radius);
+  height: 100px;
+  margin: 20px;
+  width: 100px;
+}

@@ -1,0 +1,102 @@
+import { Meta, ArgsTable, Story, Canvas, Description, Stories } from '@storybook/addon-docs';
+import { Select, SelectItem } from './Select';
+import { FormField } from '../../organisms/form-field/FormField';
+import { Alert } from '../alert/Alert';
+
+# Select Props
+
+<Description />
+
+**This documentation is just to display the select props where you can interact with them and see how it behaves. For implementation please use [FormField](/?path=/docs/forms-form-fields--select-field) docs to gide.**
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  The Select component must be used as a child of a FormField component.
+</Alert>
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--default" />
+</Canvas>
+
+### Select Placeholder
+
+In order to have a placeholder in your select component, you need to set the `placeholder` prop.
+
+### Label
+
+Pass a `label` prop to the `FormField` component for a11y reasons.
+
+## Example Code
+
+```tsx
+<FormField id="select-formfield" label="Some label:">
+  <Select>
+    <SelectItem textValue="USA" value="usa" />
+    <SelectItem textValue="Mexico" value="mexico" />
+    <SelectItem textValue="Canada" value="canada" />
+  </Select>
+</FormField>
+```
+
+### Result
+
+<FormField id="select-formfield-demo" label="Country">
+  <Select placeholder="Select a country">
+    <SelectItem textValue="USA" value="usa" />
+    <SelectItem textValue="Mexico" value="mexico" />
+    <SelectItem textValue="Canada" value="canada" />
+  </Select>
+</FormField>
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+## States
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+### Default
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--default" />
+</Canvas>
+
+### With Disabled Item
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--with-disabled-item" />
+</Canvas>
+
+### Grouped
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--grouped" />
+</Canvas>
+
+### Stretch
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--stretch" />
+</Canvas>
+
+### Invalid
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--invalid" />
+</Canvas>
+
+### Warning
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--warning" />
+</Canvas>
+
+### Success
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--success" />
+</Canvas>
+
+### Disabled
+
+<Canvas>
+  <Story id="controls-form-fields-select-props--disabled" />
+</Canvas>

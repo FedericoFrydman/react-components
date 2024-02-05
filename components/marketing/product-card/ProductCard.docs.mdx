@@ -1,0 +1,52 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { ProductCard } from './ProductCard';
+import { Grid } from '../../foundation/grid/Grid';
+import { GridRow } from '../../foundation/grid/GridRow';
+import { GridCol } from '../../foundation/grid/GridCol';
+import { Text } from '../../atoms/text/Text';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="marketing-productcard--default" />
+</Canvas>
+
+<ArgsTable of={ProductCard} />
+
+This is an example of how to implement the `ProductCard` component.
+
+### Example Code
+
+```tsx
+<ProductCard
+  detailsLabel="Plan Details"
+  detailsUrl="https://www.legalshield.com"
+  iconType="legalshield"
+  market="en-us"
+  onClick={null}
+  price="from $10.95"
+  subprice="+ processing fee"
+  subtitle="Subtitle"
+  title="Title"
+>
+  <Text text="LegalShield stands strong, Production for all who seek, Legal peace of mind." />
+</ProductCard>
+```
+
+### Result
+
+<ProductCard
+  detailsLabel="Plan Details"
+  detailsUrl="https://www.legalshield.com"
+  iconType="legalshield"
+  market="en-us"
+  onClick={null}
+  price="from $10.95"
+  subprice="+ processing fee"
+  subtitle="Subtitle"
+  title="Title"
+>
+  <Text text="LegalShield stands strong, Production for all who seek, Legal peace of mind." />
+</ProductCard>

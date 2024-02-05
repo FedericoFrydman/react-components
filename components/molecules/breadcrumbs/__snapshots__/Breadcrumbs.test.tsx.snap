@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs Component should render the component 1`] = `
+<div
+  className="lsux-crumbs"
+>
+  <div
+    className="lsux-crumbs__crumb"
+    key="Home"
+  >
+    <a
+      className="lsux-crumbs__crumb--link"
+      data-pplsi-event-id="test prop 1"
+      href="#"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <ForwardRef(IconComponent)
+      name="arrow_chevron_right"
+      size="small"
+    />
+  </div>
+  <div
+    className="lsux-crumbs__crumb"
+    key="Page1"
+  >
+    <a
+      className="lsux-crumbs__crumb--link"
+      data-pplsi-event-id="test prop 2"
+      href="#"
+      onClick={[Function]}
+    >
+      Page1
+    </a>
+    <ForwardRef(IconComponent)
+      name="arrow_chevron_right"
+      size="small"
+    />
+  </div>
+  <div
+    className="lsux-crumbs__crumb"
+    key="Page2"
+  >
+    <span
+      className="lsux-crumbs__crumb--leaf"
+    >
+      Page2
+    </span>
+    <ForwardRef(IconComponent)
+      name="arrow_chevron_right"
+      size="small"
+    />
+  </div>
+  <div
+    className="lsux-crumbs__crumb"
+    key="Page3"
+  >
+    <a
+      className="lsux-crumbs__crumb--link"
+      data-pplsi-event-id="test prop 4"
+      href="#"
+      onClick={[Function]}
+    >
+      Page3
+    </a>
+    <ForwardRef(IconComponent)
+      name="arrow_chevron_right"
+      size="small"
+    />
+  </div>
+  <div
+    className="lsux-crumbs__crumb"
+    key="Page3"
+  >
+    <span
+      className="lsux-crumbs__crumb--leaf"
+    >
+      Page3
+    </span>
+  </div>
+</div>
+`;

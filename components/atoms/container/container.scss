@@ -1,0 +1,92 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-container {
+
+  &.lsux-container--light-gray {
+    background-color: $N100;
+  }
+  &.lsux-container--white {
+    background-color: $N00;
+  }
+  &.lsux-container--fixed {
+    position: fixed;
+    z-index: 99;
+  }
+  &.lsux-container--flexbox {
+    display: flex;
+
+    &.lsux-container--flex-direction-row {
+      flex-direction: row;
+    }
+    &.lsux-container--flex-direction-row-reverse {
+      flex-direction: row-reverse;
+    }
+    &.lsux-container--flex-direction-column {
+      flex-direction: column;
+    }
+    &.lsux-container--flex-direction-column-reverse {
+      flex-direction: column-reverse;
+    }
+
+    &.lsux-container--flex-wrap-wrap {
+      flex-wrap: wrap;
+    }
+    &.lsux-container--flex-wrap-nowrap {
+      flex-wrap: nowrap;
+    }
+    &.lsux-container--flex-wrap-reverse {
+      flex-wrap: wrap-reverse;
+    }
+
+    &.lsux-container--flex-justify-flex-start {
+      justify-content: flex-start;
+    }
+    &.lsux-container--flex-justify-flex-end {
+      justify-content: flex-end;
+    }
+    &.lsux-container--flex-justify-center {
+      justify-content: center;
+    }
+    &.lsux-container--flex-justify-space-between {
+      justify-content: space-between;
+    }
+    &.lsux-container--flex-justify-space-around {
+      justify-content: space-around;
+    }
+
+    &.lsux-container--flex-items-flex-start {
+      align-items: flex-start;
+    }
+    &.lsux-container--flex-items-flex-end {
+      align-items: flex-end;
+    }
+    &.lsux-container--flex-items-center {
+      align-items: center;
+    }
+    &.lsux-container--flex-items-baseline {
+      align-items: baseline;
+    }
+    &.lsux-container--flex-items-stretch {
+      align-items: stretch;
+    }
+
+    &.lsux-container--flex-content-flex-start {
+      align-content: flex-start;
+    }
+    &.lsux-container--flex-content-flex-end {
+      align-content: flex-end;
+    }
+    &.lsux-container--flex-content-center {
+      align-content: center;
+    }
+    &.lsux-container--flex-content-space-between {
+      align-content: space-between;
+    }
+    &.lsux-container--flex-content-space-around {
+      align-content: space-around;
+    }
+    &.lsux-container--flex-content-strech {
+      align-content: stretch;
+    }
+  }
+}

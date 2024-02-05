@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip Component should render the component 1`] = `
+<ForwardRef(TippyWrapper)
+  animation="scale"
+  arrow={true}
+  content={
+    <ForwardRef(TextComponent)
+      as="p"
+      text="Some text"
+      textSize="small"
+    />
+  }
+  disabled={false}
+  duration={500}
+  placement="top"
+  theme="light"
+>
+  <ForwardRef(ButtonComponent)
+    label="Hover"
+  />
+</ForwardRef(TippyWrapper)>
+`;

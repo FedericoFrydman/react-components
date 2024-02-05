@@ -1,0 +1,40 @@
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Alert } from './AlertControl';
+
+# Alert Control
+
+## Implementations
+
+### Server Implementation
+
+The AlertControl component wraps the Alert component and is implemented using the code below:
+
+```
+import { themisRouter } from '@legalshield/themis-core';
+
+// allow non-logged in users to access the endpoint
+router.use(
+  themisRouter({
+    alertApp: 'example', // defaults to the subdomain if not passed in
+    allowAnonymous: true,
+  }),
+);
+
+// only allow logged in users to access it
+router.use(
+  themisRouter({
+    alertApp: 'example', // defaults to the subdomain if not passed in
+    authImpact: AuthImpact.Medium,
+    supportedRealms: [Realm.Internal],
+  }),
+);
+```
+
+### Client Implementation
+
+Including the Alert Control in the client application is as simple as adding the component.
+
+Example: `<AlertControl />`
+
+The component will automatically fetch the latest alert and display it in the language specified by the market global variable.
+If no market is specified, it will default to `en-us`.

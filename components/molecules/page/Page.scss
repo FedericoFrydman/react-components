@@ -1,0 +1,29 @@
+@import '../../assets/styles/colors.scss';
+
+.page {
+  align-items: center;
+  display: flex;
+}
+
+.page .page--ellipsis {
+  margin: 2px;
+  padding: 4px 8px 4px 8px;
+}
+.page .page--link {
+  color: $B200;
+  margin: 2px;
+  padding: 4px 8px 4px 8px;
+  text-decoration: none;
+}
+
+.page .page--link:hover {
+  text-decoration: underline;
+}
+
+.page .page--current {
+  background-color: $B200;
+  border-radius: var(--brand-border-radius);
+  color: $N00;
+  margin: 2px;
+  padding: 4px 8px 4px 8px;
+}

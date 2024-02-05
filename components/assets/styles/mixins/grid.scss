@@ -1,0 +1,84 @@
+@use 'sass:math';
+
+@import '../variables.scss';
+
+@mixin dynamic-gutter {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      $grid-gutter-half-width: math.div($gutter, 2);
+      padding-left: $grid-gutter-half-width;
+      padding-right: $grid-gutter-half-width;
+    }
+  }
+}
+
+@mixin dynamic-negative-gutter {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      $grid-gutter-half-width: math.div(-$gutter, 2);
+      margin-left: $grid-gutter-half-width;
+      margin-right: $grid-gutter-half-width;
+    }
+  }
+}
+
+@mixin static-gutter {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      $grid-gutter-width: $gutter;
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+    }
+  }
+}
+
+@mixin row-margin-top {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      $row-margin: $gutter;
+      margin-top: $row-margin;
+    }
+  }
+}
+
+@mixin make-container {
+  margin-left: auto;
+  margin-right: auto;
+  @include static-gutter;
+}
+
+@mixin make-row {
+  display: flex;
+  flex-wrap: wrap;
+  @include dynamic-negative-gutter;
+  @include row-margin-top;
+}
+
+@mixin make-col-ready {
+  position: relative;
+  width: 100%;
+  @include dynamic-gutter;
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage(math.div($size, $columns));
+  max-width: percentage(math.div($size, $columns));
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  max-width: 100%;
+  width: auto;
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: math.div($size, $columns);
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+@mixin row-cols($count) {
+  > * {
+    flex: 0 0 math.div(100%, $count);
+    max-width: math.div(100%, $count);
+  }
+}

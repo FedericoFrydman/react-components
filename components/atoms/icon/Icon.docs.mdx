@@ -1,0 +1,98 @@
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+
+import { IconDoc } from './IconDoc';
+import { Icon } from './Icon';
+import { Heading } from '../heading/Heading';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="components-icon--default" />
+</Canvas>
+
+<Meta />
+
+<ArgsTable of={Icon} />
+
+## Sizes
+
+| <Heading as="T16" text="XSmall" />          | <Heading as="T16" text="Small" />          | <Heading as="T16" text="Medium Small" />          | <Heading as="T16" text="Medium" />          | <Heading as="T16" text="Large" />          | <Heading as="T16" text="XLarge" />          |
+| ------------------------------------------- | ------------------------------------------ | ------------------------------------------------- | ------------------------------------------- | ------------------------------------------ | ------------------------------------------- |
+| <Heading as="T16" text="12x12 px" />        | <Heading as="T16" text="16x16 px" />       | <Heading as="T16" text="18x18 px" />              | <Heading as="T16" text="24x24 px" />        | <Heading as="T16" text="32x32 px" />       | <Heading as="T16" text="48x48 px" />        |
+| <Icon name="system_camera" size="xsmall" /> | <Icon name="system_camera" size="small" /> | <Icon name="system_camera" size="medium-small" /> | <Icon name="system_camera" size="medium" /> | <Icon name="system_camera" size="large" /> | <Icon name="system_camera" size="xlarge" /> |
+
+## Colors
+
+After version v1.11.0 icons have the option to use any color in our [color palette](?path=/docs/foundation-colors--page)
+
+**For old color references:**
+
+| Old color name | New color name |
+| -------------- | -------------- |
+| blue           | B200           |
+| green          | G200           |
+| light-gray     | N500           |
+| gray           | N700           |
+| black          | N800           |
+| deep-black     | N1000          |
+| red            | R300           |
+| yellow         | Y300           |
+
+These is the list for all colors now available for ICON_COLORS
+
+| Color name | Palette color reference | HEX code |
+| ---------- | ----------------------- | -------- |
+| default    |
+| B10        | $B10                    | #e9eff9  |
+| B100       | $B100                   | #377bdd  |
+| B200       | $B200                   | #1952bd  |
+| B200       | $B200                   | #13429a  |
+| G10        | $G10                    | #e9f4ed  |
+| G100       | $G100                   | #34ab5e  |
+| G200       | $G200                   | #2c9150  |
+| G300       | $G300                   | #006e3c  |
+| N00        | $N00                    | #ffffff  |
+| N100       | $N100                   | #f7f7f7  |
+| N300       | $N300                   | #eeeeee  |
+| N500       | $N500                   | #afafaf  |
+| N700       | $N700                   | #545454  |
+| N800       | $N800                   | #222222  |
+| N1000      | $N1000                  | #000000  |
+| P10        | $P10                    | #f0ecf3  |
+| P100       | $P100                   | #a073bc  |
+| P200       | $P200                   | #70468c  |
+| P300       | $P300                   | #431c5e  |
+| R10        | $R10                    | #ffeef0  |
+| R100       | $R100                   | #ce0220  |
+| R200       | $R200                   | #b5021c  |
+| R300       | $R300                   | #920217  |
+| Y10        | $Y10                    | #fffee6  |
+| Y100       | $Y100                   | #ffd633  |
+| Y200       | $Y200                   | #ffcc00  |
+| Y300       | $Y300                   | #e6b800  |
+| BRAND50    | name                    | NA       |
+| BRAND100   | name                    | NA       |
+| BRAND200   | name                    | NA       |
+| BRAND300   | name                    | NA       |
+
+## Events
+
+An icon has all the properties of an img tag, so it can receive events. Particularly the **onClick** event adds the `cursor: pointer` style.
+
+<Canvas>
+  <Story id="components-icon--clickable" />
+</Canvas>
+
+## Icons
+
+Below are icons use included for responsive web available in different icon colors and icon sizes. For iOS and Android app, "System" icons are the set from the OS itself. We took advantage to use them for a cohesive app experience and easy to maintenance.
+
+## Version 2 Icons
+
+<IconDoc libraryVersion="2" />
+
+## Version 1 Icons
+
+<IconDoc libraryVersion="1" />

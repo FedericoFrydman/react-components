@@ -1,0 +1,193 @@
+import { FC } from 'react';
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Alert } from '../../molecules/alert/Alert';
+
+# Form Field
+
+The FormField component is a container that adds the labels; validation messages, hints and colors for the different controls in a form (inputs, selects, checkbox, radio).
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  Based on the text above, Input component should always be used as child of FormField.
+</Alert>
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+<ArgsTable />
+
+**About the input:**
+
+- Input allows people to enter data for further use in your product, or to configure options. Inputs and forms are used to get information and guide people with minimal fuss.
+- Input should always be accompanied by a label for accessibility purposes with the exception of Search (for this reason, the default text color for Search is N1000 for color contrast.
+
+## Type
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+### Text Field
+
+<Canvas>
+  <Story id="controls-form-fields--text-field" />
+</Canvas>
+
+### Number
+
+<Canvas>
+  <Story id="controls-form-fields--number-field" />
+</Canvas>
+
+- Up and down buttons to make it easy for user to adjust amount
+- Can use “up” or “down” keyboard to adjust amount when input is focused
+
+### Password
+
+<Canvas>
+  <Story id="controls-form-fields--password-field" />
+</Canvas>
+
+### Tel
+
+<Canvas>
+  <Story id="controls-form-fields--tel-field" />
+</Canvas>
+
+### TextArea
+
+<Canvas>
+  <Story id="controls-form-fields--text-area-field" />
+</Canvas>
+
+- Consider to add character counter or add description to show character limit
+- Auto increase height or can also be adjusted by user
+
+### Search
+
+<Canvas>
+  <Story id="controls-form-fields--search-field" />
+</Canvas>
+
+### Date
+
+<Canvas>
+  <Story id="controls-form-fields--date" />
+</Canvas>
+
+- These inputs has the format for birth day, that means month/day/year. Click on Show code to see how to implement this.
+
+<Alert title="Dev Note" severity="warning" icon="alert_warning">
+  In case you need just one date input, have in mind you can set the input type as a date and its behavior would be the
+  default browser behavior.
+</Alert>
+
+### Select
+
+<Canvas>
+  <Story id="controls-form-fields--select-field" />
+</Canvas>
+
+### Radio
+
+<Canvas>
+  <Story id="controls-form-fields--radio-field" />
+</Canvas>
+
+### Checkbox
+
+<Canvas>
+  <Story id="controls-form-fields--checkbox-field" />
+</Canvas>
+
+### Required
+
+<Canvas>
+  <Story id="controls-form-fields--input-required" />
+</Canvas>
+
+### Description
+
+<Canvas>
+  <Story id="controls-form-fields--description" />
+</Canvas>
+
+## Usage guidelines
+
+- **Do** include a label with all inputs. Label should be sentence case and keep it short
+- **Do not** use placeholder as label text
+- **Do** use placeholder text to give hints what should go into the input/field
+- **Do** make it clear with an \* asterisk if an individual input is required
+- **Do** mark "Optional" for optional inputs when majority of other inputs are required
+- **Do** include description if an input format is expected or give context why we are collecting the information from users
+
+## States
+
+<p style={{ margin: 0 }}>&nbsp;</p>
+
+In order to display the input state you must define the status prop and use the validationHint prop as well for user experience.
+
+### Invalid/Error
+
+<Canvas>
+  <Story id="controls-form-fields--invalid" />
+</Canvas>
+
+### Warning
+
+<Canvas>
+  <Story id="controls-form-fields--warning" />
+</Canvas>
+
+### Success
+
+<Canvas>
+  <Story id="controls-form-fields--success" />
+</Canvas>
+
+### Disabled
+
+<Canvas>
+  <Story id="controls-form-fields--disabled" />
+</Canvas>
+
+### Read only
+
+<Canvas>
+  <Story id="controls-form-fields--read-only" />
+</Canvas>
+
+## Example Code
+
+```tsx
+export const EmailForm: FC = ({}) => {
+
+  ...
+
+  return (
+    <Form onSubmit={submitForm}>
+      <FormField
+        id="email"
+        status={email.status}
+        validationHint={email.hint}
+        label="Email Address"
+        type="input"
+        required
+      >
+        <Input
+          name="email"
+          onChange={handleInputChange}
+          placeholder="Email Address"
+          value={email.value}
+          pattern={EMAIL_PATTERN}
+          type="email"
+          required
+        />
+      </FormField>
+      <Button
+        type="submit"
+        disabled={!isValid}
+        label="Send Email"
+        classNames={['mt-5']}
+        stretch
+      />
+    </Form>
+  )
+}
+```

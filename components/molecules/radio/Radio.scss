@@ -1,0 +1,56 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-rb-container {
+  align-items: center;
+  display: flex;
+
+  input {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    width: 0;
+  }
+
+  &__rb {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+
+    &.margin-left {
+      margin-left: 8px;
+    }
+
+    &.margin-right {
+      margin-right: 8px;
+    }
+  }
+
+  input ~ &__rb {
+    border: 2px solid $N600;
+  }
+
+  body.using-key input:focus ~ &__rb {
+    outline: 2px solid $N100;
+  }
+
+  input:checked ~ &__rb {
+    background: radial-gradient(var(--radio-cb-enabled-checked-background) 45%, #fff 46.2%, transparent 0%);
+    border: 2px solid var(--radio-cb-enabled-checked-border);
+  }
+
+  input:disabled ~ span {
+    color: var(--radio-cb-disabled-checked-border);
+  }
+
+  input:disabled ~ &__rb {
+    background-color: var(--radio-cb-disabled-unchecked-background);
+    border: 1px solid var(--radio-cb-disabled-unchecked-border);
+    cursor: not-allowed;
+  }
+
+  input:disabled:checked ~ &__rb {
+    background-color: var(--radio-cb-disabled-checked-background);
+    border: 5px solid var(--radio-cb-disabled-checked-background);
+  }
+}

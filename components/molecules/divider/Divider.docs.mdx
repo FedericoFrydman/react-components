@@ -1,0 +1,44 @@
+import { ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Divider } from './Divider';
+
+# Divider
+
+Divider is a component that can be used to divide components and improved the UI.
+
+<ArgsTable of={Divider} />
+
+## Divider types
+
+<p>&nbsp;</p>
+
+### Line Divider
+
+---
+
+In order to have a just line divider, the label should not be defined. See code bellow:
+
+**Example code**
+
+```tsx
+<Divider />
+```
+
+**Result**
+
+<Divider />
+
+### Text Divider
+
+---
+
+You can add text to your divider component. The will be converted to lowercase. See example bellow:
+
+**Example code**
+
+```tsx
+<Divider label="Text Divider" />
+```
+
+**Result**
+
+<Divider label="Text divider" />

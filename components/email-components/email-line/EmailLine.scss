@@ -1,0 +1,21 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-email-line {
+  background-color: $N00;
+  height: 12px;
+  width: 600px;
+
+  &.lsux-email-line--horizontal {
+    margin: 0 auto 6px;
+    max-width: 552px;
+    hr {
+      background-color: $N300;
+      border: 1px solid $N300;
+      border-top: 1px solid $N300;
+      display: block;
+      height: 1px;
+      margin: 1em 0;
+      padding: 0;
+    }
+  }
+}

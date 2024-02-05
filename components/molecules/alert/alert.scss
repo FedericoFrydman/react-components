@@ -1,0 +1,103 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+@import '../../atoms/text/text.scss';
+
+.lsux-alert {
+  align-items: center;
+  border-bottom: 1px solid $N350;
+  color: $N1000;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.25s ease-in-out;
+
+  .lsux-alert__header-wrapper {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+
+    > .lsux-col:first-of-type {
+      padding: 0;
+    }
+    > .lsux-col {
+      align-self: flex-start;
+      display: flex;
+      flex: 1;
+      padding: 0 auto;
+    }
+    > .lsux-col:nth-child(2) {
+      align-self: center;
+      display: flex;
+      flex: auto;
+      flex-grow: 1;
+    }
+  }
+
+  &--content-text {
+    display: flex;
+  }
+
+  &.lsux-alert--default {
+    &--subtle {
+      background-color: $N100;
+    }
+    &--bold {
+      background-color: $N800;
+      color: $N00;
+      .lsux-text {
+        color: $N00;
+      }
+    }
+  }
+  &.lsux-alert--error {
+    &--subtle {
+      background-color: $R10;
+    }
+    &--bold {
+      background-color: $R200;
+      color: $N00;
+      .lsux-text {
+        color: $N00;
+      }
+    }
+  }
+  &.lsux-alert--information {
+    &--subtle {
+      background-color: $B10;
+    }
+    &--bold {
+      background-color: $B200;
+      color: $N00;
+      .lsux-text {
+        color: $N00;
+      }
+    }
+  }
+  &.lsux-alert--success {
+    &--subtle {
+      background-color: $G10;
+    }
+    &--bold {
+      background-color: $G200;
+      color: $N00;
+      .lsux-text {
+        color: $N00;
+      }
+    }
+  }
+  &.lsux-alert--warning {
+    &--subtle {
+      background-color: $Y10;
+    }
+    &--bold {
+      background-color: $Y200;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: -0.006em;
+    line-height: 16px;
+  }
+}

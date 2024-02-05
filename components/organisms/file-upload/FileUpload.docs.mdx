@@ -1,0 +1,79 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { FileUpload } from './FileUpload';
+
+<Title />
+
+<Description />
+
+<Canvas>
+  <Story id="controls-fileupload--default" />
+</Canvas>
+
+<ArgsTable of={FileUpload}/>
+
+<Stories />
+
+## Component BE setup
+
+### Dotnet
+
+Install the FileService SDK [WIKI](https://github.com/LegalShield/fedux-imagestore-service/wiki)
+
+```bash
+dotnet add package Fedux.File.Service.SDK
+```
+
+Config your app
+
+#### Startup.cs
+
+```c#
+using Atlas.Auth.Startup.AuthInitialization;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Themis.Core.Application;
+using Fedux.File.Service.SDK;
+
+namespace AdonisExampleWeb
+{
+  public class Startup: CoreStartup
+  {
+    public Startup(IConfiguration configuration) : base(configuration) { }
+
+    public override void CoreStartupConfigureServices(IServiceCollection services)
+    {
+      services.SetupAuthenticationLowImpact();
+      services.SetupUserMatchAuthorization();
+      services.AddScoped<IFileServiceSDK, FileServiceSDK>();
+    }
+  }
+}
+```
+
+Add a Controller
+
+#### File Controller
+
+```c#
+using static Atlas.Auth.Constants.AuthConstants;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Fedux.File.Service.SDK;
+using Fedux.File.Service.SDK.Controllers.v1;
+
+namespace AdonisExampleWeb.Controllers.v1
+{
+  [Authorize(AuthenticationSchemes = LOW_IMPACT_AUTHN)]
+  [ApiController]
+  [Route("v1/container/files")]
+  public class FileController : FileControllerBaseSDK
+  {
+    private readonly IFileServiceSDK _fileServiceSDK;
+
+    public FileController(IFileServiceSDK fileServiceSDK) : base(fileServiceSDK)
+    {
+      _fileServiceSDK = fileServiceSDK;
+    }
+  }
+}
+```

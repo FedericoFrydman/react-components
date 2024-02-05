@@ -1,0 +1,104 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/shadows.scss';
+
+.lsux-tab {
+  > li {
+    list-style: none;
+  }
+  &--bar,
+  &--pills,
+  &--tabs {
+    > ul {
+      margin-block-end: 0px;
+      margin-block-start: 0px;
+      padding-inline-start: 0px;
+    }
+
+    align-content: center;
+    display: flex;
+    width: fit-content;
+
+    &.lsux-tab--stretch {
+      width: auto;
+      ul {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    a {
+      color: $N700;
+      text-decoration: none;
+
+      &:hover {
+        color: $B200;
+        outline: none;
+      }
+    }
+  }
+  &--bar,
+  &--tabs {
+    a {
+      color: $N700;
+    }
+  }
+  &--pills {
+    background-color: var(--brand-color-prim50);
+    border: 1px solid var(--brand-color-prim100);
+    border-radius: 50px;
+    padding: 4px;
+
+    &-selected {
+      background-color: var(--brand-color-prim200);
+      border-radius: 50px;
+      color: $N00;
+    }
+    a {
+      color: $N800;
+    }
+  }
+  &--bar {
+    border-bottom: 2px solid $N300;
+    &-selected {
+      border-bottom: 2px solid $N1000;
+      color: $N1000;
+    }
+    .lsux-tab {
+      background-clip: padding-box;
+      margin-bottom: -2px;
+      padding: 0;
+    }
+  }
+  &--tabs {
+    background-color: $N100;
+    border-radius: 11px 11px 0px 0px;
+
+    &-selected {
+      background-color: $N00;
+      border-radius: 11px 11px 0px 0px;
+      color: $N1000;
+      position: relative;
+      &:before {
+        background: var(--brand-color-prim200);
+        border-radius: 10px 10px 0px 0px;
+        content: '';
+        flex: none;
+        flex-grow: 0;
+        height: 3px;
+        left: 7%;
+        order: 1;
+        position: absolute;
+        right: 0%;
+        top: 0px;
+        width: 85%;
+        z-index: 1;
+      }
+    }
+
+    h4 {
+      font-weight: 400;
+    }
+  }
+}

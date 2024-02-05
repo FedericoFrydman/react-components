@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Component should render the component 1`] = `
+<button
+  aria-label="Switch"
+  className="lsux-switch lsux-switch--large"
+  disabled={false}
+>
+  <span
+    className="lsux-switch__slider"
+  />
+  <span
+    className="lsux-switch__knob lsux-switch__knob--large"
+  />
+</button>
+`;

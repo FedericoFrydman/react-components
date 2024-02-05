@@ -1,0 +1,623 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlanCard Component should render the component 1`] = `
+<Card
+  classNames={
+    Array [
+      "lsux-plan-card lsux-plan-card--selected",
+    ]
+  }
+  id="ls-card"
+  isSelected={true}
+  selectable={true}
+>
+  <PlanCardInfo
+    appName="LegalShield"
+    onClick={null}
+    onSeeDetailsClick={[Function]}
+    planDescription="Legal protection for you and your family"
+    planFees="+ processing fees"
+    planName="Individual & Family Legal"
+    planPrice="$29.95"
+    planRecurrence="/mo"
+    planType="Legal Plan"
+    showFees={true}
+  >
+    <PlanCardRegionPicker
+      availableRegions={
+        Array [
+          Object {
+            "label": "Alabama",
+            "value": "AL",
+          },
+          Object {
+            "label": "Alaska",
+            "value": "AK",
+          },
+          Object {
+            "label": "Arizona",
+            "value": "AZ",
+          },
+          Object {
+            "label": "Arkansas",
+            "value": "AR",
+          },
+          Object {
+            "label": "California",
+            "value": "CA",
+          },
+          Object {
+            "label": "Colorado",
+            "value": "CO",
+          },
+          Object {
+            "label": "Connecticut",
+            "value": "CT",
+          },
+          Object {
+            "label": "Delaware",
+            "value": "DE",
+          },
+          Object {
+            "label": "Florida",
+            "value": "FL",
+          },
+          Object {
+            "label": "Georgia",
+            "value": "GA",
+          },
+          Object {
+            "label": "Hawaii",
+            "value": "HI",
+          },
+          Object {
+            "label": "Idaho",
+            "value": "ID",
+          },
+          Object {
+            "label": "Illinois",
+            "value": "IL",
+          },
+          Object {
+            "label": "Indiana",
+            "value": "IN",
+          },
+          Object {
+            "label": "Iowa",
+            "value": "IA",
+          },
+          Object {
+            "label": "Kansas",
+            "value": "KS",
+          },
+          Object {
+            "label": "Kentucky",
+            "value": "KY",
+          },
+          Object {
+            "label": "Louisiana",
+            "value": "LA",
+          },
+          Object {
+            "label": "Maine",
+            "value": "ME",
+          },
+          Object {
+            "label": "Maryland",
+            "value": "MD",
+          },
+          Object {
+            "label": "Massachusetts",
+            "value": "MA",
+          },
+          Object {
+            "label": "Michigan",
+            "value": "MI",
+          },
+          Object {
+            "label": "Minnesota",
+            "value": "MN",
+          },
+          Object {
+            "label": "Mississippi",
+            "value": "MS",
+          },
+          Object {
+            "label": "Missouri",
+            "value": "MO",
+          },
+          Object {
+            "label": "Montana",
+            "value": "MT",
+          },
+          Object {
+            "label": "Nebraska",
+            "value": "NE",
+          },
+          Object {
+            "label": "Nevada",
+            "value": "NV",
+          },
+          Object {
+            "label": "New Hampshire",
+            "value": "NH",
+          },
+          Object {
+            "label": "New Jersey",
+            "value": "NJ",
+          },
+          Object {
+            "label": "New Mexico",
+            "value": "NM",
+          },
+          Object {
+            "label": "New York",
+            "value": "NY",
+          },
+          Object {
+            "label": "North Carolina",
+            "value": "NC",
+          },
+          Object {
+            "label": "North Dakota",
+            "value": "ND",
+          },
+          Object {
+            "label": "Ohio",
+            "value": "OH",
+          },
+          Object {
+            "label": "Oklahoma",
+            "value": "OK",
+          },
+          Object {
+            "label": "Oregon",
+            "value": "OR",
+          },
+          Object {
+            "label": "Pennsylvania",
+            "value": "PA",
+          },
+          Object {
+            "label": "Rhode Island",
+            "value": "RI",
+          },
+          Object {
+            "label": "South Carolina",
+            "value": "SC",
+          },
+          Object {
+            "label": "South Dakota",
+            "value": "SD",
+          },
+          Object {
+            "label": "Tennessee",
+            "value": "TN",
+          },
+          Object {
+            "label": "Texas",
+            "value": "TX",
+          },
+          Object {
+            "label": "Utah",
+            "value": "UT",
+          },
+          Object {
+            "label": "Vermont",
+            "value": "VT",
+          },
+          Object {
+            "label": "Virginia",
+            "value": "VA",
+          },
+          Object {
+            "label": "Washington",
+            "value": "WA",
+          },
+          Object {
+            "label": "West Virginia",
+            "value": "WV",
+          },
+          Object {
+            "label": "Wisconsin",
+            "value": "WI",
+          },
+          Object {
+            "label": "Wyoming",
+            "value": "WY",
+          },
+        ]
+      }
+      onRegionSelect={null}
+      selectedRegion="CA"
+    />
+  </PlanCardInfo>
+  <PlanCardAddOns />
+</Card>
+`;
+
+exports[`PlanCardInfo Component should render the component 1`] = `
+<CardContent>
+  <div
+    className="lsux-plan-card__header"
+    onClick={null}
+  >
+    <div
+      className="lsux-plan-card__header__logo-container"
+    >
+      <ForwardRef(IconComponent)
+        classNames="lsux-plan-card__header__logo-container__icon"
+        name="apps_legal_shield"
+        size="xlarge"
+      />
+    </div>
+    <div
+      className="lsux-plan-card__header__title-container"
+    >
+      <div>
+        <ForwardRef(HeadingComponent)
+          as="T16"
+          classNames={
+            Array [
+              "pc-plan-name",
+            ]
+          }
+          text="Individual & Family Legal"
+        />
+        <ForwardRef(TextComponent)
+          classNames={
+            Array [
+              "pc-plan-type",
+            ]
+          }
+          text="Legal Plan"
+          textSize="small"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="lsux-plan-card__plan-info"
+  >
+    <div
+      className="lsux-plan-card__plan-info-price pt-4"
+    >
+      <ForwardRef(TitleComponent)
+        text="$29.95/mo"
+        textSize="large"
+      />
+      <ForwardRef(TextComponent)
+        classNames={
+          Array [
+            "plan-fee-text",
+            "pt-1",
+          ]
+        }
+        text="+ processing fees"
+        textSize="small"
+      />
+    </div>
+    <div
+      className="lsux-plan-card__plan-info-description pt-4 pb-3"
+    >
+      <ForwardRef(TextComponent)
+        text="Legal protection for you and your family"
+      />
+    </div>
+  </div>
+</CardContent>
+`;
+
+exports[`PlanCardRegionPicker Component should render the component 1`] = `
+<div
+  className="lsux-plan-card__region-selector pt-5"
+>
+  <ForwardRef(SelectComponent)
+    onValueChange={null}
+    placeholder="Select your state"
+    stretch={true}
+    value="CA"
+  >
+    <SelectItem
+      key="AL"
+      value="AL"
+    >
+      Alabama
+    </SelectItem>
+    <SelectItem
+      key="AK"
+      value="AK"
+    >
+      Alaska
+    </SelectItem>
+    <SelectItem
+      key="AZ"
+      value="AZ"
+    >
+      Arizona
+    </SelectItem>
+    <SelectItem
+      key="AR"
+      value="AR"
+    >
+      Arkansas
+    </SelectItem>
+    <SelectItem
+      key="CA"
+      value="CA"
+    >
+      California
+    </SelectItem>
+    <SelectItem
+      key="CO"
+      value="CO"
+    >
+      Colorado
+    </SelectItem>
+    <SelectItem
+      key="CT"
+      value="CT"
+    >
+      Connecticut
+    </SelectItem>
+    <SelectItem
+      key="DE"
+      value="DE"
+    >
+      Delaware
+    </SelectItem>
+    <SelectItem
+      key="FL"
+      value="FL"
+    >
+      Florida
+    </SelectItem>
+    <SelectItem
+      key="GA"
+      value="GA"
+    >
+      Georgia
+    </SelectItem>
+    <SelectItem
+      key="HI"
+      value="HI"
+    >
+      Hawaii
+    </SelectItem>
+    <SelectItem
+      key="ID"
+      value="ID"
+    >
+      Idaho
+    </SelectItem>
+    <SelectItem
+      key="IL"
+      value="IL"
+    >
+      Illinois
+    </SelectItem>
+    <SelectItem
+      key="IN"
+      value="IN"
+    >
+      Indiana
+    </SelectItem>
+    <SelectItem
+      key="IA"
+      value="IA"
+    >
+      Iowa
+    </SelectItem>
+    <SelectItem
+      key="KS"
+      value="KS"
+    >
+      Kansas
+    </SelectItem>
+    <SelectItem
+      key="KY"
+      value="KY"
+    >
+      Kentucky
+    </SelectItem>
+    <SelectItem
+      key="LA"
+      value="LA"
+    >
+      Louisiana
+    </SelectItem>
+    <SelectItem
+      key="ME"
+      value="ME"
+    >
+      Maine
+    </SelectItem>
+    <SelectItem
+      key="MD"
+      value="MD"
+    >
+      Maryland
+    </SelectItem>
+    <SelectItem
+      key="MA"
+      value="MA"
+    >
+      Massachusetts
+    </SelectItem>
+    <SelectItem
+      key="MI"
+      value="MI"
+    >
+      Michigan
+    </SelectItem>
+    <SelectItem
+      key="MN"
+      value="MN"
+    >
+      Minnesota
+    </SelectItem>
+    <SelectItem
+      key="MS"
+      value="MS"
+    >
+      Mississippi
+    </SelectItem>
+    <SelectItem
+      key="MO"
+      value="MO"
+    >
+      Missouri
+    </SelectItem>
+    <SelectItem
+      key="MT"
+      value="MT"
+    >
+      Montana
+    </SelectItem>
+    <SelectItem
+      key="NE"
+      value="NE"
+    >
+      Nebraska
+    </SelectItem>
+    <SelectItem
+      key="NV"
+      value="NV"
+    >
+      Nevada
+    </SelectItem>
+    <SelectItem
+      key="NH"
+      value="NH"
+    >
+      New Hampshire
+    </SelectItem>
+    <SelectItem
+      key="NJ"
+      value="NJ"
+    >
+      New Jersey
+    </SelectItem>
+    <SelectItem
+      key="NM"
+      value="NM"
+    >
+      New Mexico
+    </SelectItem>
+    <SelectItem
+      key="NY"
+      value="NY"
+    >
+      New York
+    </SelectItem>
+    <SelectItem
+      key="NC"
+      value="NC"
+    >
+      North Carolina
+    </SelectItem>
+    <SelectItem
+      key="ND"
+      value="ND"
+    >
+      North Dakota
+    </SelectItem>
+    <SelectItem
+      key="OH"
+      value="OH"
+    >
+      Ohio
+    </SelectItem>
+    <SelectItem
+      key="OK"
+      value="OK"
+    >
+      Oklahoma
+    </SelectItem>
+    <SelectItem
+      key="OR"
+      value="OR"
+    >
+      Oregon
+    </SelectItem>
+    <SelectItem
+      key="PA"
+      value="PA"
+    >
+      Pennsylvania
+    </SelectItem>
+    <SelectItem
+      key="RI"
+      value="RI"
+    >
+      Rhode Island
+    </SelectItem>
+    <SelectItem
+      key="SC"
+      value="SC"
+    >
+      South Carolina
+    </SelectItem>
+    <SelectItem
+      key="SD"
+      value="SD"
+    >
+      South Dakota
+    </SelectItem>
+    <SelectItem
+      key="TN"
+      value="TN"
+    >
+      Tennessee
+    </SelectItem>
+    <SelectItem
+      key="TX"
+      value="TX"
+    >
+      Texas
+    </SelectItem>
+    <SelectItem
+      key="UT"
+      value="UT"
+    >
+      Utah
+    </SelectItem>
+    <SelectItem
+      key="VT"
+      value="VT"
+    >
+      Vermont
+    </SelectItem>
+    <SelectItem
+      key="VA"
+      value="VA"
+    >
+      Virginia
+    </SelectItem>
+    <SelectItem
+      key="WA"
+      value="WA"
+    >
+      Washington
+    </SelectItem>
+    <SelectItem
+      key="WV"
+      value="WV"
+    >
+      West Virginia
+    </SelectItem>
+    <SelectItem
+      key="WI"
+      value="WI"
+    >
+      Wisconsin
+    </SelectItem>
+    <SelectItem
+      key="WY"
+      value="WY"
+    >
+      Wyoming
+    </SelectItem>
+  </ForwardRef(SelectComponent)>
+</div>
+`;

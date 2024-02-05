@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component should render the component 1`] = `
+<div
+  className="lsux-card lsux-card--bg--white lsux-card--unselected"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": undefined,
+      "width": undefined,
+    }
+  }
+>
+  <CardContent>
+    <ForwardRef(TextComponent)
+      text="Example text"
+    />
+  </CardContent>
+</div>
+`;

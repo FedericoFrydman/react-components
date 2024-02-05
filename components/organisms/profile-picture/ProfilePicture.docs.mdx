@@ -1,0 +1,68 @@
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { ProfilePictureExample } from './ProfilePictureExample';
+import { ProfilePicture } from './ProfilePicture';
+
+<Title />
+
+- A highly customizable React component to crop images/videos with easy interactions used mostly for Profile purposes, giving the ability to change/edit/erase the profile picture, size, aspect, and others
+
+<Canvas>
+  <Story id="controls-profilepicture--default" />
+</Canvas>
+
+<Meta component={ProfilePicture} title={ProfilePicture} />
+
+<ArgsTable of={ProfilePicture} />
+
+## Usage guideline
+
+- Keep in mind shape, aspect and image sizing, this can be customizable but it is recommended to keep aspect by default
+- onCropConfirm is called when clicking on Modal's confirm button with the file as a parameter ( use this method to upload the cropped picture )
+
+## Example code
+
+- In this example, after clicking on Modal Confirm we are calling the Image Upload service as we do on FileUpload Component, keep in mind that additional configuration may apply and post params (dir,app,market) should NOT be hardcoded
+
+```tsx
+import { FileUploadResponse } from '..';
+import { ProfilePicture } from './ProfilePicture';
+
+export const ProfilePictureExample = () => {
+  const uploadFiles = async (file: any) => {
+    const formData = new FormData();
+
+    formData.append('files', file);
+    const params = [
+      ['app', 'ux-fw'],
+      ['dir', '/dir'],
+      ['locale', 'en-us'],
+    ];
+    const queryString = new URLSearchParams(params).toString();
+
+    const response = await fetch(`/v1/container/files?${queryString.toString()}`, {
+      body: formData,
+      credentials: 'include',
+      method: 'POST',
+    });
+
+    if (response.ok) {
+      const uploadedFiles: FileUploadResponse[] = await response.json();
+      //do something with response
+    }
+  };
+
+  return (
+    <div>
+      <ProfilePicture
+        shape="round"
+        profileImageUrl="https://img.huffingtonpost.com/asset/5ab4d4ac2000007d06eb2c56.jpeg?cache=sih0jwle4e&ops=1910_1000"
+        onCropConfirm={uploadFiles}
+      />
+    </div>
+  );
+};
+```
+
+### Result
+
+<ProfilePictureExample />

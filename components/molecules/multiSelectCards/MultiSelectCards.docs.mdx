@@ -1,0 +1,59 @@
+import { Meta, ArgsTable, Story, Canvas, Title, Description } from '@storybook/addon-docs';
+import { Heading } from '../../atoms/heading/Heading';
+import { Container } from '../../atoms/container/Container';
+import { MultiSelectCards, MultiSelectCardsProps } from './MultiSelectCards';
+
+<Title />
+
+Multi select cards is a component that is essentially a collective of "card" components in the UX-framework.
+
+<Meta component={MultiSelectCards} title={MultiSelectCards} />
+
+Implements a layout of multiple cards. Upon clicking, the card will render a border with a check mark icon indicating which card 
+is selected. A callback is provided to be used to identify which card has been selected. Cards are flexible by changing it's width and height. 
+
+## Usage guideline
+
+- Layout will grow according to the parent's container 
+- When width of container is exceeded, cards will wrap instead
+- A list of strings and IconNames (Prop: Cards) is the only prop required in order to render component. Icon is optional.
+- selectedCards prop is provided to indicated which card has been selected. This will enable border color change and display check mark icon.
+
+## Example code
+
+```tsx
+  <Container>
+    <MultiSelectCards 
+      cards={[
+        ['Married', 'ls_prenup'],
+        ['Pursue Higher Education', 'ls_balance'],
+        ['Own a business', 'ls_access'],
+        ['Own a home', 'ls_family'],
+        ['Rent a home', 'ls_family'],
+        ['Have a will', 'ls_family'],
+      ]}
+      selectedCards={["Married"]}
+      cardWidth="190px"
+      cardHeight="100px"
+      onCardClick={() => {}}
+    />
+  </Container>
+```
+
+### Result
+<Container>
+  <MultiSelectCards 
+    cards={[
+      ['Married', 'ls_prenup'],
+      ['Pursue Higher Education', 'ls_balance'],
+      ['Own a business', 'ls_access'],
+      ['Own a home', 'ls_family'],
+      ['Rent a home', 'ls_family'],
+      ['Have a will', 'ls_family'],
+    ]}
+    selectedCards={["Married"]}
+    cardWidth="200px"
+    cardHeight="120px"
+    onCardClick={() => {}}
+  />
+</Container>

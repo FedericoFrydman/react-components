@@ -1,0 +1,110 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-switch {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -ms-transition: background-color 800ms ease-in-out;
+  -webkit-transition: 0.4s;
+  -webkit-transition: background-color 800ms ease-in-out;
+  transition: 0.4s;
+  transition: background-color 800ms ease-in-out;
+  vertical-align: top;
+
+  &:focus {
+    outline: none;
+    .lsux-switch__knob {
+      box-shadow: 0 0 0 1.5px var(--switch--enabled-checked-background);
+    }
+  }
+
+  &--small {
+    height: 16px;
+    width: 28px;
+  }
+  &--large {
+    height: 24px;
+    width: 42px;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+  .lsux-switch__slider {
+    background-color: var(--switch--enabled-unchecked-background);
+    border-color: $N350;
+    border-radius: 48px;
+    border-style: solid;
+    border-width: 0px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -ms-transition: background-color 800ms ease-in-out;
+    -webkit-transition: background-color 800ms ease-in-out;
+    transition: background-color 800ms ease-in-out;
+  }
+  .lsux-switch__knob {
+    background-color: $N00;
+    border-color: $N350;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+    position: absolute;
+    -webkit-transition: transform 0.4s;
+    transition: transform 0.4s;
+    &--small {
+      height: 14px;
+      left: calc(50% - 8px / 2 - 9px);
+      top: calc(50% - 14px / 2);
+      width: 14px;
+    }
+    &--large {
+      height: 22px;
+      left: calc(50% - 22px / 2 - 9px);
+      top: calc(50% - 22px / 2);
+      width: 22px;
+    }
+  }
+  &.checked {
+    .lsux-switch__knob {
+      background-color: $N00;
+      border-color: $N350;
+
+      &--small {
+        -ms-transform: translateX(12px);
+        -webkit-transform: translateX(12px);
+        transform: translateX(12px);
+      }
+      &--large {
+        -ms-transform: translateX(18px);
+        -webkit-transform: translateX(18px);
+        transform: translateX(18px);
+      }
+    }
+    .lsux-switch__slider {
+      background-color: var(--switch--enabled-checked-background);
+      border-color: var(--switch--enabled-checked-background);
+      -webkit-transition: border-color 750ms ease-in-out;
+      -ms-transition: border-color 750ms ease-in-out;
+      transition: border-color 750ms ease-in-out;
+    }
+  }
+  &.disabled {
+    .lsux-switch__slider {
+      background-color: var(--switch--disabled-unchecked-background);
+      border-color: var(--switch--disabled-unchecked-background);
+      -webkit-transition: border-color 800ms ease-in-out;
+      -ms-transition: border-color 800ms ease-in-out;
+      transition: border-color 800ms ease-in-out;
+    }
+    .lsux-switch__knob {
+      background-color: $N00;
+      border-color: $N350;
+    }
+  }
+}

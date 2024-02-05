@@ -1,0 +1,61 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
+.lsux-email-hero {
+  background-color: $N00;
+  height: 225px;
+  width: 600px;
+
+  .lsux-text {
+    max-width: 488px;
+  }
+  &.lsux-email-hero--default {
+    .lsux-email-hero--wrapper {
+      padding-left: 32px;
+      .lsux-text {
+        max-width: 520px;
+      }
+    }
+  }
+  &.lsux-email-hero--small-hero,
+  &.lsux-email-hero--huge-hero,
+  &.lsux-email-hero--center {
+    text-align: center;
+    .lsux-text {
+      margin: 0 auto;
+    }
+  }
+  &.lsux-email-hero--small-hero {
+    .lsux-text {
+      color: $N800;
+    }
+  } 
+  &.lsux-email-hero--huge-hero {
+    background-color: $N100;
+    height: 329px;
+
+    .lsux-heading {
+      margin-bottom: 21px;
+    }
+    .lsux-text {
+      font-size: 26px;
+      max-width: 459px;
+    }
+    .lsux-button {
+      margin: 22px auto 0;
+    }
+  }
+  &.lsux-email-hero--image-bkg {
+    color: $N00;
+    height: 530px;
+
+    .lsux-email-hero--wrapper {
+      padding-top: 300px;
+
+      .lsux-text {
+        max-width: 382px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,24 @@
+import { Meta, ArgsTable, Story, Stories, Canvas, Title, Description } from '@storybook/addon-docs';
+import { AssociateBadge } from './AssociateBadge';
+
+<Title />
+
+<Description />
+Associate Badge is a standalone component to display information about an associate and ways to contact. It can be included in the Header or body content.
+
+<Canvas>
+  <Story id="layout-associatebadge--default" />
+</Canvas>
+
+<Meta component={AssociateBadge} title="AssociateBadge" />
+
+### Usage guidelines
+
+- The entire badge is clickable/tappable.
+- “Initial” Avatar should be default when photo is not available.
+- Contact menu is a [Dropdown](https://ux-framework-svc-sandbox-us.app.pplsicorp.com/?path=/docs/controls-dropdown--links-dropdown) component and should follow the same rules.
+- Associate name or title should be single line. Truncate it with “…” when necessary.
+
+<ArgsTable of={AssociateBadge}/>
+
+<Stories />

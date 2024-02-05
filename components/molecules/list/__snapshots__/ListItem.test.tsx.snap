@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem Component should render the component 1`] = `
+<li
+  className="lsux-list-item"
+>
+  test list item
+</li>
+`;

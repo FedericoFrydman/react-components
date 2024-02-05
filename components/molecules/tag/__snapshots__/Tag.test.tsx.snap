@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag Component should render the component 1`] = `
+<div
+  className="lsux-tag"
+>
+  <ForwardRef(TextComponent)
+    as="span"
+    text="something"
+    textSize="medium"
+  />
+</div>
+`;

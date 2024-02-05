@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snackbar Component should render the component 1`] = `
+<div
+  className="lsux-snackbar lsux-snackbar--hidden lsux-snackbar--animation-fade-in lsux-snackbar--position-default"
+>
+  <ForwardRef(AlertComponent)
+    bold={false}
+    dismissible={true}
+    icon="alert_warning"
+    severity="error"
+    title="This is a description"
+  >
+    Actionable
+  </ForwardRef(AlertComponent)>
+</div>
+`;

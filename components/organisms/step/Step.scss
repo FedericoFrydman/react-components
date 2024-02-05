@@ -1,0 +1,195 @@
+@import '../../assets/styles/brand.scss';
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/mixins/breakpoints.scss';
+
+.lsux-step-bar {
+  .lsux-step-bar--container {
+    overflow: hidden;
+    position: relative;
+  }
+  .lsux-step--button {
+    align-items: center;
+    display: flex;
+    padding: 0;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    &:visited {
+      color: var(--b200);
+    }
+  }
+
+  .step-container {
+    display: flex;
+    justify-content: center;
+
+    &.mobile {
+      background-color: $N300;
+      height: 4px;
+
+      &.step-circle--current,
+      &.step-circle--complete {
+        background-color: var(--brand-color-prim200);
+      }
+    }
+  }
+
+  .step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+
+    .step-circle {
+      align-items: center;
+      background-color: $N00;
+      border: 1px solid $N700;
+      border-radius: 50%;
+      color: $N800;
+      display: flex;
+      height: 36px;
+      justify-content: center;
+      width: 36px;
+
+      img {
+        filter: $filter-default;
+      }
+      &:hover {
+        background-color: $N100;
+      }
+      &.step-circle--current {
+        background-color: $N1000;
+        color: $N00;
+        display: flex;
+
+        img {
+          filter: $filter-white;
+        }
+
+        + .step-label p {
+          color: $N1000;
+          font-weight: 600;
+        }
+        &:hover {
+          border: 2px solid $N700;
+        }
+      }
+
+      &.step-circle--complete {
+        border-color: $G200;
+        color: $G200;
+        display: flex;
+
+        img {
+          filter: $filter-green;
+        }
+      }
+    }
+
+    .step-label {
+      color: $N800;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .step-sections-container {
+    background-color: $N200;
+    display: flex;
+    justify-content: center;
+
+    .step-section-container {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      height: 92px;
+      justify-content: center;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .step-section {
+      background-color: $N400;
+      border-radius: 50px;
+      height: 6px;
+      width: 100%;
+
+      .step-section--bar {
+        background-color: var(--brand-color-prim200);
+        border-radius: 50px;
+        height: 6px;
+      }
+    }
+
+    .step-section-text {
+      margin-bottom: 16px;
+    }
+  }
+
+  a.step {
+    border: none;
+    color: $N1000;
+    padding: 0;
+    text-decoration: none;
+
+    &:focus {
+      outline: none;
+
+      .step-label {
+        text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      outline: none;
+
+      .step-circle {
+        background-color: $G10;
+        border-width: 2px;
+        display: flex;
+      }
+
+      .step-label p {
+        color: $N800;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .auto-divider-right {
+    background-color: $N500;
+    flex: 1 1 auto;
+    height: 1px;
+    margin: 18px 0 0 -52px;
+
+    &.small {
+      margin: 18px 0 0 -46px;
+    }
+
+    &.blank {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .auto-divider-left {
+    background-color: $N500;
+    flex: 1 1 auto;
+    height: 1px;
+    margin: 18px -52px 0 0;
+
+    &.small {
+      margin: 18px -46px 0 0;
+    }
+
+    &.blank {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+}

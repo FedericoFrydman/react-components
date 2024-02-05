@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/addon-docs';
+import { FormTest } from './utilities/FormTest';
+
+<Meta title="Foundation/Utilities" />
+
+# Utilities
+
+Several react components that can be used.
+
+## useMedia
+
+This is a react hook that allows a react component to respond to different media query triggers.
+
+## useOutsideClick
+
+This is a react hook that allows a react component to respond to clicks outside its container
+
+## useViewportSize
+
+This is a react hook that allows a react component to respond to different viewport sizes (width and height)
+
+## useLoader
+
+This is a react hook that handles feedback for aynchronous operations. This includes feedback during the operation (spinner), and after the operation (success or
+error messages via modals or alerts).
+
+It handles all state management and rendering.
+
+## useForm
+
+This is a react hook that handles the creation and rendering of input fields for inclusion in an HTML form. It need not be used exclusively for all fields in the form.
+
+It handles validation, error processing with input state (focus, blur, etc.), and rendering.
+
+Rendering is done using the ```<FormField><Control/></FormField>``` paradigm in the rest of the framework.
+
+
+<FormTest />

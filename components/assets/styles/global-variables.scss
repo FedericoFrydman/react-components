@@ -1,0 +1,84 @@
+@import './fonts.scss';
+@import './colors.scss';
+
+:root {
+  // Global Colors
+  --overlay: #{$overlay};
+  --b10: #{$B10};
+  --b100: #{$B100};
+  --b200: #{$B200};
+  --b300: #{$B300};
+  --g10: #{$G10};
+  --g100: #{$G100};
+  --g200: #{$G200};
+  --g300: #{$G300};
+  --n00: #{$N00};
+  --n1000: #{$N1000};
+  --n100: #{$N100};
+  --n200: #{$N200};
+  --n300: #{$N300};
+  --n350: #{$N350};
+  --n400: #{$N400};
+  --n450: #{$N450};
+  --n500: #{$N500};
+  --n50: #{$N50};
+  --n600: #{$N600};
+  --n700: #{$N700};
+  --n750: #{$N750};
+  --n800: #{$N800};
+  --p10: #{$P10};
+  --p100: #{$P100};
+  --p200: #{$P200};
+  --p300: #{$P300};
+  --r10: #{$R10};
+  --r100: #{$R100};
+  --r200: #{$R200};
+  --r300: #{$R300};
+  --y10: #{$Y10};
+  --y100: #{$Y100};
+  --y200: #{$Y200};
+  --y300: #{$Y300};
+
+  // Color Filters
+  --filter-default: #{$filter-default};
+  --filter-blue-10: #{$filter-blue-10};
+  --filter-blue-100: #{$filter-blue-100};
+  --filter-blue: #{$filter-blue};
+  --filter-blue-300: #{$filter-blue-300};
+  --filter-green-10: #{$filter-green-10};
+  --filter-green-100: #{$filter-green-100};
+  --filter-green: #{$filter-green};
+  --filter-green-300: #{$filter-green-300};
+  --filter-white: #{$filter-white};
+  --filter-neutral-100: #{$filter-neutral-100};
+  --filter-neutral-300: #{$filter-neutral-300};
+  --filter-light-gray: #{$filter-light-gray};
+  --filter-gray: #{$filter-gray};
+  --filter-black: #{$filter-black};
+  --filter-deep-black: #{$filter-deep-black};
+  --filter-purple-10: #{$filter-purple-10};
+  --filter-purple-100: #{$filter-purple-100};
+  --filter-purple-200: #{$filter-purple-200};
+  --filter-purple-300: #{$filter-purple-300};
+  --filter-red-10: #{$filter-red-10};
+  --filter-red-100: #{$filter-red-100};
+  --filter-red-200: #{$filter-red-200};
+  --filter-red: #{$filter-red};
+  --filter-yellow-10: #{$filter-yellow-10};
+  --filter-yellow-100: #{$filter-yellow-100};
+  --filter-yellow-200: #{$filter-yellow-200};
+  --filter-yellow: #{$filter-yellow};
+
+  // Fonts
+  --t95: #{$T95};
+  --t76: #{$T76};
+  --t61: #{$T61};
+  --t49: #{$T49};
+  --t39: #{$T39};
+  --t31: #{$T31};
+  --t28: #{$T28};
+  --t26: #{$T26};
+  --t20: #{$T20};
+  --t16: #{$T16};
+  --t14: #{$T14};
+}

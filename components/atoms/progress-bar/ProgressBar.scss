@@ -1,0 +1,62 @@
+@import '../../assets/styles/colors.scss';
+
+.lsux-progressbar {
+  background-color: $N300;
+  border-radius: 20px;
+  height: 6px;
+  overflow: hidden;
+  width: 216px;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  height: 6px;
+  width: 216px;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: $N300;
+  border-radius: 20px;
+  margin-top: 0px;
+}
+progress[value]::-webkit-progress-value {
+  background-color: var(--progress-bar-default);
+  border-radius: 20px;
+  padding-top: 0px;
+  transition: all 0.4s ease;
+}
+
+.lsux-inside-bar {
+  height: 6px;
+
+  &--progress {
+    background-color: var(--progress-bar-default);
+    border-radius: 20px;
+    left: 0px;
+    position: relative;
+    transition: ease 1s;
+  }
+
+  &--loop {
+    animation: movingBar infinite 1s;
+    background-color: var(--progress-bar-default);
+    border-radius: 0px;
+    left: 0;
+    position: relative;
+    width: 112px;
+  }
+
+  @keyframes movingBar {
+    from {
+      left: -50%;
+      right: 100%;
+      width: 112px;
+    }
+    to {
+      left: 100%;
+      right: 0%;
+      width: 112px;
+    }
+  }
+}

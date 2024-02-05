@@ -1,0 +1,70 @@
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/variables.scss';
+
+$textBreakpoint: 540px;
+
+.lsux-heading {
+  margin: 0;
+
+  &--t95 {
+    font: $T95;
+    @media only screen and (max-width: $textBreakpoint) {
+      font: $T61;
+    }
+  }
+
+  &--t76 {
+    font: $T76;
+    @media only screen and (max-width: $textBreakpoint) {
+      font: $T49;
+    }
+  }
+
+  &--t61 {
+    font: $T61;
+    @media only screen and (max-width: $textBreakpoint) {
+      font: $T39;
+    }
+  }
+
+  &--t49 {
+    font: $T49;
+    @media only screen and (max-width: $textBreakpoint) {
+      font: $T31;
+    }
+  }
+
+  &--t39 {
+    font: $T39;
+    @media only screen and (max-width: $textBreakpoint) {
+      font: $T28;
+    }
+  }
+
+  &--t31 {
+    font: $T31;
+    @media only screen and (max-width: $textBreakpoint) {
+      font: $T20;
+    }
+  }
+
+  &--t28 {
+    font: $T28;
+  }
+
+  &--t26 {
+    font: $T26;
+  }
+
+  &--t20 {
+    font: $T20;
+  }
+
+  &--t16 {
+    font: $T16;
+  }
+
+  &--t14 {
+    font: $T14;
+  }
+}
